@@ -1,0 +1,190 @@
+body {
+    background: linear-gradient(45deg, rgba(192,38,0,1) 0%, rgba(218,44,0,1) 100%);
+  }
+  
+  svg {
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  #texte {
+    fill-opacity: 0;
+    fill: white;
+    animation: show 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+  }
+  #bandes-texte {
+    stroke: white;
+    stroke-width:4;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;       
+  }
+  #fleches {
+    fill-opacity: 0;
+    fill: white;
+    animation: show2 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #contour {
+    stroke: white;
+    fill: none;
+    stroke-width:2;
+    stroke-miterlimit:10;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: draw 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #contour-ecran {
+    stroke: white;
+    fill: none;
+    stroke-width:1;
+    stroke-miterlimit:10;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: draw 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #404 {
+    fill-opacity:0;
+    fill: #1E1B18;
+    animation: show 2s linear;     
+  }
+  #ecran {
+    fill-opacity: 0;
+    fill: white;
+    animation: show 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #bouton-gauche {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #bouton-droit {
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    fill: none;
+    animation: draw 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #remplissage-gauche {
+    fill-opacity: 0;
+    fill: white;
+    animation: show 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #remplissage-droit {
+    fill-opacity: 0;
+    fill: white;
+    animation: show 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #details-centre {
+    stroke: white;
+    stroke-width: 1;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    fill: none;
+    animation: draw 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #telecran-logo {
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    fill: none;
+    animation: draw 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;    
+  }
+  #telecran-1 {
+    fill-opacity: 0;
+    animation: rotation 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      opacity: 1;
+   }
+      }
+    
+    @keyframes show {
+    to {
+      fill-opacity: 1;
+      opacity: 1;
+   }
+      }
+  @keyframes show2 {
+    to {
+      fill-opacity: 0.5;
+   }
+      }
+  
+  @keyframes rotation {
+      0% {
+          transform: rotate(0deg);
+          fill-opacity:1;
+      }
+      50% {
+          transform: rotate(10deg);
+          fill-opacity:0.5;
+      }
+    100% {
+          transform: rotate(0deg);
+          fill-opacity:0;
+      }
+  }

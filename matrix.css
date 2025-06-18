@@ -1,0 +1,117 @@
+@use postcss-nested;
+
+@font-face {
+  font-family: "Comic Sans MS";
+  src:
+    url("https://manzdev.github.io/twitch-matrix-canvas/fonts/comic-sans-ms.woff2") format("woff2"),
+    url("https://manzdev.github.io/twitch-matrix-canvas/fonts/comic-sans-ms.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src:
+    url("https://manzdev.github.io/twitch-matrix-canvas/fonts/bebas-neue.woff2") format("woff2"),
+    url("https://manzdev.github.io/twitch-matrix-canvas/fonts/bebas-neue.woff") format("woff");
+}
+
+body {
+  background: #000;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.manz {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 400px);
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.manz img {
+  transform: scale(1);
+  image-rendering: pixelated;
+  clip-path: inset(5%);
+}
+
+.manz div {
+  width: 800px;
+  height: 105px;
+  text-align: center;
+  font-family: "Bebas Neue", monospace;
+  font-size: 92px;
+  color: #fff;
+  background: #000e;
+  text-shadow: 0 0 10px #0f0;
+  box-shadow: 0 0 10px 4px #0f0;
+}
+
+.manz a {
+  color: #0f0;
+  text-shadow: 0 0 35px #0f0;
+  text-decoration: none;
+}
+
+.moved {
+  transform: translate(10px, 10px);
+}
+
+.color {
+  filter: hue-rotate(250deg);
+}
+
+.manz div.comic {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 53px;
+  line-height: 190%;
+}
+
+.created {
+  background: 
+    url(https://assets.codepen.io/154065/internal/avatars/users/default.png),
+    linear-gradient(to bottom, #884ced, #ec1cce);
+  background-size: 75px 75px, cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2em;
+  
+  & span,
+  & h2,
+  & p,
+  & a {
+    font-family: Montserrat;
+    margin: 0;
+  }
+  
+  & a,
+  & p,
+  & span {
+    color: #fff;    
+  }
+  
+  & h2 {
+    font-weight: 700;
+    transform: translate(0, -4px);    
+  }
+  
+  & a {
+    text-decoration-color: rgba(255,255,255,0.4);
+  }
+  
+  & a:hover {
+    color: #e6e82a;
+  }
+}
