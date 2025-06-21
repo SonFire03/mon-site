@@ -1,7 +1,183 @@
-<link rel="stylesheet" href="matrix.css">
-<link rel="stylesheet" href="matrix.js">
-<canvas id="canvas"></canvas>
-<div class="manz">
-    <img src="https://manzdev.github.io/twitch-matrix-canvas/matrix.gif" alt="Manztrix">
-    <div>ENTRER DANS <a href="1ndex.html">AIRFLOW</a></div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tya Garnier - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<div id="loader-wrapper">
+  <div id="loader"></div>
 </div>
+
+  <div class="container">
+    <header>
+      <img src="assets/profile.jpg" alt="Photo de Tya" class="photo-profil" />
+      <h1 class="typing">Bienvenue sur le portfolio de Tya Garnier</h1>
+
+      <button id="themeToggle">🌗 Basculer Thème</button>
+    </header>
+
+<section class="education">
+  <h2>Parcours</h2>
+  <ul>
+    <li>Contrat d’Engagement Jeune – Mission Emploi et Insertion, LA ROCHETTE (77), avril 2025</li>
+    <li>Baccalauréat Professionnel Gestion Administration – Lycée Jacques Prévert, COMBS-LA-VILLE (77), obtenu en 2021</li>
+  </ul>
+</section>
+
+    <section class="timeline">
+      <h2>Expériences</h2>
+      <div class="timeline-container">
+        <div class="timeline-item"><h3>Baby-sitter – Melun</h3><span>Janv. 2024 - Juil. 2024</span></div>
+        <div class="timeline-item"><h3>Normal – Melun</h3><span>Févr. 2024</span></div>
+        <div class="timeline-item"><h3>McDonald's – Sens</h3><span>Juin 2023 - Janv. 2024</span></div>
+        <div class="timeline-item"><h3>Normal – Lieusaint</h3><span>Juil. 2022</span></div>
+        <div class="timeline-item"><h3>Maison des Pains – Vert-Saint-Denis</h3><span>Oct. 2021 - Avr. 2022</span></div>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Compétences</h2>
+      <ul>
+        <li>Dynamique</li>
+        <li>Rigoureuse</li>
+        <li>Accueillante</li>
+        <li>Diplomate</li>
+        <li>À l'écoute</li>
+        <li>Adaptabilité</li>
+      </ul>
+    </section>
+
+    <section class="languages">
+      <h2>Langues</h2>
+      <ul>
+        <li>Anglais : B2 en cours</li>
+        <li>Espagnol : A1</li>
+        <li>Italien : en cours</li>
+        <li>Japonais : en cours</li>
+      </ul>
+    </section>
+
+    <section class="hobbies">
+      <h2>Loisirs</h2>
+      <ul>
+        <li>Musique</li>
+        <li>Cinéma</li>
+        <li>Lecture</li>
+        <li>Cuisine</li>
+        <li>Voyage</li>
+        <li>Crochet</li>
+      </ul>
+    </section>
+
+
+        <a class="cv-button" href="assets/CV_admin_pdf_20240313_164449_0000_pdf_20240809_163016_0000_pdf_20250613.pdf" download>📄 Télécharger le CV de Tya</a>
+
+
+        <section class="map">
+  <h2>Localisation</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36266.07843453169!2d2.634646079341724!3d48.54213516261019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fa62379c029f%3A0x40b82c3688c5450!2s77000%20Melun!5e1!3m2!1sfr!2sfr!4v1750369841607!5m2!1sfr!2sfr" 
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" &
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<section class="socials">
+  <h2>Retrouvez-moi</h2>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>
+    <a href="https://www.linkedin.com/" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+
+<div class="secret-access">
+  <h2>🔐 Accès secret</h2>
+  <p>Réponds à la question pour découvrir un contenu caché :</p>
+  <input type="text" id="secretAnswer" placeholder="Nom de la première entreprise...">
+  <button onclick="checkSecret()">Déverrouiller</button>
+  <p id="secretFeedback"></p>
+</div>
+
+<script>
+  function checkSecret() {
+    const input = document.getElementById('secretAnswer').value.trim().toLowerCase();
+    const feedback = document.getElementById('secretFeedback');
+
+    if (input === "maison des pain" || input === "Maison Des Pains" || input === "maison des pains") {
+      feedback.textContent = "✅ Accès autorisé ! Redirection...";
+      feedback.style.color = "lime";
+      setTimeout(() => {
+        window.location.href = "secret.html"; // page cachée à créer
+      }, 1500);
+    } else {
+      feedback.textContent = "❌ Mauvaise réponse.";
+      feedback.style.color = "crimson";
+    }
+  }
+</script>
+
+    <section class="qrcode">
+      <h2>Accès rapide pour la prochaine fois</h2>
+      <img src="assets/qrcode_cv_tya.png" alt="QR Code vers le site" style="max-width:150px;">
+    </section>
+
+    <footer>
+      <p>&copy; 2025 - Tya Garnier</p>
+        <p style="font-size: 1px; color: #111;">Site créé par Sofiane Dehimi</p>
+
+    </footer>
+  </div>
+
+<!-- Google Translate -->
+<div id="google_translate_element" style="margin-top: 30px; text-align: center;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fr',
+      includedLanguages: 'fr,en,es,ja,it',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loader-wrapper');
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      setTimeout(() => loader.style.display = 'none', 500);
+    }, 2000); // 3 secondes avant de cacher
+  });
+</script>
+
+
+
+<button id="backToTop" title="Revenir en haut">⬆️</button>
+
+</body>
+</html>
