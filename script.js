@@ -1,4 +1,4 @@
-console.log("Bienvenue sur le portfolio de Tya !");
+console.log("Bienvenue sur le portfolio de Sofiane !");
 
 // Affiche les éléments de la timeline au scroll
 const timelineItems = document.querySelectorAll('.timeline-item');
@@ -18,11 +18,8 @@ const toggleBtn = document.getElementById('themeToggle');
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
 });
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Merci ! Ton message a été envoyer avec succès 🪄✨");
-  this.reset();
-});
+
+
 
 // Affiche le bouton au scroll
 window.onscroll = function () {

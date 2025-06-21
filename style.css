@@ -32,7 +32,7 @@ header {
   margin: 10px auto;
   display: block;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border: 3px solid #ff69b4;
+  border: 3px solid #00f2ff;
 }
 
 
@@ -42,7 +42,7 @@ header {
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #ff69b4;
+  border-right: 2px solid #00f2ff;
   animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
 }
 
@@ -61,7 +61,7 @@ header {
   font-size: 0.9em;
   border: none;
   border-radius: 20px;
-  background: #ff69b4;
+  background: #00f2ff;
   color: white;
   cursor: pointer;
   transition: background 0.3s;
@@ -77,7 +77,7 @@ section {
 }
 
 h2 {
-  color: #ff69b4;
+  color: #00f2ff;
   margin-bottom: 10px;
   font-size: 1.3em;
 }
@@ -93,7 +93,7 @@ ul li {
 
 /* Timeline */
 .timeline-container {
-  border-left: 3px solid #ff69b4;
+  border-left: 3px solid #00f2ff;
   padding-left: 20px;
   position: relative;
 }
@@ -120,7 +120,7 @@ ul li {
   display: inline-block;
   margin: 20px auto;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #ff69b4, #ff4081);
+  background: linear-gradient(135deg, #00f2ff, #ff4081);
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -161,7 +161,7 @@ body.light-mode .cv-button {
   color: white;
 }
 .map-container {
-  border: 3px solid #ff69b4;
+  border: 3px solid #00f2ff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
@@ -190,7 +190,7 @@ body.light-mode .cv-button {
 
 .socials h2 {
   margin-bottom: 20px;
-  color: #ff69b4;
+  color: #00f2ff;
 }
 
 .social-icons {
@@ -216,7 +216,7 @@ body.light-mode .cv-button {
 .contact h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #ff69b4;
+  color: #00f2ff;
 }
 
 #contact-form {
@@ -247,7 +247,7 @@ body.light-mode #contact-form textarea {
   padding: 12px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(135deg, #ff69b4, #ff4081);
+  background: linear-gradient(135deg, #00f2ff, #ff4081);
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -276,7 +276,7 @@ body.light-mode #contact-form textarea {
 
 #loader {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid #ff69b4;
+  border-top: 8px solid #00f2ff;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -294,14 +294,14 @@ body.light-mode #contact-form textarea {
   margin: 40px auto;
   padding: 25px;
   background: #1a1a1a;
-  border: 2px solid #ff69b4;
+  border: 2px solid #00f2ff;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(255, 105, 180, 0.3);
   text-align: center;
 }
 
 .secret-access h2 {
-  color: #ff69b4;
+  color: #00f2ff;
   margin-bottom: 10px;
 }
 
@@ -317,7 +317,7 @@ body.light-mode #contact-form textarea {
 
 .secret-access button {
   padding: 10px 18px;
-  background: linear-gradient(135deg, #ff69b4, #ff4081);
+  background: linear-gradient(135deg, #00f2ff, #ff4081);
   color: white;
   border: none;
   border-radius: 20px;
@@ -340,7 +340,7 @@ body.light-mode #contact-form textarea {
   bottom: 30px;
   right: 30px;
   display: none;
-  background-color: #ff69b4;
+  background-color: #00f2ff;
   color: white;
   border: none;
   border-radius: 50%;
