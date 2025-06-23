@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suivi de progression</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Progress / <span id="year_num"></span></h1>
+  </header>
+
+  <div class="day_night" id="day_night">
+    <span class="day_icon">🌤️</span>
+    <span class="night_icon">🌙</span>
+  </div>
+
+  <main class="main" id="main">
+    <div class="year_progress grid-item">
+      <p>Year progress: <span id="yp_text"></span></p>
+      <div class="bar">
+        <div id="yp_bar"></div>
+      </div>
+    </div>
+    <div class="month_progress grid-item">
+      <p>Month progress: <span id="mp_text"></span></p>
+      <div class="bar">
+        <div id="mp_bar"></div>
+      </div>
+    </div>
+    <div class="day_progress grid-item">
+      <p>Day progress: <span id="dp_text"></span></p>
+      <div class="bar">
+        <div id="dp_bar"></div>
+      </div>
+    </div>
+    <div class="hour_progress grid-item">
+      <p>Hour progress: <span id="hp_text"></span></p>
+      <div class="bar">
+        <div id="hp_bar"></div>
+      </div>
+    </div>
+    <div class="days">
+      <p>Day:</p>
+      <div class="days_cont" id="days_cont"></div>
+    </div>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='https://github.com/SonFire03'">
+      &copy; 2025 - Sofiane Dehimi
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
