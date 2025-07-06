@@ -373,5 +373,17 @@ body.light-mode #contact-form textarea {
   text-shadow: 0 0 10px #00f2ff;
 }
 
+.footer-link {
+  color: #00f2ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-link:hover {
+  color: #0077ff;
+  text-shadow: 0 0 10px #00f2ff;
+}
+
 
 
