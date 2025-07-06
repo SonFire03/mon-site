@@ -356,17 +356,22 @@ body.light-mode #contact-form textarea {
   transform: scale(1.1);
   background-color: #ff4081;
 }
-.footer-button {
-  display: inline-block;
-  background-color: #007bff;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+.footer-text {
+  text-align: center;
+  margin: 1rem 0;
 }
 
-.footer-button:hover {
-  background-color: #0056b3;
+.footer-link {
+  color: #00f2ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
 }
+
+.footer-link:hover {
+  color: #0077ff;
+  text-shadow: 0 0 10px #00f2ff;
+}
+
+
+

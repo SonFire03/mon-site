@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mes Certifications - Sofiane Dehimi</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #000; color: #eee; }
+    .certifications { padding: 2rem; text-align: center; }
+    .certifications-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .cert-card {
+      background-color: rgba(0,242,255,0.05);
+      border: 1px solid #00f2ff;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00f2ff;
+    }
+    .cert-card img {
+      width: 100px;
+      margin-bottom: 0.5rem;
+    }
+    .cert-title {
+      color: #00f2ff;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .cert-card a {
+      color: #00f2ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cert-card a:hover {
+      color: #0077ff;
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <section class="certifications section">
+      <h2 class="section-title" data-heading="Vitrine">Mes Certifications</h2>
+      <div class="certifications-container">
+
+     
+      <div class="cert-card">
+        <img src="assets/1028d7f3-5860-4796-ba86-b6fad89f870f.png" alt="Coursestack - Red Team Operation Mgmt">
+        <h3 class="cert-title">Coursestack - Red Team Operation Mgmt</h3>
+        <a href="https://redteamleaders.coursestack.com/completion/066b9b379fa83520" target="_blank">Voir le badge</a>
+      </div>
+    
+      <div class="cert-card">
+        <img src="assets/6853c82d-efb8-4933-8929-a85307b6315b.png" alt="Coursestack - Offensive Dev Windows V1">
+        <h3 class="cert-title">Coursestack - Offensive Dev Windows V1</h3>
+        <a href="https://redteamleaders.coursestack.com/completion/3d912cf4b05e071f" target="_blank">Voir le badge</a>
+      </div>
+    
+      <div class="cert-card">
+        <img src="assets/44586111-31b7-4781-a442-82c573e25fe5.png" alt="Coursestack - Red Team Windows API">
+        <h3 class="cert-title">Coursestack - Red Team Windows API</h3>
+        <a href="https://redteamleaders.coursestack.com/completion/4d0c3fd5e3a69131" target="_blank">Voir le badge</a>
+      </div>
+    
+      </div>
+    </section>
+  </main>
+</body>
+</html>
