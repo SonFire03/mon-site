@@ -1,144 +1,251 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mes Certifications - Sofiane Dehimi</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body { background: #000; color: #eee; }
-    .certifications { padding: 2rem; text-align: center; }
-    .certifications-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .cert-card {
-      background-color: rgba(0,242,255,0.05);
-      border: 1px solid #00f2ff;
-      border-radius: 10px;
-      padding: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .cert-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px #00f2ff;
-    }
-    .cert-card img {
-      width: 100px;
-      margin-bottom: 0.5rem;
-    }
-    .cert-title {
-      color: #00f2ff;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    .cert-card a {
-      color: #00f2ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .cert-card a:hover {
-      color: #0077ff;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certifications — Sofiane Dehimi</title>
+  <meta name="description" content="Badges et certificats (Coursestack / TryHackMe)." />
+
+  <link rel="stylesheet" href="../../css/main.css" />
+  <script defer src="../../js/main.js"></script>
 </head>
 <body>
-  <main class="main">
-    <section class="certifications section">
-      <h2 class="section-title" data-heading="Vitrine">Mes Certifications CourseStack</h2>
-      <div class="certifications-container">
-
-     
-      <div class="cert-card">
-        <img src="assets/1028d7f3-5860-4796-ba86-b6fad89f870f.png" alt="Coursestack - Red Team Operation Mgmt">
-        <h3 class="cert-title">Coursestack - Red Team Operation Mgmt</h3>
-        <a href="https://redteamleaders.coursestack.com/completion/066b9b379fa83520" target="_blank">Voir le badge</a>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
+      <div class="row">
+        <a class="btn btn--ghost" href="../../index.html#certifications">Retour</a>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
       </div>
-    
-      <div class="cert-card">
-        <img src="assets/6853c82d-efb8-4933-8929-a85307b6315b.png" alt="Coursestack - Offensive Dev Windows V1">
-        <h3 class="cert-title">Coursestack - Offensive Dev Windows V1</h3>
-        <a href="https://redteamleaders.coursestack.com/completion/3d912cf4b05e071f" target="_blank">Voir le badge</a>
-      </div>
-    
-      <div class="cert-card">
-        <img src="assets/44586111-31b7-4781-a442-82c573e25fe5.png" alt="Coursestack - Red Team Windows API">
-        <h3 class="cert-title">Coursestack - Red Team Windows API</h3>
-        <a href="https://redteamleaders.coursestack.com/completion/4d0c3fd5e3a69131" target="_blank">Voir le badge</a>
-      </div>
-    
-      </div>
-    </section>
-  </main>
+    </div>
+  </header>
 
-<main class="main">
-    <section class="certifications section">
-      <h2 class="section-title" data-heading="Vitrine">Mes Certifications Tryhackme</h2>
-      <div class="certifications-container">
+  <main class="wrap" style="padding:22px 18px 50px">
+    <div class="section__head">
+      <h2>Certifications</h2>
+      <p class="muted">Contenu existant conservé. Mise en forme unifiée.</p>
+    </div>
 
-     
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Red Team Operation Mgmt">
-        <h3 class="cert-title">pathway-blueteamt</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-PIQFF3H6FU.pdf" target="_blank">Voir le badge</a>
-      </div>
-    
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Offensive Dev Windows V1">
-        <h3 class="cert-title">Web Fundamentals</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-PUFRDISHOY.pdf" target="_blank">Voir le badge</a>
-      </div>
-    
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Red Team Windows API">
-        <h3 class="cert-title">Jr Penetration Tester</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-N9AA7539TP.pdf" target="_blank">Voir le badge</a>
-      </div>
+    <section class="card" style="margin-top:14px">
+      <div class="kicker">Vitrine</div>
+      <div class="h3">Mes Certifications CourseStack</div>
 
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Offensive Dev Windows V1">
-        <h3 class="cert-title">pathway-introtocyber</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-CSGAVQIIGN.pdf" target="_blank">Voir le badge</a>
-      </div>
+      <div class="grid3" style="margin-top:14px">
+        <article class="card">
+          <img src="assets/1028d7f3-5860-4796-ba86-b6fad89f870f.png" alt="Coursestack - Red Team Operation Mgmt" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Coursestack - Red Team Operation Mgmt</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://redteamleaders.coursestack.com/completion/066b9b379fa83520" target="_blank" rel="noreferrer">Voir le badge</a>
+          </div>
+        </article>
 
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Offensive Dev Windows V1">
-        <h3 class="cert-title">CompTIA Pentest+</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-UVDP0EGS6S.pdf" target="_blank">Voir le badge</a>
-      </div>
+        <article class="card">
+          <img src="assets/6853c82d-efb8-4933-8929-a85307b6315b.png" alt="Coursestack - Offensive Dev Windows V1" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Coursestack - Offensive Dev Windows V1</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://redteamleaders.coursestack.com/completion/3d912cf4b05e071f" target="_blank" rel="noreferrer">Voir le badge</a>
+          </div>
+        </article>
 
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Offensive Dev Windows V1">
-        <h3 class="cert-title">pathway-beginner</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-I9JVOKIHIM.pdf" target="_blank">Voir le badge</a>
-      </div>
-
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Offensive Dev Windows V1">
-        <h3 class="cert-title">Pre Security</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NFISADZHWA.pdf" target="_blank">Voir le badge</a>
-      </div>
-
-      <div class="cert-card">
-        <img src="/projet/certif/assets/3HnCZjv.png" alt="Coursestack - Offensive Dev Windows V1">
-        <h3 class="cert-title">Offensive Pentesting</h3>
-        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SYIGT9IJUT.pdf" target="_blank">Voir le badge</a>
-      </div>
-
-     
-
-
-
-
-
-
-    
+        <article class="card">
+          <img src="assets/44586111-31b7-4781-a442-82c573e25fe5.png" alt="Coursestack - Red Team Windows API" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Coursestack - Red Team Windows API</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://redteamleaders.coursestack.com/completion/4d0c3fd5e3a69131" target="_blank" rel="noreferrer">Voir le badge</a>
+          </div>
+        </article>
       </div>
     </section>
-  </main>
 
+    <section class="card" style="margin-top:14px">
+      <div class="kicker">Cisco / Credly</div>
+      <div class="h3">Badges Cisco (Credly)</div>
+      <p class="muted" style="margin-top:8px">Liens officiels Credly + miniatures locales.</p>
+
+      <div class="grid3" style="margin-top:14px">
+        <article class="card">
+          <img src="assets/credly/ethical-hacker.png" alt="Cisco - Ethical Hacker" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Ethical Hacker</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/802aa0da-eb35-478a-8b7e-3833303fa93b/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/introduction-to-cybersecurity.png" alt="Cisco - Introduction to Cybersecurity" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Introduction to Cybersecurity</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/d5cf981e-bf40-4eb4-bdb4-6ec71ad7b0c3/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/cyber-threat-management.png" alt="Cisco - Cyber Threat Management" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Cyber Threat Management</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/5f34a8a2-b5c1-4f10-8a14-a62f265582aa/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/endpoint-security.png" alt="Cisco - Endpoint Security" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Endpoint Security</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/0910350a-758c-4c8f-b2e8-d27662451eb5/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/network-defense.png" alt="Cisco - Network Defense" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Network Defense</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/6459609a-0d5a-4b29-8041-7c805ae464f0/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/network-support-and-security.png" alt="Cisco - Network Support and Security" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Network Support and Security</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/6bf638e3-0357-4534-b43c-2d27d314c96b/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/network-technician-career-path.png" alt="Cisco - Network Technician Career Path" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Network Technician Career Path</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/7077a785-9d71-4053-8f43-cf144d19bb7f/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/junior-cybersecurity-analyst-career-path.png" alt="Cisco - Junior Cybersecurity Analyst Career Path" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Junior Cybersecurity Analyst Career Path</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/bfb7ee47-a3e2-4a1a-ba6f-3a469568c922/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/python-essentials-1.png" alt="Cisco - Python Essentials 1" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Python Essentials 1</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/99e9e6ef-1254-40b6-bbc8-67da57a880b7/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/python-essentials-2.png" alt="Cisco - Python Essentials 2" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Python Essentials 2</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/550f94fe-0f5d-4b11-a25f-dabd13fb6a4a/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/it-customer-support-basics.png" alt="Cisco - IT Customer Support Basics" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">IT Customer Support Basics</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/3095cbcc-032b-42a9-8b29-4943bd4a31fb/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/english-for-it-1.png" alt="Cisco - English for IT 1" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">English for IT 1</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/28e64a1e-67b9-4bfa-b405-c68ff9f206c5/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/credly/english-for-it-2.png" alt="Cisco - English for IT 2" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">English for IT 2</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://www.credly.com/badges/5ec8e2d1-dd86-47b6-bd4e-d299721df39d/public_url" target="_blank" rel="noreferrer">Voir sur Credly</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px">
+      <div class="kicker">Vitrine</div>
+      <div class="h3">Mes Certifications TryHackMe</div>
+
+      <div class="grid3" style="margin-top:14px">
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">pathway-blueteamt</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-PIQFF3H6FU.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Web Fundamentals</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-PUFRDISHOY.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Jr Penetration Tester</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-N9AA7539TP.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">pathway-introtocyber</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-CSGAVQIIGN.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">CompTIA Pentest+</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-UVDP0EGS6S.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">pathway-beginner</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-I9JVOKIHIM.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Pre Security</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-NFISADZHWA.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/3HnCZjv.png" alt="TryHackMe" style="max-width:120px" />
+          <h3 style="margin:10px 0 0">Offensive Pentesting</h3>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SYIGT9IJUT.pdf" target="_blank" rel="noreferrer">Voir le PDF</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="muted" style="margin-top:14px">
+        Note: l’asset THM (icône) doit être présent dans <code>projet/certif/assets/3HnCZjv.png</code>.
+      </p>
+    </section>
+  </main>
 </body>
 </html>

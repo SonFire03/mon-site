@@ -1,58 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suivi de progression</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Progress — Sofiane Dehimi</title>
+  <meta name="description" content="Suivi de progression (jour/mois/année)." />
+
+  <link rel="stylesheet" href="../../css/main.css" />
+  <script defer src="../../js/main.js"></script>
+  <style>
+    .bar{ height: 10px; border-radius: 999px; border:1px solid var(--border); background: color-mix(in srgb, var(--panel) 72%, transparent); overflow:hidden; }
+    .bar > div{ height:100%; width:0%; background: linear-gradient(135deg, rgba(34,211,238,.85), rgba(255,77,141,.65)); }
+    .grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; }
+    @media (max-width: 860px){ .grid{ grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <h1 class="header__title">Progress / <span id="year_num"></span></h1>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
+      <div class="row">
+        <a class="btn btn--ghost" href="../../index.html#projects">Retour</a>
+      </div>
+    </div>
   </header>
 
-  <div class="day_night" id="day_night">
-    <span class="day_icon">🌤️</span>
-    <span class="night_icon">🌙</span>
-  </div>
+  <main class="wrap" style="padding:22px 18px 50px">
+    <div class="section__head">
+      <h2>Progress</h2>
+      <p class="muted">Projet existant conservé — UI unifiée avec le portfolio.</p>
+    </div>
 
-  <main class="main" id="main">
-    <div class="year_progress grid-item">
-      <p>Year progress: <span id="yp_text"></span></p>
-      <div class="bar">
-        <div id="yp_bar"></div>
+    <section class="grid" style="margin-top:14px">
+      <article class="card">
+        <div class="row between"><strong>Year</strong><span class="muted" id="yp_text">—</span></div>
+        <div class="bar" style="margin-top:10px"><div id="yp_bar"></div></div>
+      </article>
+      <article class="card">
+        <div class="row between"><strong>Month</strong><span class="muted" id="mp_text">—</span></div>
+        <div class="bar" style="margin-top:10px"><div id="mp_bar"></div></div>
+      </article>
+      <article class="card">
+        <div class="row between"><strong>Day</strong><span class="muted" id="dp_text">—</span></div>
+        <div class="bar" style="margin-top:10px"><div id="dp_bar"></div></div>
+      </article>
+      <article class="card">
+        <div class="row between"><strong>Hour</strong><span class="muted" id="hp_text">—</span></div>
+        <div class="bar" style="margin-top:10px"><div id="hp_bar"></div></div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:14px">
+      <div class="row between">
+        <div>
+          <div class="kicker">Calendar</div>
+          <div class="h3">Jour courant</div>
+        </div>
+        <div class="muted" id="year_num">—</div>
       </div>
-    </div>
-    <div class="month_progress grid-item">
-      <p>Month progress: <span id="mp_text"></span></p>
-      <div class="bar">
-        <div id="mp_bar"></div>
-      </div>
-    </div>
-    <div class="day_progress grid-item">
-      <p>Day progress: <span id="dp_text"></span></p>
-      <div class="bar">
-        <div id="dp_bar"></div>
-      </div>
-    </div>
-    <div class="hour_progress grid-item">
-      <p>Hour progress: <span id="hp_text"></span></p>
-      <div class="bar">
-        <div id="hp_bar"></div>
-      </div>
-    </div>
-    <div class="days">
-      <p>Day:</p>
-      <div class="days_cont" id="days_cont"></div>
-    </div>
+      <div id="days_cont" class="row" style="margin-top:14px; flex-wrap:wrap"></div>
+    </section>
   </main>
 
-  <footer>
-    <button onclick="window.location.href='https://github.com/SonFire03'">
-      &copy; 2025 - Sofiane Dehimi
-    </button>
-  </footer>
+  <script>
+    // Refactor léger du script original (sans dépendances)
+    const $ = (id) => document.getElementById(id);
 
-  <script src="script.js"></script>
+    function pct(a,b){ return Math.max(0, Math.min(100, (a/b)*100)); }
+
+    function setBar(id, value){
+      const el = $(id);
+      if (el) el.style.width = value.toFixed(2) + '%';
+    }
+
+    function setText(id, txt){ const el = $(id); if (el) el.textContent = txt; }
+
+    function render(){
+      const now = new Date();
+      const year = now.getFullYear();
+      $('year_num').textContent = String(year);
+
+      const startYear = new Date(year, 0, 1);
+      const endYear = new Date(year + 1, 0, 1);
+      const startMonth = new Date(year, now.getMonth(), 1);
+      const endMonth = new Date(year, now.getMonth() + 1, 1);
+      const startDay = new Date(year, now.getMonth(), now.getDate());
+      const endDay = new Date(year, now.getMonth(), now.getDate() + 1);
+
+      const yp = pct(now - startYear, endYear - startYear);
+      const mp = pct(now - startMonth, endMonth - startMonth);
+      const dp = pct(now - startDay, endDay - startDay);
+      const hp = pct(now.getMinutes()*60 + now.getSeconds(), 3600);
+
+      setText('yp_text', yp.toFixed(2) + '%');
+      setText('mp_text', mp.toFixed(2) + '%');
+      setText('dp_text', dp.toFixed(2) + '%');
+      setText('hp_text', hp.toFixed(2) + '%');
+
+      setBar('yp_bar', yp);
+      setBar('mp_bar', mp);
+      setBar('dp_bar', dp);
+      setBar('hp_bar', hp);
+
+      const daysCont = $('days_cont');
+      if (daysCont && !daysCont.dataset.rendered){
+        daysCont.dataset.rendered = '1';
+        const d = now.getDate();
+        for (let i=1;i<=31;i++){
+          const pill = document.createElement('span');
+          pill.className = 'pill';
+          pill.textContent = String(i);
+          if (i === d) {
+            pill.style.borderColor = 'color-mix(in srgb, var(--cyan) 70%, var(--border))';
+            pill.style.color = 'var(--text)';
+          }
+          daysCont.appendChild(pill);
+        }
+      }
+    }
+
+    render();
+    setInterval(render, 1000);
+  </script>
 </body>
 </html>

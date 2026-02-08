@@ -1,206 +1,396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sofiane Dehimi - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sofiane Dehimi — Portfolio (IT / Cyber / Dev)</title>
+  <meta name="description" content="Portfolio de Sofiane Dehimi : IT, cybersécurité, scripting, projets et parcours." />
+  <meta name="theme-color" content="#070b14" />
+
+  <meta property="og:title" content="Sofiane Dehimi — Portfolio" />
+  <meta property="og:description" content="IT / Cyber / Dev Backend — parcours, compétences, projets, certifications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/sofiane.jpg" />
+  <link rel="canonical" href="https://sonfire03.github.io/mon-site/" />
+
+  <link rel="preload" href="css/main.css" as="style" />
+  <link rel="preconnect" href="https://formspree.io" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sofiane Dehimi",
+    "jobTitle": "IT / Cyber / Dev Backend",
+    "knowsAbout": [
+      "Cybersécurité",
+      "Scripting Python",
+      "Bash",
+      "Linux",
+      "Windows",
+      "Réseaux"
+    ],
+    "url": "https://sonfire03.github.io/mon-site/",
+    "sameAs": ["https://github.com/SonFire03"]
+  }
+  </script>
+  <script defer src="js/main.js"></script>
 </head>
 <body>
+  <a class="skip" href="#content">Aller au contenu</a>
 
-<div id="loader-wrapper">
-  <div id="loader"></div>
-</div>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
 
-<div class="container">
-  <header>
-    <img src="assets/sofiane.jpg" alt="Photo de Sofiane" class="photo-profil" />
-    <h1 class="typing">Ingénieur informatique passionné de cybersécurité, créateur de solutions, dompteur de scripts.</h1>
-    <button id="themeToggle">🌗 Basculer Thème</button>
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          Menu
+        </button>
+        <div class="nav__menu" id="navMenu">
+          <a href="#about">À propos</a>
+          <a href="#skills">Compétences</a>
+          <a href="#projects">Projets</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button">Thème</button>
+        <a class="btn" href="assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
   </header>
 
-  <section class="education">
-  <h2>Parcours</h2>
-  <ul>
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__left">
+          <p class="kicker">IT • Cybersécurité • Scripting</p>
+          <h1 class="h1">
+            Ingénieur informatique passionné de cybersécurité,<br />
+            créateur de solutions, dompteur de scripts.
+          </h1>
+          <p class="lead">
+            Profil orienté terrain (systèmes/réseaux) + automatisation (Python/Bash) + culture cyber.
+          </p>
 
-    <li><strong>Baccalauréat Professionnel Systèmes Numériques</strong> – Lycée Jacques Prévert, Combs-la-Ville (77), 2018 - 2021 – Mention Bien</li>
-    <li><strong>Brevet d'Études Supérieures Systèmes Numériques</strong> – Lycée Jacques Prévert, Combs-la-Ville (77), 2019</li>
-  </ul>
-</section>
+          <div class="hero__cta">
+            <a class="btn" href="#contact">Me contacter</a>
+            <a class="btn btn--ghost" href="#projects">Voir les projets</a>
+          </div>
 
+          <div class="chips" aria-label="Liens">
+            <a class="chip" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="chip" href="#secret">Accès secret</a>
+            <a class="chip" href="#location">Localisation</a>
+          </div>
+        </div>
 
-  <section class="timeline">
-  <h2>Expériences</h2>
-  <div class="timeline-container">
-    <div class="timeline-item">
-      <h3>Conseiller Service Client – Boulanger, Cesson</h3>
-      <span>Août 2023 - Nov. 2024</span>
-      <p>Service après-vente</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Technicien Maintenance Informatique – Mairie, Dammarie-les-Lys</h3>
-      <span>Sept. 2021 - Mars 2023</span>
-      <p>Contrat d'apprentissage – Service informatique</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Technicien Maintenance Informatique – Mairie, Dammarie-les-Lys</h3>
-      <span>Déc. 2020 - Fév. 2021</span>
-      <p>Stage – Service informatique</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Technicien Maintenance Informatique – Mairie, Dammarie-les-Lys</h3>
-      <span>Janv. 2020 - Fév. 2020</span>
-      <p>Stage – Service informatique</p>
-    </div>
-  </div>
-</section>
+        <div class="hero__right">
+          <div class="card profile" data-reveal>
+            <img src="assets/sofiane.jpg" alt="Photo de Sofiane" class="profile__img" />
+            <div class="profile__meta">
+              <div class="profile__name">Sofiane Dehimi</div>
+              <div class="profile__role muted">IT / Cyber / Dev Backend</div>
+              <div class="profile__stack">
+                <span class="pill">Python</span>
+                <span class="pill">Bash</span>
+                <span class="pill">Linux</span>
+                <span class="pill">Windows</span>
+                <span class="pill">Réseaux</span>
+              </div>
+            </div>
+          </div>
 
+          <div class="card small" data-reveal>
+            <div class="small__title">Accès rapide</div>
+            <div class="small__content">
+              <img src="assets/qrcode_cv_sofiane.png" alt="QR Code vers le site" class="qr" />
+              <div class="muted">Scan pour ouvrir le portfolio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="skills">
-  <h2>Compétences</h2>
-  <ul>
-    <li>Maintenance et diagnostic hardware</li>
-    <li>Déploiement de systèmes Windows et Linux</li>
-    <li>Programmation : Python, Bash, HTML, CSS, JS</li>
-    <li>Cybersécurité (scripts de surveillance, keylogger pédagogique, etc.)</li>
-    <li>Création de sites web (GitHub Pages, responsive design)</li>
-    <li>Utilisation de Termux et outils de pentesting</li>
-    <li>Réseaux informatiques : câblage, adressage IP, dépannage</li>
-    <li>Autonomie, rigueur et pédagogie</li>
-  </ul>
-</section>
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>À propos</h2>
+          <p class="muted">Parcours et expériences (contenu conservé, mise en forme modernisée).</p>
+        </div>
 
+        <div class="grid2">
+          <article class="card" data-reveal>
+            <h3>Parcours</h3>
+            <ul class="list">
+              <li><strong>Baccalauréat Professionnel Systèmes Numériques</strong> — Lycée Jacques Prévert, Combs-la-Ville (77), 2018 - 2021 — Mention Bien</li>
+              <li><strong>Brevet d'Études Supérieures Systèmes Numériques</strong> — Lycée Jacques Prévert, Combs-la-Ville (77), 2019</li>
+            </ul>
 
-  <section class="languages">
-    <h2>Langues</h2>
-    <ul>
-      <li>Français : natif</li>
-      <li>Anglais : C1</li>
-      <li>Espagnol : A2</li>
-      <li>Japonais : en cours</li>
-    </ul>
-  </section>
+            <div class="divider"></div>
 
-<section class="hobbies">
-  <h2>Loisirs</h2>
-  <ul>
-    <li>Cybersécurité éthique & CTF (Capture The Flag)</li>
-    <li>Programmation & création de scripts utiles</li>
-    <li>Gaming & modding (GTA V, Minecraft, etc.)</li>
-    <li>Photo & design numérique</li>
-    <li>Fitness & entraînements en salle</li>
-    <li>Exploration de systèmes (Linux, Termux, Android)</li>
-  </ul>
-</section>
+            <h3>Formations / certifications (complément)</h3>
+            <p class="muted" style="margin-top:8px">
+              En parallèle du parcours scolaire : badges Cisco (Credly) orientés cyber, réseau et scripting.
+            </p>
+            <ul class="list">
+              <li><strong>Junior Cybersecurity Analyst Career Path</strong> (Cisco)</li>
+              <li><strong>Endpoint Security</strong> • <strong>Network Defense</strong> • <strong>Cyber Threat Management</strong> (Cisco)</li>
+              <li><strong>Python Essentials 1 & 2</strong> (Cisco)</li>
+              <li><strong>Ethical Hacker</strong> (Cisco)</li>
+            </ul>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projet/certif/certifications.html">Voir toutes les certifications</a>
+            </div>
+          </article>
 
+          <article class="card" data-reveal>
+            <h3>Expériences</h3>
+            <div class="timeline">
+              <div class="titem">
+                <div class="titem__top">
+                  <div class="titem__title">Conseiller Service Client — Boulanger, Cesson</div>
+                  <div class="titem__date muted">Août 2023 - Nov. 2024</div>
+                </div>
+                <div class="titem__desc muted">Service après-vente</div>
+              </div>
 
-  <a class="cv-button" href="assets/CV_Sofiane_Dehimi.pdf" download>📄 Télécharger le CV de Sofiane</a>
+              <div class="titem">
+                <div class="titem__top">
+                  <div class="titem__title">Technicien Maintenance Informatique — Mairie, Dammarie-les-Lys</div>
+                  <div class="titem__date muted">Sept. 2021 - Mars 2023</div>
+                </div>
+                <div class="titem__desc muted">Contrat d'apprentissage — Service informatique</div>
+              </div>
 
-  <section class="map">
-    <h2>Localisation</h2>
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36266.07843453169!2d2.634646079341724!3d48.54213516261019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fa62379c029f%3A0x40b82c3688c5450!2s77000%20Melun!5e1!3m2!1sfr!2sfr!4v1750369841607!5m2!1sfr!2sfr" 
-        width="100%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
+              <div class="titem">
+                <div class="titem__top">
+                  <div class="titem__title">Technicien Maintenance Informatique — Mairie, Dammarie-les-Lys</div>
+                  <div class="titem__date muted">Déc. 2020 - Fév. 2021</div>
+                </div>
+                <div class="titem__desc muted">Stage — Service informatique</div>
+              </div>
 
-  <section class="socials">
-    <h2>Retrouvez-moi</h2>
-    <div class="social-icons">
-      <a href="https://github.com/SonFire03" target="_blank"><img src="assets/github.svg" alt="GitHub"></a>
-    </div>
-  </section>
+              <div class="titem">
+                <div class="titem__top">
+                  <div class="titem__title">Technicien Maintenance Informatique — Mairie, Dammarie-les-Lys</div>
+                  <div class="titem__date muted">Janv. 2020 - Fév. 2020</div>
+                </div>
+                <div class="titem__desc muted">Stage — Service informatique</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="contact">
-  <h2>Contact</h2>
-  <form id="contact-form" action="https://formspree.io/f/mrbkavoo" method="POST">
-    <input type="text" name="name" placeholder="Ton prénom ou pseudo" required>
-    <input type="email" name="email" placeholder="Ton adresse email" required>
-    <textarea name="message" placeholder="Écris-moi un message, une question ou un défi 🧠" rows="5" required></textarea>
-    <button type="submit">Envoyer ✉️</button>
-  </form>
-  <p id="form-feedback" style="text-align:center; margin-top:10px;"></p>
-</section>
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Compétences</h2>
+          <p class="muted">Axes techniques réels (contenu conservé + regroupé).</p>
+        </div>
 
+        <div class="grid3">
+          <article class="card" data-reveal>
+            <h3>Systèmes</h3>
+            <ul class="list">
+              <li>Déploiement de systèmes Windows et Linux</li>
+              <li>Maintenance et diagnostic hardware</li>
+              <li>Autonomie, rigueur et pédagogie</li>
+            </ul>
+          </article>
 
-  <div class="secret-access">
-    <h2>🔐 Accès secret</h2>
-    <p>Réponds à la question pour découvrir un contenu caché :</p>
-    <input type="text" id="secretAnswer" placeholder="Nom de la première entreprise...">
-    <button onclick="checkSecret()">Déverrouiller</button>
-    <p id="secretFeedback"></p>
-  </div>
+          <article class="card" data-reveal>
+            <h3>Dev / Scripting</h3>
+            <ul class="list">
+              <li>Programmation : Python, Bash, HTML, CSS, JS</li>
+              <li>Création de sites web (GitHub Pages, responsive design)</li>
+            </ul>
+          </article>
 
-  <section class="qrcode">
-    <h2>Accès rapide pour la prochaine fois</h2>
-    <img src="assets/qrcode_cv_sofiane.png" alt="QR Code vers le site" style="max-width:150px;">
-  </section>
+          <article class="card" data-reveal>
+            <h3>Cyber / Réseau</h3>
+            <ul class="list">
+              <li>Cybersécurité (scripts de surveillance, keylogger pédagogique, etc.)</li>
+              <li>Utilisation de Termux et outils de pentesting</li>
+              <li>Réseaux informatiques : câblage, adressage IP, dépannage</li>
+            </ul>
+          </article>
+        </div>
 
-<footer class="footer">
-  <p class="footer-text">
-    <a href="/mon-site/projet/timeline/index.html" class="footer-link">
-      &copy; 2025 - Sofiane Dehimi
-    </a>
-    |
-    <a href="/mon-site/projet/certif/certifications.html" class="footer-link">
-      Mes Certifications
-    </a>
-  </p>
-</footer>
+        <div class="grid2" style="margin-top:14px">
+          <article class="card" data-reveal>
+            <h3>Langues</h3>
+            <ul class="list">
+              <li>Français : natif</li>
+              <li>Anglais : C1</li>
+              <li>Espagnol : A2</li>
+              <li>Japonais : en cours</li>
+            </ul>
+          </article>
 
+          <article class="card" data-reveal>
+            <h3>Loisirs</h3>
+            <ul class="list">
+              <li>Cybersécurité éthique & CTF (Capture The Flag)</li>
+              <li>Programmation & création de scripts utiles</li>
+              <li>Gaming & modding (GTA V, Minecraft, etc.)</li>
+              <li>Photo & design numérique</li>
+              <li>Fitness & entraînements en salle</li>
+              <li>Exploration de systèmes (Linux, Termux, Android)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Projets</h2>
+          <p class="muted">Mise en valeur de l’existant (pas d’invention). Liens conservés.</p>
+        </div>
 
+        <div class="grid2">
+          <article class="card" data-reveal>
+            <h3>Suivi de progression</h3>
+            <p class="muted">Page "Progress" (jour/mois/année). Projet existant conservé.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projet/timeline/index.html">Ouvrir</a>
+            </div>
+          </article>
 
-</div>
+          <article class="card" data-reveal>
+            <h3>Certifications</h3>
+            <p class="muted">Vitrine des badges (Coursestack / TryHackMe). Page existante conservée.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projet/certif/certifications.html">Ouvrir</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div id="google_translate_element" style="margin-top: 30px; text-align: center;"></div>
+    <section class="section" id="certifications">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Certifications / Formations</h2>
+          <p class="muted">Lien direct vers la page dédiée (contenu détaillé conservé).</p>
+        </div>
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'fr',
-      includedLanguages: 'fr,en,es,ja,it',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
+        <div class="card" data-reveal>
+          <div class="row between">
+            <div>
+              <div class="kicker">Badges & PDF</div>
+              <div class="h3">Mes certifications</div>
+              <div class="muted">Coursestack + TryHackMe.</div>
+            </div>
+            <a class="btn" href="projet/certif/certifications.html">Voir la page</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <section class="section" id="location">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Localisation</h2>
+          <p class="muted">Embed existant conservé.</p>
+        </div>
 
-<script>
-  function checkSecret() {
-    const input = document.getElementById('secretAnswer').value.trim().toLowerCase();
-    const feedback = document.getElementById('secretFeedback');
-    if (input === "boulanger") {
-      feedback.textContent = "✅ Accès autorisé ! Redirection...";
-      feedback.style.color = "lime";
-      setTimeout(() => {
-        window.location.href = "secret.html";
-      }, 1500);
-    } else {
-      feedback.textContent = "❌ Mauvaise réponse.";
-      feedback.style.color = "crimson";
+        <div class="card" data-reveal>
+          <div class="map">
+            <iframe
+              title="Localisation"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36266.07843453169!2d2.634646079341724!3d48.54213516261019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fa62379c029f%3A0x40b82c3688c5450!2s77000%20Melun!5e1!3m2!1sfr!2sfr!4v1750369841607!5m2!1sfr!2sfr"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Contact</h2>
+          <p class="muted">Formspree conservé. UX améliorée (feedback).</p>
+        </div>
+
+        <div class="grid2">
+          <article class="card" data-reveal>
+            <h3>Me retrouver</h3>
+            <div class="social">
+              <a class="social__link" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">
+                <img src="assets/github.svg" alt="GitHub" />
+                <span>github.com/SonFire03</span>
+              </a>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 id="secret">🔐 Accès secret</h3>
+            <p class="muted">Réponds à la question pour découvrir un contenu caché.</p>
+            <div class="row" style="gap:10px; margin-top:10px;">
+              <input class="input" type="text" id="secretAnswer" placeholder="Nom de la première entreprise..." autocomplete="off" />
+              <button class="btn" id="secretBtn" type="button">Déverrouiller</button>
+            </div>
+            <p class="muted" id="secretFeedback" style="margin-top:10px"></p>
+          </article>
+
+          <article class="card" data-reveal>
+            <h3>Envoyer un message</h3>
+            <form id="contact-form" action="https://formspree.io/f/mrbkavoo" method="POST">
+              <label class="label">
+                <span>Nom / pseudo</span>
+                <input class="input" type="text" name="name" placeholder="Ton prénom ou pseudo" required />
+              </label>
+              <label class="label">
+                <span>Email</span>
+                <input class="input" type="email" name="email" placeholder="Ton adresse email" required />
+              </label>
+              <label class="label">
+                <span>Message</span>
+                <textarea class="input" name="message" rows="5" placeholder="Écris-moi un message, une question ou un défi 🧠" required></textarea>
+              </label>
+              <button class="btn" type="submit">Envoyer</button>
+              <p class="muted" id="form-feedback" style="margin-top:10px"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="footer__link" href="projet/timeline/index.html">&copy; 2025 — Sofiane Dehimi</a>
+        <span class="muted">|</span>
+        <a class="footer__link" href="projet/certif/certifications.html">Mes Certifications</a>
+      </div>
+    </footer>
+  </main>
+
+  <button class="totop" id="backToTop" type="button" aria-label="Revenir en haut">↑</button>
+
+  <!-- Google Translate (conservé) -->
+  <div id="google_translate_element" class="gtranslate"></div>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'fr',
+        includedLanguages: 'fr,en,es,ja,it',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
     }
-  }
-
-  window.addEventListener('load', function () {
-    const loader = document.getElementById('loader-wrapper');
-    setTimeout(() => {
-      loader.style.opacity = '0';
-      setTimeout(() => loader.style.display = 'none', 500);
-    }, 2000);
-  });
-</script>
-
-<button id="backToTop" title="Revenir en haut">⬆️</button>
-
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
