@@ -260,6 +260,7 @@
 
     // common actions
     actions.push({ label: 'Ouvrir GitHub', meta: 'Lien', kind: 'url', value: 'https://github.com/SonFire03' });
+    actions.push({ label: 'Recruiter view (10s)', meta: 'Page', kind: 'path', value: 'recruiter.html' });
     actions.push({ label: 'Ouvrir Certifications', meta: 'Page', kind: 'path', value: 'projet/certif/certifications.html' });
     actions.push({ label: 'Ouvrir Progress', meta: 'Page', kind: 'path', value: 'projet/timeline/index.html' });
 
