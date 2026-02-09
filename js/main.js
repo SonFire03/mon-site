@@ -344,6 +344,9 @@
     window.__cmdOnKey = null;
   }
 
+  const openPaletteBtn = document.getElementById('openPalette');
+  if (openPaletteBtn) openPaletteBtn.addEventListener('click', showPalette);
+
   document.addEventListener('keydown', (e) => {
     const isMac = navigator.platform.toLowerCase().includes('mac');
     const mod = isMac ? e.metaKey : e.ctrlKey;
@@ -405,19 +408,39 @@
     apply();
   }
 
-  // Copy GitHub
+  // Copy links
+  async function copyText(btn, text, okLabel, toastTitle, toastSub){
+    if (!btn || !navigator.clipboard) return;
+    try {
+      await navigator.clipboard.writeText(text);
+      const prev = btn.textContent;
+      btn.textContent = okLabel;
+      toast(toastTitle, toastSub);
+      setTimeout(() => (btn.textContent = prev), 1200);
+    } catch {
+      // ignore
+    }
+  }
+
   const copyGithub = document.getElementById('copyGithub');
-  if (copyGithub && navigator.clipboard) {
-    copyGithub.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText('https://github.com/SonFire03');
-        copyGithub.textContent = 'Copié ✅';
-        toast('Copié', 'Lien GitHub');
-        setTimeout(() => (copyGithub.textContent = 'Copier le lien GitHub'), 1200);
-      } catch {
-        // ignore
-      }
-    });
+  if (copyGithub) {
+    copyGithub.addEventListener('click', () =>
+      copyText(copyGithub, 'https://github.com/SonFire03', 'Copié ✅', 'Copié', 'Lien GitHub')
+    );
+  }
+
+  const copyPortfolio = document.getElementById('copyPortfolio');
+  if (copyPortfolio) {
+    copyPortfolio.addEventListener('click', () =>
+      copyText(copyPortfolio, 'https://sonfire03.github.io/mon-site/', 'Copié ✅', 'Copié', 'Lien portfolio')
+    );
+  }
+
+  const copyRecruiter = document.getElementById('copyRecruiter');
+  if (copyRecruiter) {
+    copyRecruiter.addEventListener('click', () =>
+      copyText(copyRecruiter, 'https://sonfire03.github.io/mon-site/recruiter.html', 'Copié ✅', 'Copié', 'Recruiter view')
+    );
   }
 
   // Secret access (content conserved)
