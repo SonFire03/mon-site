@@ -139,6 +139,28 @@
   const yearNow = document.getElementById('yearNow');
   if (yearNow) yearNow.textContent = String(new Date().getFullYear());
 
+  // Scroll progress
+  const scrollProgress = document.getElementById('scrollProgress');
+  if (scrollProgress) {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const doc = document.documentElement;
+      const max = Math.max(1, doc.scrollHeight - doc.clientHeight);
+      const p = Math.max(0, Math.min(1, (doc.scrollTop || window.scrollY || 0) / max));
+      scrollProgress.style.width = (p * 100).toFixed(2) + '%';
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    update();
+  }
+
   // Back to top
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
@@ -195,6 +217,140 @@
       }
     });
   }
+
+  // Command palette (Ctrl+K)
+  function ensurePalette(){
+    let el = document.getElementById('cmdPalette');
+    if (el) return el;
+
+    el = document.createElement('div');
+    el.className = 'palette';
+    el.id = 'cmdPalette';
+    el.innerHTML = `
+      <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Command palette">
+        <div class="palette__top">
+          <input class="palette__input" id="cmdInput" placeholder="Rechercher une action…" autocomplete="off" />
+          <div class="palette__hint">Esc</div>
+        </div>
+        <div class="palette__list" id="cmdList"></div>
+      </div>
+    `;
+
+    el.addEventListener('click', (e) => {
+      if (e.target === el) hidePalette();
+    });
+
+    document.body.appendChild(el);
+    return el;
+  }
+
+  function buildActions(){
+    const actions = [];
+
+    // anchors from nav if present
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+      navMenu.querySelectorAll('a[href^="#"]').forEach((a) => {
+        const href = a.getAttribute('href');
+        const label = a.textContent.trim();
+        if (!href || !label) return;
+        actions.push({ label, meta: 'Section', kind: 'hash', value: href });
+      });
+    }
+
+    // common actions
+    actions.push({ label: 'Ouvrir GitHub', meta: 'Lien', kind: 'url', value: 'https://github.com/SonFire03' });
+    actions.push({ label: 'Ouvrir Certifications', meta: 'Page', kind: 'path', value: 'projet/certif/certifications.html' });
+    actions.push({ label: 'Ouvrir Progress', meta: 'Page', kind: 'path', value: 'projet/timeline/index.html' });
+
+    const cv = document.querySelector('a[href$="CV_Sofiane_Dehimi.pdf"], a[href*="CV_Sofiane_Dehimi.pdf"]');
+    if (cv) actions.push({ label: 'Télécharger CV (PDF)', meta: 'Fichier', kind: 'url', value: cv.getAttribute('href') });
+
+    return actions;
+  }
+
+  function showPalette(){
+    const el = ensurePalette();
+    el.classList.add('show');
+    const input = document.getElementById('cmdInput');
+    const list = document.getElementById('cmdList');
+
+    window.__cmdActions = buildActions();
+    window.__cmdIndex = 0;
+
+    function render(){
+      const q = (input.value || '').trim().toLowerCase();
+      const all = window.__cmdActions || [];
+      const items = all.filter(a => !q || (a.label + ' ' + a.meta).toLowerCase().includes(q));
+      window.__cmdFiltered = items;
+      if (window.__cmdIndex >= items.length) window.__cmdIndex = Math.max(0, items.length - 1);
+
+      list.innerHTML = '';
+      items.forEach((a, i) => {
+        const div = document.createElement('div');
+        div.className = 'palette__item';
+        div.setAttribute('role','option');
+        div.setAttribute('aria-selected', i === window.__cmdIndex ? 'true' : 'false');
+        div.innerHTML = `<div><div class="palette__label"></div><div class="palette__meta"></div></div><div class="palette__meta">↵</div>`;
+        div.querySelector('.palette__label').textContent = a.label;
+        div.querySelectorAll('.palette__meta')[0].textContent = a.meta;
+        div.addEventListener('click', () => runAction(i));
+        list.appendChild(div);
+      });
+    }
+
+    function runAction(idx){
+      const items = window.__cmdFiltered || [];
+      const a = items[idx];
+      if (!a) return;
+      hidePalette();
+      if (a.kind === 'hash') {
+        window.location.hash = a.value;
+        return;
+      }
+      if (a.kind === 'path') {
+        const base = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname.replace(/\/[^/]*$/, '/');
+        // if already in /projet/..., base handles relative; simplest: use absolute from site root
+        window.location.href = '/' + (a.value || '');
+        return;
+      }
+      window.open(a.value, '_blank', 'noreferrer');
+    }
+
+    function onKey(e){
+      if (e.key === 'Escape') { e.preventDefault(); hidePalette(); return; }
+      if (e.key === 'ArrowDown') { e.preventDefault(); window.__cmdIndex = Math.min((window.__cmdIndex||0)+1, (window.__cmdFiltered||[]).length-1); render(); return; }
+      if (e.key === 'ArrowUp') { e.preventDefault(); window.__cmdIndex = Math.max((window.__cmdIndex||0)-1, 0); render(); return; }
+      if (e.key === 'Enter') { e.preventDefault(); runAction(window.__cmdIndex||0); return; }
+    }
+
+    window.__cmdRender = render;
+    window.__cmdOnKey = onKey;
+
+    input.oninput = render;
+    document.addEventListener('keydown', onKey);
+    input.focus();
+    input.select();
+    render();
+  }
+
+  function hidePalette(){
+    const el = document.getElementById('cmdPalette');
+    if (el) el.classList.remove('show');
+    const input = document.getElementById('cmdInput');
+    if (input) input.value = '';
+    if (window.__cmdOnKey) document.removeEventListener('keydown', window.__cmdOnKey);
+    window.__cmdOnKey = null;
+  }
+
+  document.addEventListener('keydown', (e) => {
+    const isMac = navigator.platform.toLowerCase().includes('mac');
+    const mod = isMac ? e.metaKey : e.ctrlKey;
+    if (mod && (e.key === 'k' || e.key === 'K')) {
+      e.preventDefault();
+      showPalette();
+    }
+  });
 
   // Certifications page: filter + search
   const certFilters = document.getElementById('certFilters');
