@@ -363,7 +363,9 @@
   const certCards = Array.from(document.querySelectorAll('.cert[data-source][data-title]'));
 
   if (certCards.length && (certFilters || certSearch)) {
-    let filter = 'all';
+    const params = new URLSearchParams(window.location.search || '');
+    let filter = params.get('filter') || 'all';
+    if (!['all','cisco','tryhackme','coursestack'].includes(filter)) filter = 'all';
 
     const setPressed = () => {
       if (!certFilters) return;
@@ -402,6 +404,12 @@
 
     if (certSearch) {
       certSearch.addEventListener('input', apply);
+    }
+
+    // init from URL: ?filter=cisco&q=python
+    if (certSearch) {
+      const q0 = (params.get('q') || '').trim();
+      if (q0) certSearch.value = q0;
     }
 
     setPressed();
