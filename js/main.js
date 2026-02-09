@@ -11,9 +11,23 @@
 (function () {
   const root = document.documentElement;
 
+  // Toast (optional)
+  const toastEl = document.getElementById('toast');
+  const toastTitle = document.getElementById('toastTitle');
+  const toastSub = document.getElementById('toastSub');
+  function toast(title, sub=''){
+    if (!toastEl || !toastTitle || !toastSub) return;
+    toastTitle.textContent = title;
+    toastSub.textContent = sub;
+    toastEl.classList.add('show');
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
+  }
+
   // Theme
   const THEME_KEY = 'sd_theme';
   const themeBtn = document.getElementById('themeToggle');
+  const themeBtn2 = document.getElementById('themeToggle2');
 
   function applyTheme(theme) {
     if (theme === 'light') root.setAttribute('data-theme', 'light');
@@ -23,14 +37,15 @@
   const storedTheme = localStorage.getItem(THEME_KEY);
   if (storedTheme) applyTheme(storedTheme);
 
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      const isLight = root.getAttribute('data-theme') === 'light';
-      const next = isLight ? 'dark' : 'light';
-      localStorage.setItem(THEME_KEY, next);
-      applyTheme(next);
-    });
+  function toggleTheme(){
+    const isLight = root.getAttribute('data-theme') === 'light';
+    const next = isLight ? 'dark' : 'light';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
   }
+
+  if (themeBtn) themeBtn.addEventListener('click', () => { toggleTheme(); toast('Thème', root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'); });
+  if (themeBtn2) themeBtn2.addEventListener('click', () => { toggleTheme(); toast('Thème', root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'); });
 
   // Mobile nav
   const navToggle = document.getElementById('navToggle');
@@ -107,7 +122,22 @@
       { threshold: 0.12 }
     );
     revealEls.forEach((el) => obs.observe(el));
+
+    // immediate reveal above the fold
+    requestAnimationFrame(() => {
+      for (const el of revealEls) {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.9) {
+          el.classList.add('is-visible');
+          obs.unobserve(el);
+        }
+      }
+    });
   }
+
+  // Footer year
+  const yearNow = document.getElementById('yearNow');
+  if (yearNow) yearNow.textContent = String(new Date().getFullYear());
 
   // Back to top
   const backToTop = document.getElementById('backToTop');
@@ -128,9 +158,15 @@
   const form = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
   if (form && formFeedback) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       formFeedback.textContent = 'Envoi en cours…';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi…';
+      }
 
       try {
         const data = new FormData(form);
@@ -143,11 +179,86 @@
         if (res.ok) {
           form.reset();
           formFeedback.textContent = 'Message envoyé ✅';
+          toast('Message envoyé', 'Merci');
         } else {
           formFeedback.textContent = 'Erreur lors de l\'envoi. Réessaie plus tard.';
+          toast('Erreur', 'Envoi impossible');
         }
       } catch {
         formFeedback.textContent = 'Erreur réseau. Réessaie plus tard.';
+        toast('Erreur réseau', 'Réessaie plus tard');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Envoyer';
+        }
+      }
+    });
+  }
+
+  // Certifications page: filter + search
+  const certFilters = document.getElementById('certFilters');
+  const certSearch = document.getElementById('certSearch');
+  const certCount = document.getElementById('certCount');
+  const certCards = Array.from(document.querySelectorAll('.cert[data-source][data-title]'));
+
+  if (certCards.length && (certFilters || certSearch)) {
+    let filter = 'all';
+
+    const setPressed = () => {
+      if (!certFilters) return;
+      certFilters.querySelectorAll('button[data-filter]').forEach((b) => {
+        const v = b.getAttribute('data-filter');
+        b.setAttribute('aria-pressed', v === filter ? 'true' : 'false');
+      });
+    };
+
+    const apply = () => {
+      const q = (certSearch?.value || '').trim().toLowerCase();
+      let visible = 0;
+
+      for (const c of certCards) {
+        const src = (c.getAttribute('data-source') || '');
+        const title = (c.getAttribute('data-title') || '').toLowerCase();
+        const matchFilter = (filter === 'all') || (src === filter);
+        const matchQuery = !q || title.includes(q);
+        const ok = matchFilter && matchQuery;
+        c.style.display = ok ? '' : 'none';
+        if (ok) visible += 1;
+      }
+
+      if (certCount) certCount.textContent = `${visible} / ${certCards.length}`;
+    };
+
+    if (certFilters) {
+      certFilters.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-filter]');
+        if (!btn) return;
+        filter = btn.getAttribute('data-filter') || 'all';
+        setPressed();
+        apply();
+      });
+    }
+
+    if (certSearch) {
+      certSearch.addEventListener('input', apply);
+    }
+
+    setPressed();
+    apply();
+  }
+
+  // Copy GitHub
+  const copyGithub = document.getElementById('copyGithub');
+  if (copyGithub && navigator.clipboard) {
+    copyGithub.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('https://github.com/SonFire03');
+        copyGithub.textContent = 'Copié ✅';
+        toast('Copié', 'Lien GitHub');
+        setTimeout(() => (copyGithub.textContent = 'Copier le lien GitHub'), 1200);
+      } catch {
+        // ignore
       }
     });
   }
