@@ -297,7 +297,7 @@ body::before{
 
 .badgegrid{
   display:grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
 }
 .badge{
@@ -306,6 +306,8 @@ body::before{
   padding: 10px;
   background: color-mix(in srgb, var(--panel) 72%, transparent);
   transition: transform .18s ease, border-color .18s ease;
+  display:flex;
+  flex-direction:column;
 }
 .badge:hover{
   transform: translateY(-2px);
@@ -313,7 +315,8 @@ body::before{
 }
 .badge img{
   width: 100%;
-  height: 96px;
+  height: 92px;
+  max-height: 92px;
   object-fit: contain;
   border-radius: 12px;
   background: rgba(255,255,255,.03);
