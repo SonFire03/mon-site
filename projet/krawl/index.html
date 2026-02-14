@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Krawl — Honeypot & Dashboard | Sofiane Dehimi</title>
+  <meta name="description" content="Étude de cas: Krawl (honeypot + dashboard) — collecte, détection (SQLi/XSS/LFI/XXE), tests WSL2 + accès téléphone, export d'IPs." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260209b" />
+  <script defer src="../../js/main.js?v=20260209b"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div class="nav__menu" id="navMenu">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../index.html#projects">Projets</a>
+          <a href="../../index.html#contact">Contact</a>
+          <div class="nav__divider" aria-hidden="true"></div>
+          <button class="btn btn--ghost nav__btn" id="themeToggle2" type="button">Thème</button>
+          <a class="btn nav__btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+        </div>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button">Thème</button>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top:28px">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Krawl — Honeypot & Dashboard</h2>
+          <p class="muted">Collecte de requêtes suspectes + détection de vecteurs d’attaque + visualisation (dashboard) + export d’IPs.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row between" style="flex-wrap:wrap; gap:12px">
+            <div>
+              <div class="kicker">Cybersécurité • Observabilité</div>
+              <div class="h3">Objectif</div>
+              <p class="muted" style="margin-top:8px">
+                Mettre en place un honeypot simple pour <b>observer</b> les scans/attaques (paths, payloads, user-agents),
+                détecter des patterns (SQLi, XSS, LFI/RFI, traversal, XXE) et obtenir des indicateurs actionnables.
+              </p>
+            </div>
+            <div class="tags" aria-label="Technos" style="align-self:flex-start">
+              <span class="tag">Python</span>
+              <span class="tag">WSL2</span>
+              <span class="tag">HTTP</span>
+              <span class="tag">Dashboard</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="grid2">
+            <div>
+              <h3>Fonctionnalités validées</h3>
+              <ul class="list">
+                <li>Dashboard: top IPs, top user-agents, activité récente</li>
+                <li>Capture de credentials sur endpoints “pièges”</li>
+                <li>Classification des attaques: <code>sql_injection</code>, <code>xss_attempt</code>, <code>path_traversal</code>, <code>lfi_rfi</code>, <code>xxe_injection</code></li>
+                <li>Simulation de trafic via <code>curl</code> + script (UA variés, chemins variés)</li>
+                <li>Accès LAN (téléphone) depuis WSL2 via firewall + portproxy</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Livrable</h3>
+              <p class="muted">TP complet (étapes + commandes + dépannage WSL2).</p>
+              <div class="card__actions" style="margin-top:10px">
+                <a class="btn" href="../../assets/Krawl_TP.pdf" download>Télécharger le TP (PDF)</a>
+                <a class="btn btn--ghost" href="../../assets/Krawl_TP.pdf" target="_blank" rel="noreferrer">Ouvrir</a>
+              </div>
+              <p class="muted" style="margin-top:10px">Note: les captures d’écran du dashboard peuvent être ajoutées ici (à fournir).</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Ce que ça apporte “en réel”</h3>
+          <ul class="list">
+            <li>Visibilité sur les scans/attaques (sur un serveur exposé) + timing + volume</li>
+            <li>Indicateurs: IPs, user-agents, vecteurs d’attaque les plus fréquents</li>
+            <li>Base pour automatiser: alerting, blocage (fail2ban/iptables), rate-limit</li>
+          </ul>
+        </div>
+
+        <div class="card__actions" style="margin-top:14px" data-reveal>
+          <a class="btn btn--ghost" href="../../index.html#projects">← Retour aux projets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="footer__link" href="../../index.html">&copy; 2025–<span id="yearNow">2025</span> — Sofiane Dehimi</a>
+        <span class="muted">|</span>
+        <a class="footer__link" href="../../index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <button class="totop" id="backToTop" type="button" aria-label="Revenir en haut">↑</button>
+</body>
+</html>
