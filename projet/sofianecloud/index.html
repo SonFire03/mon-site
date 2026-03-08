@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sofiane Cloud — Projet</title>
+  <link rel="stylesheet" href="../../css/main.css?v=20260209b" />
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour au portfolio">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
+
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" href="../../index.html#projects">← Projets</a>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h1 class="h2">Sofiane Cloud — Private Media Hub</h1>
+          <p class="muted">Projet perso (cloud local) : UI premium, exploration de fichiers, galerie, ops panel, tunnel Cloudflare.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <img class="project__thumb" src="assets/overview.png" alt="Sofiane Cloud — aperçu" loading="lazy" decoding="async" />
+          <div class="card__top" style="margin-top:10px;">
+            <h2 class="h3">Objectif</h2>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Flask</span>
+              <span class="tag">HTML/CSS/JS</span>
+              <span class="tag">systemd</span>
+              <span class="tag">Cloudflare Tunnel</span>
+            </div>
+          </div>
+          <p class="muted">Centraliser photos/vidéos/docs sur une machine locale, avec une interface rapide sur mobile, et des outils d’admin (monitoring + actions) pour l’exploitation.</p>
+
+          <div class="divider"></div>
+
+          <h2 class="h3">Fonctionnalités clés</h2>
+          <ul class="list">
+            <li><strong>Home dark premium</strong> : navigation par onglets (Images / Vidéos / Docs / Apps / Notes).</li>
+            <li><strong>Explorer Docs/Apps</strong> : responsive + recherche + pagination + multi-sélection + actions bulk (ZIP, move, trash, share).</li>
+            <li><strong>Galerie</strong> : modal preview avec navigation clavier + actions (download / copy link).</li>
+            <li><strong>Corbeille</strong> : UI avancée (recherche, tri, pagination, bulk restore/delete).</li>
+            <li><strong>Admin Ops Panel</strong> : état services/tunnels + actions systemd (sudo -n), ressources (CPU/RAM) lightweight.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h2 class="h3">Captures</h2>
+          <p class="muted" style="margin-top:8px;">Aperçu des écrans principaux.</p>
+          <div class="grid2" style="margin-top:12px;">
+            <article class="card" style="padding:12px;">
+              <img class="project__thumb" style="height:220px" src="assets/login.png" alt="Login" loading="lazy" decoding="async" />
+              <div class="muted" style="margin-top:8px;">Page de login</div>
+            </article>
+            <article class="card" style="padding:12px;">
+              <img class="project__thumb" style="height:220px" src="assets/overview.png" alt="Aperçu du site" loading="lazy" decoding="async" />
+              <div class="muted" style="margin-top:8px;">Aperçu du site</div>
+            </article>
+            <article class="card" style="padding:12px;">
+              <img class="project__thumb" style="height:220px" src="assets/quick-actions.png" alt="Onglet actions rapides" loading="lazy" decoding="async" />
+              <div class="muted" style="margin-top:8px;">Onglet actions rapides</div>
+            </article>
+            <article class="card" style="padding:12px;">
+              <img class="project__thumb" style="height:220px" src="assets/info-tab.png" alt="Onglet info" loading="lazy" decoding="async" />
+              <div class="muted" style="margin-top:8px;">Onglet info</div>
+            </article>
+            <article class="card" style="padding:12px;">
+              <img class="project__thumb" style="height:220px" src="assets/upload-form.png" alt="Formulaire upload" loading="lazy" decoding="async" />
+              <div class="muted" style="margin-top:8px;">Formulaire upload</div>
+            </article>
+            <article class="card" style="padding:12px;">
+              <img class="project__thumb" style="height:220px" src="assets/explore-docs.png" alt="Explorer documents" loading="lazy" decoding="async" />
+              <div class="muted" style="margin-top:8px;">Explorer documents</div>
+            </article>
+            <article class="card" style="padding:12px;">
+              <img class="project__thumb" style="height:220px" src="assets/admin-panel.png" alt="Panneau admin" loading="lazy" decoding="async" />
+              <div class="muted" style="margin-top:8px;">Panneau admin</div>
+            </article>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2 class="h3">Notes</h2>
+          <ul class="list">
+            <li>Projet destiné à un environnement privé (LAN / tunnel). Liens publics variables si QuickTunnel.</li>
+            <li>Focus : UX + fiabilité ops (redémarrages, logs, health checks).</li>
+          </ul>
+
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="../../index.html#projects">Retour</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="../../js/main.js?v=20260209b"></script>
+</body>
+</html>
