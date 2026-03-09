@@ -88,10 +88,45 @@
                 <a class="btn" href="../../assets/Krawl_TP.pdf" download>Télécharger le TP (PDF)</a>
                 <a class="btn btn--ghost" href="../../assets/Krawl_TP.pdf" target="_blank" rel="noreferrer">Ouvrir</a>
               </div>
-              <p class="muted" style="margin-top:10px">Note: les captures d’écran du dashboard peuvent être ajoutées ici (à fournir).</p>
+              <p class="muted" style="margin-top:10px">Le TP détaille l’installation, la simulation de trafic (UA/paths) et les points de config réseau WSL2.</p>
             </div>
           </div>
         </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Captures (dashboard & honeypot)</h3>
+          <p class="muted">Exemples de pages leurres + activité capturée + classification des attaques.</p>
+
+          <div class="grid2" style="margin-top:12px">
+            <figure class="card" style="margin:0">
+              <a href="../../assets/krawl/krawl-me.png" target="_blank" rel="noreferrer">
+                <img src="../../assets/krawl/krawl-me.png" alt="Page Krawl me! avec liens aléatoires (leurre anti-crawlers)" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Page leurre “Krawl me!” (piège à crawlers)</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="../../assets/krawl/dashboard-zero.png" target="_blank" rel="noreferrer">
+                <img src="../../assets/krawl/dashboard-zero.png" alt="Krawl Dashboard au démarrage (statistiques à zéro)" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Dashboard (démarrage)</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="../../assets/krawl/credentials-captured.png" target="_blank" rel="noreferrer">
+                <img src="../../assets/krawl/credentials-captured.png" alt="Activité capturée et credentials soumis sur endpoints pièges (ex: wp-login, login)" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Credentials capturés sur endpoints pièges</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="../../assets/krawl/attack-analysis.png" target="_blank" rel="noreferrer">
+                <img src="../../assets/krawl/attack-analysis.png" alt="Analyse des attaques: SQLi, path traversal, XSS, LFI/RFI, XXE; user agents curl et zgrab" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Classification & user agents (curl, zgrab)</figcaption>
+            </figure>
+          </div>
+        </div>
 
         <div class="card" data-reveal style="margin-top:14px">
           <h3>Ce que ça apporte “en réel”</h3>
