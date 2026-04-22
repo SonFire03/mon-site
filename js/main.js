@@ -263,6 +263,7 @@
     actions.push({ label: 'Recruiter view (10s)', meta: 'Page', kind: 'path', value: 'recruiter.html' });
     actions.push({ label: 'Ouvrir Certifications', meta: 'Page', kind: 'path', value: 'projet/certif/certifications.html' });
     actions.push({ label: 'Ouvrir Progress', meta: 'Page', kind: 'path', value: 'projet/timeline/index.html' });
+    actions.push({ label: 'Ouvrir AutoHack', meta: 'Projet', kind: 'path', value: 'projet/autohack/index.html' });
 
     const cv = document.querySelector('a[href$="CV_Sofiane_Dehimi.pdf"], a[href*="CV_Sofiane_Dehimi.pdf"]');
     if (cv) actions.push({ label: 'Télécharger CV (PDF)', meta: 'Fichier', kind: 'url', value: cv.getAttribute('href') });

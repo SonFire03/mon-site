@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AutoHack — Lab Commander | Sofiane Dehimi</title>
+  <meta name="description" content="Étude de cas: AutoHack Lab Commander — application terminal Python/Rich pour organiser, rechercher, documenter et exporter des commandes de lab cybersécurité." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260209b" />
+  <script defer src="../../js/main.js?v=20260209b"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div class="nav__menu" id="navMenu">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../index.html#projects">Projets</a>
+          <a href="../../index.html#contact">Contact</a>
+          <div class="nav__divider" aria-hidden="true"></div>
+          <button class="btn btn--ghost nav__btn" id="themeToggle2" type="button">Thème</button>
+          <a class="btn nav__btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+        </div>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button">Thème</button>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top:28px">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>AutoHack — Lab Commander</h2>
+          <p class="muted">Application terminal Python pour centraliser les commandes utiles en lab cybersécurité, CTF et entraînement autorisé.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row between" style="flex-wrap:wrap; gap:12px">
+            <div>
+              <div class="kicker">Cybersécurité • CLI • Documentation</div>
+              <div class="h3">Objectif</div>
+              <p class="muted" style="margin-top:8px">
+                Remplacer les notes dispersées par un catalogue consultable depuis une interface terminal,
+                avec contexte, prérequis, risques, dry-run et exports pour garder les commandes auditables.
+              </p>
+            </div>
+            <div class="tags" aria-label="Technos" style="align-self:flex-start">
+              <span class="tag">Python</span>
+              <span class="tag">Rich</span>
+              <span class="tag">CLI</span>
+              <span class="tag">Pytest</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="grid2">
+            <div>
+              <h3>Fonctionnalités</h3>
+              <ul class="list">
+                <li>Interface TUI avec <code>rich</code> + mode CLI non interactif</li>
+                <li>Recherche par mot-clé, tag, texte de commande ou identifiant</li>
+                <li>Métadonnées de sécurité : safe, dry-run, lab-only, dangerous, sudo</li>
+                <li>Favoris, historique local et vérification des outils installés</li>
+                <li>Exports du catalogue en Markdown, TXT, JSON et HTML</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Chiffres clés</h3>
+              <ul class="list">
+                <li>1 331 entrées de catalogue</li>
+                <li>13 catégories : reconnaissance, web, réseau, passwords, XSS, etc.</li>
+                <li>1 013 payloads XSS référencés</li>
+                <li>Suite de tests Pytest couvrant catalogue, CLI, exécution, exports et menus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Exemples d’utilisation</h3>
+          <pre>git clone https://github.com/SonFire03/autohack.git
+cd autohack
+python3 -m pip install -r requirements.txt
+python3 main.py
+python3 main.py --search tor
+python3 main.py --dry-run sys_001
+python3 main.py --export html</pre>
+
+          <div class="card__actions" style="margin-top:10px">
+            <a class="btn" href="https://github.com/SonFire03/autohack" target="_blank" rel="noreferrer">Ouvrir le repo GitHub</a>
+            <a class="btn btn--ghost" href="../../index.html#projects">Retour aux projets</a>
+          </div>
+        </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Modèle de sécurité</h3>
+          <p class="muted">
+            AutoHack n’est pas un framework d’exploitation. Le projet sert à apprendre, documenter et revoir les commandes
+            avant exécution dans des environnements légaux : labs personnels, CTF, entraînement et audits autorisés.
+          </p>
+        </div>
+
+        <div class="card__actions" style="margin-top:14px" data-reveal>
+          <a class="btn btn--ghost" href="../../index.html#projects">← Retour aux projets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="footer__link" href="../../index.html">&copy; 2025–<span id="yearNow">2025</span> — Sofiane Dehimi</a>
+        <span class="muted">|</span>
+        <a class="footer__link" href="../../index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <button class="totop" id="backToTop" type="button" aria-label="Revenir en haut">↑</button>
+</body>
+</html>
