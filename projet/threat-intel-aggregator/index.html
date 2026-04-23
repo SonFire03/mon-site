@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Threat Intel Aggregator — Projet | Sofiane Dehimi</title>
+  <meta name="description" content="Étude de cas Threat Intel Aggregator (IOCvault): agrégation IOC, normalisation, scoring, export et captures GitHub." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260209b" />
+  <script defer src="../../js/main.js?v=20260209b"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div class="nav__menu" id="navMenu">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../index.html#projects">Projets</a>
+          <a href="../../index.html#contact">Contact</a>
+          <div class="nav__divider" aria-hidden="true"></div>
+          <button class="btn btn--ghost nav__btn" id="themeToggle2" type="button">Thème</button>
+          <a class="btn nav__btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+        </div>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button">Thème</button>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top:28px">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Threat Intel Aggregator (IOCvault)</h2>
+          <p class="muted">Workbench local-first pour agréger, normaliser, scorer et exporter des IOC dans un flux SOC / Threat Intel.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row between" style="flex-wrap:wrap; gap:12px">
+            <div>
+              <div class="kicker">Threat Intel • SOC Workflow • FastAPI</div>
+              <div class="h3">Objectif</div>
+              <p class="muted" style="margin-top:8px">
+                Combler l'écart entre des IOC gérés en tableur et une plateforme CTI lourde,
+                avec un pipeline local clair: import, normalisation, déduplication, scoring et export.
+              </p>
+            </div>
+            <div class="tags" aria-label="Technos" style="align-self:flex-start">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="grid2">
+            <div>
+              <h3>Fonctionnalités</h3>
+              <ul class="list">
+                <li>Import TXT/CSV/JSON avec rapport de traitement</li>
+                <li>Normalisation IOC: IP, domaine, URL, hash</li>
+                <li>Déduplication, suivi d'observations, tags et watchlist</li>
+                <li>Scoring local (confidence, severity, priority)</li>
+                <li>Exports en JSON, CSV et TXT</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Interface et API</h3>
+              <ul class="list">
+                <li>UI web: <code>/</code>, <code>/iocs</code>, <code>/imports</code>, <code>/exports</code></li>
+                <li>API versionnée sous <code>/api/v1/*</code></li>
+                <li>Code qualité: Ruff, Mypy, Pytest</li>
+                <li>Tag stable annoncé: <code>v0.1.0</code></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Démarrage rapide</h3>
+          <pre>git clone https://github.com/SonFire03/Threat_Intel_Aggregator.git
+cd Threat_Intel_Aggregator
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -e '.[dev]'
+uvicorn app.main:app --reload</pre>
+
+          <div class="card__actions" style="margin-top:10px">
+            <a class="btn" href="https://github.com/SonFire03/Threat_Intel_Aggregator" target="_blank" rel="noreferrer">Ouvrir le repo GitHub</a>
+            <a class="btn btn--ghost" href="../../index.html#projects">Retour aux projets</a>
+          </div>
+        </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Captures depuis GitHub</h3>
+          <p class="muted">Vues de l'interface IOCvault (dashboard, liste IOC, import, export).</p>
+
+          <div class="grid2" style="margin-top:12px">
+            <figure class="card" style="margin:0">
+              <a href="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/dashboard.png" target="_blank" rel="noreferrer">
+                <img src="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/dashboard.png" alt="Threat Intel Aggregator — dashboard IOCvault" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Dashboard IOCvault</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/iocs.png" target="_blank" rel="noreferrer">
+                <img src="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/iocs.png" alt="Threat Intel Aggregator — liste des IOC" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Liste IOC normalisée</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/imports.png" target="_blank" rel="noreferrer">
+                <img src="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/imports.png" alt="Threat Intel Aggregator — centre d'import" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Centre d'import</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/exports.png" target="_blank" rel="noreferrer">
+                <img src="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/exports.png" alt="Threat Intel Aggregator — centre d'export" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Exports IOC</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="card__actions" style="margin-top:14px" data-reveal>
+          <a class="btn btn--ghost" href="../../index.html#projects">← Retour aux projets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="footer__link" href="../../index.html">&copy; 2025–<span id="yearNow">2025</span> — Sofiane Dehimi</a>
+        <span class="muted">|</span>
+        <a class="footer__link" href="../../index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <button class="totop" id="backToTop" type="button" aria-label="Revenir en haut">↑</button>
+</body>
+</html>

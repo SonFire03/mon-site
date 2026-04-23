@@ -359,31 +359,45 @@
           </article>
 
           <article class="card" data-reveal>
+            <img class="project__thumb" src="https://raw.githubusercontent.com/SonFire03/mini_soc_dashboard/main/assets/screenshots/dashboard.png" alt="Mini SOC Dashboard — vue d'ensemble" loading="lazy" decoding="async" />
             <div class="card__top">
               <h3>Mini SOC Dashboard</h3>
               <div class="tags" aria-label="Technos">
-                <span class="tag">SOC</span>
-                <span class="tag">Dashboard</span>
-                <span class="tag">Cyber</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Blue Team</span>
               </div>
             </div>
-            <p class="muted">Tableau de bord orienté SOC pour visualiser et suivre rapidement des événements et indicateurs de sécurité.</p>
+            <p class="muted">Dashboard SOC léger pour ingérer des logs, détecter des comportements suspects, gérer les alertes/incidents et produire des rapports opérationnels.</p>
+            <ul class="list">
+              <li>Ingestion fichier/JSON + parsing Apache/Nginx-like + live tail</li>
+              <li>Règles unitaires et corrélées, IOC watchlist, politiques auto (case/escalade)</li>
+              <li>KPI SOC, rapports quotidiens HTML, exports CSV</li>
+            </ul>
             <div class="card__actions">
+              <a class="btn btn--ghost" href="projet/mini-soc-dashboard/index.html">Détails</a>
               <a class="btn btn--ghost" href="https://github.com/SonFire03/mini_soc_dashboard.git" target="_blank" rel="noreferrer">Repo GitHub</a>
             </div>
           </article>
 
           <article class="card" data-reveal>
+            <img class="project__thumb" src="https://raw.githubusercontent.com/SonFire03/Threat_Intel_Aggregator/master/assets/screenshots/dashboard.png" alt="Threat Intel Aggregator — dashboard" loading="lazy" decoding="async" />
             <div class="card__top">
               <h3>Threat Intel Aggregator</h3>
               <div class="tags" aria-label="Technos">
                 <span class="tag">Threat Intel</span>
-                <span class="tag">Aggregation</span>
-                <span class="tag">Cyber</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Python</span>
               </div>
             </div>
-            <p class="muted">Projet d’agrégation de renseignements de menace pour centraliser des sources et faciliter l’analyse.</p>
+            <p class="muted">Workbench local-first pour agréger des IOC, normaliser et dédupliquer les indicateurs, appliquer un scoring et exporter pour des workflows SOC/CTI.</p>
+            <ul class="list">
+              <li>Imports TXT/CSV/JSON avec rapport de job</li>
+              <li>Normalisation IOC (IP, domaine, URL, hash) + scoring local</li>
+              <li>API REST + UI web pour dashboard, imports, IOCs et exports</li>
+            </ul>
             <div class="card__actions">
+              <a class="btn btn--ghost" href="projet/threat-intel-aggregator/index.html">Détails</a>
               <a class="btn btn--ghost" href="https://github.com/SonFire03/Threat_Intel_Aggregator.git" target="_blank" rel="noreferrer">Repo GitHub</a>
             </div>
           </article>

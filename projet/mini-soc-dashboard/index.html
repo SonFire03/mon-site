@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mini SOC Dashboard — Projet | Sofiane Dehimi</title>
+  <meta name="description" content="Étude de cas Mini SOC Dashboard: ingestion logs, détection, alerting, incidents, reporting et captures GitHub." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260209b" />
+  <script defer src="../../js/main.js?v=20260209b"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div class="nav__menu" id="navMenu">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../index.html#projects">Projets</a>
+          <a href="../../index.html#contact">Contact</a>
+          <div class="nav__divider" aria-hidden="true"></div>
+          <button class="btn btn--ghost nav__btn" id="themeToggle2" type="button">Thème</button>
+          <a class="btn nav__btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+        </div>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button">Thème</button>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top:28px">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>Mini SOC Dashboard</h2>
+          <p class="muted">Application web Blue Team orientée SOC: ingestion de logs, détection, suivi d'alertes/incidents et reporting opérationnel.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row between" style="flex-wrap:wrap; gap:12px">
+            <div>
+              <div class="kicker">SOC • Detection Engineering • FastAPI</div>
+              <div class="h3">Objectif</div>
+              <p class="muted" style="margin-top:8px">
+                Construire une base SOC démontrable et exploitable en local: ingestion, règles de détection,
+                corrélation, gestion d'incident et export de rapports.
+              </p>
+            </div>
+            <div class="tags" aria-label="Technos" style="align-self:flex-start">
+              <span class="tag">FastAPI</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Alembic</span>
+              <span class="tag">Pytest</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="grid2">
+            <div>
+              <h3>Fonctionnalités</h3>
+              <ul class="list">
+                <li>Ingestion logs via fichier et JSON + parsing JSON lines / Apache-Nginx-like</li>
+                <li>Live tail local, IOC watchlist, règles unitaires et corrélées multi-signaux</li>
+                <li>Gestion d'alertes (statut, assignation, notes), incidents et playbooks</li>
+                <li>KPI SOC, rapports quotidiens HTML, exports CSV et scheduler</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Stack et architecture</h3>
+              <ul class="list">
+                <li>Backend FastAPI + stockage local SQLite</li>
+                <li>Règles de détection dans <code>config/rules.yaml</code></li>
+                <li>Migrations DB via Alembic</li>
+                <li>Qualité via Ruff, Mypy et tests Pytest</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Démarrage rapide</h3>
+          <pre>git clone https://github.com/SonFire03/mini_soc_dashboard.git
+cd mini_soc_dashboard
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+alembic upgrade head
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000</pre>
+
+          <div class="card__actions" style="margin-top:10px">
+            <a class="btn" href="https://github.com/SonFire03/mini_soc_dashboard" target="_blank" rel="noreferrer">Ouvrir le repo GitHub</a>
+            <a class="btn btn--ghost" href="../../index.html#projects">Retour aux projets</a>
+          </div>
+        </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Captures depuis GitHub</h3>
+          <p class="muted">Vues réelles du dashboard et des écrans opérationnels.</p>
+
+          <div class="grid2" style="margin-top:12px">
+            <figure class="card" style="margin:0">
+              <a href="https://github.com/user-attachments/assets/75cedf6c-652c-4f27-93fd-2a4d995c5427" target="_blank" rel="noreferrer">
+                <img src="https://github.com/user-attachments/assets/75cedf6c-652c-4f27-93fd-2a4d995c5427" alt="Mini SOC Dashboard — vue générale de l'interface" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Vue d'ensemble du dashboard SOC</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="https://github.com/user-attachments/assets/d0563358-dcbb-49c2-8709-2bae5a98c669" target="_blank" rel="noreferrer">
+                <img src="https://github.com/user-attachments/assets/d0563358-dcbb-49c2-8709-2bae5a98c669" alt="Mini SOC Dashboard — écran d'ingestion et d'analyse" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Ingestion et analyse de logs</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="https://raw.githubusercontent.com/SonFire03/mini_soc_dashboard/main/assets/screenshots/dashboard.png" target="_blank" rel="noreferrer">
+                <img src="https://raw.githubusercontent.com/SonFire03/mini_soc_dashboard/main/assets/screenshots/dashboard.png" alt="Mini SOC Dashboard — écran dashboard" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Dashboard principal</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="https://raw.githubusercontent.com/SonFire03/mini_soc_dashboard/main/assets/screenshots/alerts.png" target="_blank" rel="noreferrer">
+                <img src="https://raw.githubusercontent.com/SonFire03/mini_soc_dashboard/main/assets/screenshots/alerts.png" alt="Mini SOC Dashboard — gestion des alertes" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Centre d'alertes</figcaption>
+            </figure>
+
+            <figure class="card" style="margin:0">
+              <a href="https://raw.githubusercontent.com/SonFire03/mini_soc_dashboard/main/assets/screenshots/reports.png" target="_blank" rel="noreferrer">
+                <img src="https://raw.githubusercontent.com/SonFire03/mini_soc_dashboard/main/assets/screenshots/reports.png" alt="Mini SOC Dashboard — rapports SOC" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+              </a>
+              <figcaption class="muted" style="margin-top:8px">Reporting et indicateurs</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="card__actions" style="margin-top:14px" data-reveal>
+          <a class="btn btn--ghost" href="../../index.html#projects">← Retour aux projets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="footer__link" href="../../index.html">&copy; 2025–<span id="yearNow">2025</span> — Sofiane Dehimi</a>
+        <span class="muted">|</span>
+        <a class="footer__link" href="../../index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <button class="totop" id="backToTop" type="button" aria-label="Revenir en haut">↑</button>
+</body>
+</html>
