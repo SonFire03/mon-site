@@ -8,9 +8,25 @@
   <meta name="description" content="Étude de cas Threat Intel Aggregator (IOCvault): agrégation IOC, normalisation, scoring, export et captures GitHub." />
   <meta name="theme-color" content="#0B0F14" />
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://sonfire03.github.io/mon-site/projet/threat-intel-aggregator/" />
 
-  <link rel="stylesheet" href="../../css/main.css?v=20260209b" />
-  <script defer src="../../js/main.js?v=20260209b"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Threat Intel Aggregator",
+    "codeRepository": "https://github.com/SonFire03/Threat_Intel_Aggregator",
+    "programmingLanguage": ["Python"],
+    "runtimePlatform": "FastAPI",
+    "creator": {
+      "@type": "Person",
+      "name": "Sofiane Dehimi"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260424a" />
+  <script defer src="../../js/main.js?v=20260424a"></script>
 </head>
 <body>
   <a class="skip" href="#content">Aller au contenu</a>
@@ -20,7 +36,7 @@
     <div class="wrap topbar__inner">
       <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
         <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
       </a>
 
       <nav class="nav" aria-label="Navigation">
@@ -70,6 +86,26 @@
 
           <div class="divider"></div>
 
+          <h3>Case study</h3>
+          <div class="casegrid">
+            <article class="caseblock">
+              <h4>Problème</h4>
+              <p>Les IOC arrivent de sources hétérogènes et deviennent difficiles à exploiter sans normalisation.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Contraintes</h4>
+              <p>Rester local-first, simple à lancer, et compatible avec un usage SOC junior ou homelab.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Choix techniques</h4>
+              <p>FastAPI pour API/UI unifiées, SQLite pour stockage léger, pipeline strict import-normalisation-export.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Résultat</h4>
+              <p>Flux CTI cohérent: collecte IOC, déduplication, scoring local et exports opérationnels.</p>
+            </article>
+          </div>
+
           <div class="grid2">
             <div>
               <h3>Fonctionnalités</h3>
@@ -90,6 +126,26 @@
                 <li>Tag stable annoncé: <code>v0.1.0</code></li>
               </ul>
             </div>
+          </div>
+
+          <div class="metricbar" aria-label="Indicateurs projet">
+            <span class="metric">Types IOC: IP / domaine / URL / hash</span>
+            <span class="metric">Entrées: TXT / CSV / JSON</span>
+            <span class="metric">Sorties: JSON / CSV / TXT</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Limites et prochaines étapes</h3>
+          <ul class="list">
+            <li>Connecteurs externes CTI à ajouter (MISP, feeds enrichis)</li>
+            <li>Moteur de scoring plus contextuel (source, récence, réputation)</li>
+            <li>Exports spécialisés pour intégration SIEM/EDR à renforcer</li>
+          </ul>
+
+          <div class="proofline">
+            <span class="proofline__k">Preuve</span>
+            <a class="textlink" href="https://github.com/SonFire03/Threat_Intel_Aggregator" target="_blank" rel="noreferrer">Repo public, captures et tag de version</a>
           </div>
 
           <div class="divider"></div>

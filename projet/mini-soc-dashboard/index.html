@@ -8,9 +8,25 @@
   <meta name="description" content="Étude de cas Mini SOC Dashboard: ingestion logs, détection, alerting, incidents, reporting et captures GitHub." />
   <meta name="theme-color" content="#0B0F14" />
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://sonfire03.github.io/mon-site/projet/mini-soc-dashboard/" />
 
-  <link rel="stylesheet" href="../../css/main.css?v=20260209b" />
-  <script defer src="../../js/main.js?v=20260209b"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Mini SOC Dashboard",
+    "codeRepository": "https://github.com/SonFire03/mini_soc_dashboard",
+    "programmingLanguage": ["Python"],
+    "runtimePlatform": "FastAPI",
+    "creator": {
+      "@type": "Person",
+      "name": "Sofiane Dehimi"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260424a" />
+  <script defer src="../../js/main.js?v=20260424a"></script>
 </head>
 <body>
   <a class="skip" href="#content">Aller au contenu</a>
@@ -20,7 +36,7 @@
     <div class="wrap topbar__inner">
       <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
         <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
       </a>
 
       <nav class="nav" aria-label="Navigation">
@@ -70,6 +86,26 @@
 
           <div class="divider"></div>
 
+          <h3>Case study</h3>
+          <div class="casegrid">
+            <article class="caseblock">
+              <h4>Problème</h4>
+              <p>Transformer des logs disparates en alertes exploitables sans dépendre d'une stack SIEM lourde.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Contraintes</h4>
+              <p>Projet local-first, stack simple, déploiement rapide et lisibilité pour démonstration en entretien.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Choix techniques</h4>
+              <p>FastAPI + SQLite pour la vitesse d'itération, règles YAML et API claire pour workflow SOC.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Résultat</h4>
+              <p>Pipeline complet: ingestion, détection, triage alertes/incidents, reporting quotidien et exports.</p>
+            </article>
+          </div>
+
           <div class="grid2">
             <div>
               <h3>Fonctionnalités</h3>
@@ -89,6 +125,26 @@
                 <li>Qualité via Ruff, Mypy et tests Pytest</li>
               </ul>
             </div>
+          </div>
+
+          <div class="metricbar" aria-label="Indicateurs projet">
+            <span class="metric">Ingestion: fichier, JSON, live tail</span>
+            <span class="metric">Détection: règles unitaires + corrélées</span>
+            <span class="metric">Sorties: KPI, HTML, CSV</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Limites et prochaines étapes</h3>
+          <ul class="list">
+            <li>Connexion sources logs externes temps réel (syslog/agents) à renforcer</li>
+            <li>Pack de règles enrichi avec faux positifs mieux calibrés</li>
+            <li>Extension des playbooks d'incident pour scénarios multi-étapes</li>
+          </ul>
+
+          <div class="proofline">
+            <span class="proofline__k">Preuve</span>
+            <a class="textlink" href="https://github.com/SonFire03/mini_soc_dashboard" target="_blank" rel="noreferrer">Repo public, captures et historique commits</a>
           </div>
 
           <div class="divider"></div>

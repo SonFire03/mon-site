@@ -313,9 +313,10 @@
         return;
       }
       if (a.kind === 'path') {
-        const base = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname.replace(/\/[^/]*$/, '/');
-        // if already in /projet/..., base handles relative; simplest: use absolute from site root
-        window.location.href = '/' + (a.value || '');
+        const rel = (a.value || '').replace(/^\/+/, '');
+        const segs = window.location.pathname.split('/').filter(Boolean);
+        const repoPrefix = (window.location.hostname.endsWith('github.io') && segs.length > 0) ? '/' + segs[0] : '';
+        window.location.href = `${repoPrefix}/${rel}`.replace(/\/{2,}/g, '/');
         return;
       }
       window.open(a.value, '_blank', 'noreferrer');

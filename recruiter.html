@@ -4,26 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Recruiter view — Sofiane Dehimi</title>
-  <meta name="description" content="Recruiter view : preuves vérifiables (Cisco/Credly, TryHackMe) + accès rapide projets et contact." />
-  <meta name="theme-color" content="#0B0F14" />
+  <title>Recruiter View v2 — Sofiane Dehimi</title>
+  <meta name="description" content="Vue recruteur ultra synthétique: positionnement junior IT/cyber/backend, projets clés, preuves vérifiables et contact direct." />
+  <meta name="theme-color" content="#091018" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/main.css?v=20260209b" />
-  <script defer src="js/main.js?v=20260209b"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Manrope:wght@400;500;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=20260424a" />
+  <script defer src="js/main.js?v=20260424a"></script>
 </head>
 <body>
   <header class="topbar">
     <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
     <div class="wrap topbar__inner">
-      <a class="brand" href="index.html" aria-label="Retour à l’accueil">
+      <a class="brand" href="index.html" aria-label="Retour à l'accueil">
         <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
       </a>
 
-      <div class="row" style="gap:10px">
+      <div class="row" style="gap:10px; flex-wrap:wrap">
+        <a class="btn btn--ghost" href="index.html#projects">Projets</a>
         <a class="btn btn--ghost" href="index.html#contact">Contact</a>
-        <a class="btn" href="projet/certif/certifications.html">Certifications</a>
+        <a class="btn" href="assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
         <button class="btn btn--ghost" id="openPalette" type="button" title="Ctrl+K">Ctrl+K</button>
       </div>
     </div>
@@ -31,33 +35,87 @@
 
   <main class="wrap" style="padding:22px 18px 50px">
     <section class="card" data-reveal>
-      <p class="kicker">Recruiter view (10 secondes)</p>
-      <h1 class="h1" style="margin-top:10px">IT • Réseaux • Cybersécurité</h1>
-      <p class="muted" style="margin-top:8px; max-width:80ch">
-        Profil orienté terrain (support / maintenance / systèmes-réseaux) + automatisation (Python/Bash) + proof-first (Credly, TryHackMe).
-      </p>
+      <p class="kicker">Recruiter view v2</p>
+      <h1 class="h1" style="margin-top:10px">Junior IT / Cyber / Backend Python</h1>
+      <p class="muted" style="margin-top:8px; max-width:80ch">Outils SOC/CTI en Python, preuves publiques, approche défensive.</p>
 
       <div class="stats" style="margin-top:14px" data-reveal>
         <div class="stat">
-          <div class="stat__k">Points forts</div>
-          <div class="stat__v">Windows/Linux • Réseau • Support</div>
+          <div class="stat__k">Cible</div>
+          <div class="stat__v">SOC junior / IT ops / backend</div>
         </div>
         <div class="stat">
-          <div class="stat__k">Scripting</div>
-          <div class="stat__v">Python • Bash</div>
+          <div class="stat__k">Stack</div>
+          <div class="stat__v">Python • FastAPI • Linux</div>
         </div>
         <div class="stat">
-          <div class="stat__k">Preuves</div>
-          <div class="stat__v">Cisco/Credly • TryHackMe</div>
+          <div class="stat__k">Validation</div>
+          <div class="stat__v">GitHub • Credly • PDF</div>
         </div>
       </div>
 
       <div class="card__actions" style="margin-top:14px">
-        <a class="btn" href="projet/certif/certifications.html">Voir preuves (certifs)</a>
-        <a class="btn btn--ghost" href="projet/certif/certifications.html?filter=cisco">Cisco / Credly</a>
-        <a class="btn btn--ghost" href="projet/certif/certifications.html?filter=tryhackme">TryHackMe (PDF)</a>
+        <a class="btn" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">GitHub principal</a>
         <a class="btn btn--ghost" href="index.html#projects">Voir projets</a>
-        <a class="btn btn--ghost" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn btn--ghost" href="projet/certif/certifications.html">Voir preuves</a>
+        <a class="btn btn--ghost" href="index.html#contact">Contacter</a>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px" data-reveal>
+      <div class="row between" style="flex-wrap:wrap">
+        <div>
+          <div class="kicker">Projet Scan</div>
+          <div class="h3">5 projets à vérifier</div>
+        </div>
+        <a class="btn btn--ghost" href="index.html#projects">Version complète</a>
+      </div>
+
+      <div class="project-scan" style="margin-top:12px">
+        <div class="project-scan__row">
+          <div>
+            <div class="project-scan__name">Mini SOC Dashboard</div>
+            <div class="project-scan__desc">Ingestion logs, détection, alertes, exports</div>
+          </div>
+          <div class="project-scan__stack">FastAPI / SQLite</div>
+          <a class="project-scan__link" href="projet/mini-soc-dashboard/index.html">Case study</a>
+        </div>
+
+        <div class="project-scan__row">
+          <div>
+            <div class="project-scan__name">Threat Intel Aggregator</div>
+            <div class="project-scan__desc">Pipeline IOC: import, normalisation, scoring, export</div>
+          </div>
+          <div class="project-scan__stack">Python / CTI</div>
+          <a class="project-scan__link" href="projet/threat-intel-aggregator/index.html">Case study</a>
+        </div>
+
+        <div class="project-scan__row">
+          <div>
+            <div class="project-scan__name">AutoHack</div>
+            <div class="project-scan__desc">Catalogue CLI pour workflows de lab</div>
+          </div>
+          <div class="project-scan__stack">Python / Rich TUI</div>
+          <a class="project-scan__link" href="projet/autohack/index.html">Détails</a>
+        </div>
+
+        <div class="project-scan__row">
+          <div>
+            <div class="project-scan__name">Krawl</div>
+            <div class="project-scan__desc">Honeypot + dashboard + rapport PDF</div>
+          </div>
+          <div class="project-scan__stack">Python / WSL2</div>
+          <a class="project-scan__link" href="projet/krawl/index.html">Détails</a>
+        </div>
+
+        <div class="project-scan__row">
+          <div>
+            <div class="project-scan__name">Sofiane Cloud</div>
+            <div class="project-scan__desc">Hub média privé + panel ops</div>
+          </div>
+          <div class="project-scan__stack">Flask / Linux</div>
+          <a class="project-scan__link" href="projet/sofianecloud/index.html">Détails</a>
+        </div>
       </div>
     </section>
 
@@ -65,10 +123,10 @@
       <div class="row between" style="flex-wrap:wrap">
         <div>
           <div class="kicker">Proof-first</div>
-          <div class="h3">Sélection vérifiable</div>
-          <div class="muted">Liens officiels + miniatures locales.</div>
+          <div class="h3">Preuves vérifiables</div>
+          <div class="muted">Badges officiels, PDF et code public.</div>
         </div>
-        <a class="btn btn--ghost" href="projet/certif/certifications.html">Tout voir</a>
+        <a class="btn btn--ghost" href="projet/certif/certifications.html">Tout ouvrir</a>
       </div>
 
       <div class="badgegrid" style="margin-top:14px">
@@ -95,29 +153,22 @@
           <div class="badge__t">TryHackMe (PDF)</div>
           <div class="badge__s muted">Lien direct</div>
         </a>
-
-        <a class="badge" href="https://redteamleaders.coursestack.com/completion/066b9b379fa83520" target="_blank" rel="noreferrer">
-          <img src="projet/certif/assets/1028d7f3-5860-4796-ba86-b6fad89f870f.png" alt="Coursestack" loading="lazy" decoding="async" />
-          <div class="badge__t">Coursestack</div>
-          <div class="badge__s muted">Voir le badge</div>
-        </a>
-
-        <a class="badge" href="index.html#contact">
-          <img src="assets/github.svg" alt="Contact" loading="lazy" decoding="async" />
-          <div class="badge__t">Contact</div>
-          <div class="badge__s muted">Formulaire + GitHub</div>
-        </a>
       </div>
     </section>
 
     <section class="card" style="margin-top:14px" data-reveal>
-      <div class="kicker">Navigation</div>
-      <div class="h3">Où cliquer</div>
-      <ul class="list">
-        <li><strong>Certifications</strong> : preuves vérifiables (Credly + PDF) — <a class="footer__link" href="projet/certif/certifications.html">ouvrir</a></li>
-        <li><strong>Projets</strong> : pages cliquables — <a class="footer__link" href="index.html#projects">ouvrir</a></li>
-        <li><strong>Contact</strong> : Formspree + GitHub — <a class="footer__link" href="index.html#contact">ouvrir</a></li>
-      </ul>
+      <div class="kicker">Décision rapide</div>
+      <div class="h3">Validation rapide</div>
+      <ol class="list list--tight">
+        <li>Consulter le GitHub principal</li>
+        <li>Ouvrir Mini SOC Dashboard et Threat Intel Aggregator</li>
+        <li>Vérifier badges Cisco/Credly et PDF</li>
+      </ol>
+      <div class="card__actions" style="margin-top:12px">
+        <a class="btn" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">Étape 1: GitHub</a>
+        <a class="btn btn--ghost" href="projet/mini-soc-dashboard/index.html">Étape 2: Case Mini SOC</a>
+        <a class="btn btn--ghost" href="projet/certif/certifications.html">Étape 3: Certifs</a>
+      </div>
     </section>
 
     <footer class="footer">
@@ -126,7 +177,7 @@
         <span class="muted">|</span>
         <a class="footer__link" href="projet/certif/certifications.html">Certifications</a>
         <span class="muted">|</span>
-        <a class="footer__link" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="footer__link" href="index.html#contact">Contact</a>
       </div>
     </footer>
 
