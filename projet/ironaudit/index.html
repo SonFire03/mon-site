@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>IronAudit — Projet | Sofiane Dehimi</title>
+  <meta name="description" content="Étude de cas IronAudit: audit de posture sécurité Linux, scoring, findings et guidance de remédiation." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://sonfire03.github.io/mon-site/projet/ironaudit/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "IronAudit",
+    "codeRepository": "https://github.com/SonFire03/IronAudit",
+    "programmingLanguage": ["Python"],
+    "runtimePlatform": "Linux",
+    "creator": {
+      "@type": "Person",
+      "name": "Sofiane Dehimi"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260424a" />
+  <script defer src="../../js/main.js?v=20260424a"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div class="nav__menu" id="navMenu">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../index.html#projects">Projets</a>
+          <a href="../../index.html#contact">Contact</a>
+          <div class="nav__divider" aria-hidden="true"></div>
+          <button class="btn btn--ghost nav__btn" id="themeToggle2" type="button">Thème</button>
+          <a class="btn nav__btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+        </div>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button">Thème</button>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top:28px">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>IronAudit</h2>
+          <p class="muted">Linux security posture auditor with scoring, findings, and remediation guidance.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row between" style="flex-wrap:wrap; gap:12px">
+            <div>
+              <div class="kicker">Linux Security • Auditing • Defensive</div>
+              <div class="h3">Objectif</div>
+              <p class="muted" style="margin-top:8px">
+                Fournir un audit défensif local et lisible de la posture sécurité Linux, avec des résultats
+                exploitables côté ops et sécurité sans logique offensive.
+              </p>
+            </div>
+            <div class="tags" aria-label="Technos" style="align-self:flex-start">
+              <span class="tag">Python</span>
+              <span class="tag">Typer</span>
+              <span class="tag">Rich</span>
+              <span class="tag">Linux</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Description du repo</h3>
+          <p class="muted">
+            IronAudit est un auditeur de posture Linux en lecture seule, avec scoring 0..100, findings structurés
+            (severity, evidence, remediation) et exports multi-formats pour suivi et partage.
+          </p>
+
+          <div class="grid2">
+            <div>
+              <h3>Fonctionnalités</h3>
+              <ul class="list">
+                <li>Checks Linux: SSH, firewall, services, users/sudo, permissions, updates, auth</li>
+                <li>Exports: terminal, JSON, Markdown, HTML, SARIF</li>
+                <li>Comparaison de rapports baseline/current</li>
+                <li>Historique de snapshots et suivi de tendance</li>
+                <li>Dashboard web local et profils workstation/server/minimal</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Valeur opérationnelle</h3>
+              <ul class="list">
+                <li>Baseline rapide d'un hôte Linux avant durcissement</li>
+                <li>Mesure répétable de progression avec score et historique</li>
+                <li>Sorties compatibles workflow sécurité/qualité (dont SARIF)</li>
+                <li>Approche defensive-only, orientée audit et remédiation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="metricbar" aria-label="Indicateurs projet">
+            <span class="metric">Scoring posture: 0..100</span>
+            <span class="metric">Exports: JSON / MD / HTML / SARIF</span>
+            <span class="metric">Checks: SSH / FW / Users / Auth / Updates</span>
+          </div>
+
+          <div class="proofline">
+            <span class="proofline__k">Preuve</span>
+            <a class="textlink" href="https://github.com/SonFire03/IronAudit" target="_blank" rel="noreferrer">Repo public IronAudit (code + CI + docs)</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Démarrage rapide</h3>
+          <pre>git clone https://github.com/SonFire03/IronAudit.git
+cd IronAudit
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -e '.[dev]'
+ironaudit scan</pre>
+
+          <div class="card__actions" style="margin-top:10px">
+            <a class="btn" href="https://github.com/SonFire03/IronAudit" target="_blank" rel="noreferrer">Ouvrir le repo GitHub</a>
+            <a class="btn btn--ghost" href="../../index.html#projects">Retour aux projets</a>
+          </div>
+        </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Capture depuis le repo</h3>
+          <p class="muted">Visuel du dashboard/rapport IronAudit repris depuis le README du projet.</p>
+          <figure class="card" style="margin:0; margin-top:10px">
+            <a href="../../assets/ironaudit/dashboard.png" target="_blank" rel="noreferrer">
+              <img src="../../assets/ironaudit/dashboard.png" alt="IronAudit — capture dashboard depuis le README" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+            </a>
+            <figcaption class="muted" style="margin-top:8px">Capture officielle IronAudit</figcaption>
+          </figure>
+        </div>
+
+        <div class="card__actions" style="margin-top:14px" data-reveal>
+          <a class="btn btn--ghost" href="../../index.html#projects">← Retour aux projets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="footer__link" href="../../index.html">&copy; 2025–<span id="yearNow">2025</span> — Sofiane Dehimi</a>
+        <span class="muted">|</span>
+        <a class="footer__link" href="../../index.html#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <button class="totop" id="backToTop" type="button" aria-label="Revenir en haut">↑</button>
+</body>
+</html>

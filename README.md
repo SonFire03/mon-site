@@ -27,6 +27,8 @@ Profil junior orienté exécution technique:
   Honeypot pédagogique + dashboard + documentation PDF.
 - Sofiane Cloud  
   Hub média privé Flask avec panel ops.
+- IronAudit  
+  Linux security posture auditor avec scoring, findings et guidance de remédiation.
 
 ## Stack
 
