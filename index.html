@@ -331,13 +331,16 @@
       <div class="wrap">
         <div class="section__head" data-reveal>
           <h2>Projets</h2>
-          <p class="muted">6 projets clés IT/cyber/backend.</p>
+          <p class="muted">1 projet vedette, 4 preuves techniques majeures et 1 projet complémentaire.</p>
         </div>
 
         <article class="card project-feature" data-reveal>
           <div>
             <p class="kicker">Projet vedette</p>
-            <h3>Mini SOC Dashboard</h3>
+            <div class="card__top">
+              <h3>Mini SOC Dashboard</h3>
+              <span class="project-label">SOC / Detection</span>
+            </div>
             <p class="muted">Plateforme SOC légère: ingestion logs, détection, alertes et reporting.</p>
             <ul class="list list--tight">
               <li>Ingestion multi-formats (JSON/fichiers/logs web) avec mode live</li>
@@ -350,15 +353,6 @@
               <span class="tag">SQLite</span>
               <span class="tag">Blue Team</span>
             </div>
-            <div class="metricbar" aria-label="Indicateurs clés">
-              <span class="metric">Ingestion: JSON + fichiers + live</span>
-              <span class="metric">Règles unitaires et corrélées</span>
-              <span class="metric">Rapports HTML / CSV</span>
-            </div>
-            <div class="proofline">
-              <span class="proofline__k">Preuve</span>
-              <a class="textlink" href="projet/mini-soc-dashboard/index.html">Case study détaillée + captures</a>
-            </div>
             <div class="card__actions">
               <a class="btn" href="projet/mini-soc-dashboard/index.html">Voir détails</a>
               <a class="btn btn--ghost" href="https://github.com/SonFire03/mini_soc_dashboard.git" target="_blank" rel="noreferrer">Repo GitHub</a>
@@ -367,15 +361,38 @@
           <img class="project__thumb" src="https://github.com/user-attachments/assets/75cedf6c-652c-4f27-93fd-2a4d995c5427" alt="Mini SOC Dashboard — Vue d'ensemble du dashboard SOC" loading="lazy" decoding="async" />
         </article>
 
-        <div class="projects-grid">
-          <article class="card" data-reveal>
+        <div class="projects-subhead" data-reveal>
+          <h3>Projets principaux</h3>
+          <p class="muted">Noyau de preuves backend/sécurité à vérifier en priorité.</p>
+        </div>
+
+        <div class="projects-grid projects-grid--main">
+          <article class="card project-card" data-reveal>
+            <div class="card__top">
+              <h3>IronAudit</h3>
+              <span class="project-label">Linux Security</span>
+            </div>
+            <p class="muted">Auditeur de posture sécurité Linux avec scoring, findings et recommandations de remédiation.</p>
+            <ul class="list list--tight">
+              <li>Checks lecture seule: SSH, firewall, services, users/sudo, permissions, updates, auth</li>
+              <li>Exports terminal, JSON, Markdown, HTML, SARIF et dashboard web local</li>
+              <li>Comparaison baseline/current et historique de snapshots</li>
+            </ul>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Python</span>
+              <span class="tag">Typer</span>
+              <span class="tag">Linux</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="projet/ironaudit/index.html">Détails</a>
+              <a class="btn btn--ghost" href="https://github.com/SonFire03/IronAudit" target="_blank" rel="noreferrer">Repo GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project-card" data-reveal>
             <div class="card__top">
               <h3>Threat Intel Aggregator</h3>
-              <div class="tags" aria-label="Stack">
-                <span class="tag">Python</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">CTI</span>
-              </div>
+              <span class="project-label">Threat Intel</span>
             </div>
             <p class="muted">Workbench local-first pour consolider et exporter des IOC.</p>
             <ul class="list list--tight">
@@ -383,13 +400,10 @@
               <li>Normalisation IP/domaine/URL/hash avec déduplication</li>
               <li>API REST + interface web de suivi</li>
             </ul>
-            <div class="metricbar" aria-label="Indicateurs clés">
-              <span class="metric">Types IOC: IP / domaine / URL / hash</span>
-              <span class="metric">Exports: JSON / CSV / TXT</span>
-            </div>
-            <div class="proofline">
-              <span class="proofline__k">Preuve</span>
-              <a class="textlink" href="projet/threat-intel-aggregator/index.html">Case study + workflow CTI</a>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">CTI</span>
             </div>
             <div class="card__actions">
               <a class="btn btn--ghost" href="projet/threat-intel-aggregator/index.html">Détails</a>
@@ -397,14 +411,10 @@
             </div>
           </article>
 
-          <article class="card" data-reveal>
+          <article class="card project-card" data-reveal>
             <div class="card__top">
               <h3>AutoHack</h3>
-              <div class="tags" aria-label="Stack">
-                <span class="tag">Python</span>
-                <span class="tag">Rich TUI</span>
-                <span class="tag">Lab</span>
-              </div>
+              <span class="project-label">CLI Tooling</span>
             </div>
             <p class="muted">Catalogue CLI pour workflows de lab sécurité.</p>
             <ul class="list list--tight">
@@ -412,9 +422,10 @@
               <li>Dry-run, favoris, historique local et mode revue</li>
               <li>Exports Markdown/TXT/JSON/HTML pour partage</li>
             </ul>
-            <div class="metricbar" aria-label="Indicateurs clés">
-              <span class="metric">1 413 entrées au catalogue</span>
-              <span class="metric">1 013 payloads XSS indexés</span>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Python</span>
+              <span class="tag">Rich TUI</span>
+              <span class="tag">Lab</span>
             </div>
             <div class="card__actions">
               <a class="btn btn--ghost" href="projet/autohack/index.html">Détails</a>
@@ -422,14 +433,10 @@
             </div>
           </article>
 
-          <article class="card" data-reveal>
+          <article class="card project-card" data-reveal>
             <div class="card__top">
               <h3>Krawl</h3>
-              <div class="tags" aria-label="Stack">
-                <span class="tag">Python</span>
-                <span class="tag">Honeypot</span>
-                <span class="tag">WSL2</span>
-              </div>
+              <span class="project-label">Lab / Detection</span>
             </div>
             <p class="muted">Lab honeypot + dashboard en environnement contrôlé.</p>
             <ul class="list list--tight">
@@ -437,24 +444,28 @@
               <li>Tests LAN et simulation de trafic pilotée</li>
               <li>Documentation technique complète en PDF</li>
             </ul>
-            <div class="metricbar" aria-label="Indicateurs clés">
-              <span class="metric">5 familles de détection</span>
-              <span class="metric">TP PDF vérifiable</span>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Python</span>
+              <span class="tag">Honeypot</span>
+              <span class="tag">WSL2</span>
             </div>
             <div class="card__actions">
               <a class="btn btn--ghost" href="projet/krawl/index.html">Détails</a>
               <a class="btn btn--ghost" href="assets/Krawl_TP.pdf" download>TP PDF</a>
             </div>
           </article>
+        </div>
 
-          <article class="card" data-reveal>
+        <div class="projects-subhead projects-subhead--soft" data-reveal>
+          <h3>Projet complémentaire</h3>
+          <p class="muted">Infrastructure personnelle utile, en appui du positionnement cyber/backend.</p>
+        </div>
+
+        <div class="projects-complementary">
+          <article class="card project-card project-card--support" data-reveal>
             <div class="card__top">
               <h3>Sofiane Cloud</h3>
-              <div class="tags" aria-label="Stack">
-                <span class="tag">Flask</span>
-                <span class="tag">Linux</span>
-                <span class="tag">Cloudflare</span>
-              </div>
+              <span class="project-label">Infrastructure</span>
             </div>
             <p class="muted">Hub média privé avec accès fichiers et panel ops.</p>
             <ul class="list list--tight">
@@ -462,41 +473,13 @@
               <li>Explorateur avec recherche, tri, pagination et ZIP</li>
               <li>Panel ops pour supervision services et tunnels</li>
             </ul>
-            <div class="proofline">
-              <span class="proofline__k">Preuve</span>
-              <a class="textlink" href="projet/sofianecloud/index.html">Détails techniques et captures</a>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Flask</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Cloudflare</span>
             </div>
             <div class="card__actions">
               <a class="btn btn--ghost" href="projet/sofianecloud/index.html">Détails</a>
-            </div>
-          </article>
-
-          <article class="card" data-reveal>
-            <div class="card__top">
-              <h3>IronAudit</h3>
-              <div class="tags" aria-label="Stack">
-                <span class="tag">Python</span>
-                <span class="tag">Typer</span>
-                <span class="tag">Linux</span>
-              </div>
-            </div>
-            <p class="muted">Auditeur de posture sécurité Linux avec scoring, findings et recommandations de remédiation.</p>
-            <ul class="list list--tight">
-              <li>Checks lecture seule: SSH, firewall, services, users/sudo, permissions, updates, auth</li>
-              <li>Exports terminal, JSON, Markdown, HTML et SARIF + dashboard web local</li>
-              <li>Comparaison baseline/current et historique de snapshots pour suivi de progression</li>
-            </ul>
-            <div class="metricbar" aria-label="Indicateurs clés">
-              <span class="metric">Score posture: 0 à 100</span>
-              <span class="metric">Sorties: JSON / MD / HTML / SARIF</span>
-            </div>
-            <div class="proofline">
-              <span class="proofline__k">Preuve</span>
-              <a class="textlink" href="projet/ironaudit/index.html">Description + capture + repo</a>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/ironaudit/index.html">Détails</a>
-              <a class="btn btn--ghost" href="https://github.com/SonFire03/IronAudit" target="_blank" rel="noreferrer">Repo GitHub</a>
             </div>
           </article>
         </div>
