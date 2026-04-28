@@ -104,7 +104,7 @@
 
           <div class="hero__cta">
             <a class="btn" href="recruiter.html">Recruiter view (10s)</a>
-            <a class="btn btn--ghost" href="#projects">Voir les 6 projets clés</a>
+            <a class="btn btn--ghost" href="#projects">Voir la sélection projets</a>
             <a class="btn btn--ghost" href="#contact">Me contacter</a>
           </div>
 
@@ -152,8 +152,8 @@
 
         <div class="grid3">
           <article class="card" data-reveal>
-            <h3>6 projets techniques publiés</h3>
-            <p class="muted">6 projets publiés, avec pages de détail.</p>
+            <h3>Projets hiérarchisés</h3>
+            <p class="muted">1 projet vedette, 4 projets majeurs et des compléments utiles.</p>
             <a class="textlink" href="#projects">Voir la sélection projet</a>
           </article>
 
@@ -192,19 +192,19 @@
             </div>
             <div class="project-scan__row">
               <div>
-                <div class="project-scan__name">AutoHack</div>
-                <div class="project-scan__desc">Catalogue CLI structuré pour lab sécurité</div>
+                <div class="project-scan__name">DFIR Case Manager</div>
+                <div class="project-scan__desc">Suivi d'incident, timeline, IOC et reporting de cas</div>
               </div>
-              <div class="project-scan__stack">Python / Rich TUI</div>
-              <a class="project-scan__link" href="projet/autohack/index.html">Détails</a>
+              <div class="project-scan__stack">Flask / SQLite / DFIR</div>
+              <a class="project-scan__link" href="https://github.com/SonFire03/DFIR_Case_Manager.git" target="_blank" rel="noreferrer">Repo GitHub</a>
             </div>
             <div class="project-scan__row">
               <div>
-                <div class="project-scan__name">IronAudit</div>
-                <div class="project-scan__desc">Audit de posture sécurité Linux avec scoring et remédiation</div>
+                <div class="project-scan__name">ADB Manager Pro</div>
+                <div class="project-scan__desc">Tooling desktop pour opérations Android locales et audit trail</div>
               </div>
-              <div class="project-scan__stack">Python / Typer / Linux</div>
-              <a class="project-scan__link" href="projet/ironaudit/index.html">Case study</a>
+              <div class="project-scan__stack">Python / Tkinter / ADB</div>
+              <a class="project-scan__link" href="https://github.com/SonFire03/adb_manager.git" target="_blank" rel="noreferrer">Repo GitHub</a>
             </div>
           </div>
         </article>
@@ -331,8 +331,9 @@
       <div class="wrap">
         <div class="section__head" data-reveal>
           <h2>Projets</h2>
-          <p class="muted">1 projet vedette, 4 preuves techniques majeures et 1 projet complémentaire.</p>
+          <p class="muted">SOC, audit Linux, DFIR, threat intel et tooling backend: une sélection structurée et démontrable.</p>
         </div>
+        <p class="projects-intro muted" data-reveal>Ces projets montrent un axe clair: backend Python, systèmes Linux, cybersécurité défensive et automation orientée opérations.</p>
 
         <article class="card project-feature" data-reveal>
           <div>
@@ -413,19 +414,68 @@
 
           <article class="card project-card" data-reveal>
             <div class="card__top">
-              <h3>AutoHack</h3>
+              <h3>DFIR Case Manager (IncidentDesk)</h3>
+              <span class="project-label">DFIR / Case Management</span>
+            </div>
+            <p class="muted">Application DFIR pour piloter les incidents: cas, chronologie, IOC, artefacts et rapport final.</p>
+            <ul class="list list--tight">
+              <li>Gestion de cas avec statut, priorité, propriétaire et suivi d'avancement</li>
+              <li>Timeline, IOC, preuves et notes centralisées pour investigation reproductible</li>
+              <li>Exports et reporting exploitables pour handover SOC/DFIR</li>
+            </ul>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="https://github.com/SonFire03/DFIR_Case_Manager.git" target="_blank" rel="noreferrer">Repo GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project-card" data-reveal>
+            <div class="card__top">
+              <h3>ADB Manager Pro</h3>
+              <span class="project-label">Android Ops / Desktop Tooling</span>
+            </div>
+            <p class="muted">Outil desktop d'administration Android locale pour exécution fiable de workflows ops et diagnostics.</p>
+            <ul class="list list--tight">
+              <li>Transferts, exécution de commandes et health checks via workflow guidé</li>
+              <li>Journal d'actions et audit trail local pour traçabilité opérationnelle</li>
+              <li>Automatisation de tâches répétitives pour parc Android de lab</li>
+            </ul>
+            <div class="tags" aria-label="Stack">
+              <span class="tag">Python</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">ADB</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="https://github.com/SonFire03/adb_manager.git" target="_blank" rel="noreferrer">Repo GitHub</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-subhead projects-subhead--soft" data-reveal>
+          <h3>Projets complémentaires</h3>
+          <p class="muted">Des briques utiles en appui de l'axe SOC/DFIR/backend, avec une priorité de lecture plus basse.</p>
+        </div>
+
+        <div class="projects-complementary">
+          <article class="card project-card project-card--support" data-reveal>
+            <div class="card__top">
+              <h3>AUTOHACK</h3>
               <span class="project-label">CLI Tooling</span>
             </div>
-            <p class="muted">Catalogue CLI pour workflows de lab sécurité.</p>
+            <p class="muted">Catalogue CLI orienté lab pour accélérer les séquences de tests et la reproductibilité.</p>
             <ul class="list list--tight">
-              <li>Recherche multi-critères sur plus de 1 400 entrées</li>
-              <li>Dry-run, favoris, historique local et mode revue</li>
-              <li>Exports Markdown/TXT/JSON/HTML pour partage</li>
+              <li>Recherche multi-critères dans un large catalogue de commandes sécurité</li>
+              <li>Dry-run, favoris et historique local pour usage contrôlé</li>
+              <li>Exports Markdown/TXT/JSON/HTML pour partage d'exécution</li>
             </ul>
             <div class="tags" aria-label="Stack">
               <span class="tag">Python</span>
               <span class="tag">Rich TUI</span>
-              <span class="tag">Lab</span>
+              <span class="tag">Automation</span>
             </div>
             <div class="card__actions">
               <a class="btn btn--ghost" href="projet/autohack/index.html">Détails</a>
@@ -433,35 +483,6 @@
             </div>
           </article>
 
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>Krawl</h3>
-              <span class="project-label">Lab / Detection</span>
-            </div>
-            <p class="muted">Lab honeypot + dashboard en environnement contrôlé.</p>
-            <ul class="list list--tight">
-              <li>Détection de patterns SQLi/XSS/LFI/XXE</li>
-              <li>Tests LAN et simulation de trafic pilotée</li>
-              <li>Documentation technique complète en PDF</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">Python</span>
-              <span class="tag">Honeypot</span>
-              <span class="tag">WSL2</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/krawl/index.html">Détails</a>
-              <a class="btn btn--ghost" href="assets/Krawl_TP.pdf" download>TP PDF</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="projects-subhead projects-subhead--soft" data-reveal>
-          <h3>Projet complémentaire</h3>
-          <p class="muted">Infrastructure personnelle utile, en appui du positionnement cyber/backend.</p>
-        </div>
-
-        <div class="projects-complementary">
           <article class="card project-card project-card--support" data-reveal>
             <div class="card__top">
               <h3>Sofiane Cloud</h3>
