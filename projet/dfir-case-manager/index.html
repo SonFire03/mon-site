@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DFIR Case Manager (IncidentDesk) — Projet | Sofiane Dehimi</title>
+  <meta name="description" content="Étude de cas DFIR Case Manager: suivi d'incidents, timeline, IOC, artefacts, notes et reporting opérationnel." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://sonfire03.github.io/mon-site/projet/dfir-case-manager/" />
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260424a" />
+  <script defer src="../../js/main.js?v=20260424a"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
+      </a>
+
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" href="../../index.html#projects">← Projets</a>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top:28px">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>DFIR Case Manager (IncidentDesk)</h2>
+          <p class="muted">Plateforme DFIR pour piloter les investigations: cas, timeline, IOC, artefacts, notes et restitution.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row between" style="flex-wrap:wrap; gap:12px">
+            <div>
+              <div class="kicker">DFIR • Incident Tracking • Reporting</div>
+              <div class="h3">Objectif</div>
+              <p class="muted" style="margin-top:8px">
+                Structurer l'investigation d'incident dans un seul outil: traçabilité des actions,
+                centralisation des preuves et restitution claire pour handover SOC/IR.
+              </p>
+            </div>
+            <div class="tags" aria-label="Technos" style="align-self:flex-start">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">DFIR</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Case study</h3>
+          <div class="casegrid">
+            <article class="caseblock">
+              <h4>Problème</h4>
+              <p>Les informations d'incident sont souvent dispersées entre notes, fichiers et échanges.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Contraintes</h4>
+              <p>Rester local-first, simple à déployer, et utilisable dans un workflow junior SOC/DFIR.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Choix techniques</h4>
+              <p>Flask + SQLite pour itération rapide, modèle de données centré cas, timeline et IOC.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Résultat</h4>
+              <p>Suivi de cas cohérent avec historique, preuves et reporting exportable.</p>
+            </article>
+          </div>
+
+          <div class="grid2">
+            <div>
+              <h3>Fonctionnalités</h3>
+              <ul class="list">
+                <li>Création et suivi de cas (statut, priorité, propriétaire)</li>
+                <li>Timeline d'événements et journal d'actions d'investigation</li>
+                <li>Gestion IOC, artefacts techniques et notes analyste</li>
+                <li>Vue synthèse pour restitution opérationnelle</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Valeur opérationnelle</h3>
+              <ul class="list">
+                <li>Réduit la perte d'information entre triage et clôture</li>
+                <li>Améliore la qualité des handovers et post-mortems</li>
+                <li>Permet une documentation reproductible des investigations</li>
+                <li>S'aligne avec un positionnement blue-team défensif</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="metricbar" aria-label="Indicateurs projet">
+            <span class="metric">Objets: cas / IOC / artefacts / notes</span>
+            <span class="metric">Workflow: triage → investigation → rapport</span>
+            <span class="metric">Mode: local-first</span>
+          </div>
+
+          <div class="proofline">
+            <span class="proofline__k">Preuve</span>
+            <a class="textlink" href="https://github.com/SonFire03/DFIR_Case_Manager" target="_blank" rel="noreferrer">Repo public DFIR Case Manager</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Démarrage rapide</h3>
+          <pre>git clone https://github.com/SonFire03/DFIR_Case_Manager.git
+cd DFIR_Case_Manager
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+python run.py</pre>
+
+          <div class="card__actions" style="margin-top:10px">
+            <a class="btn" href="https://github.com/SonFire03/DFIR_Case_Manager" target="_blank" rel="noreferrer">Ouvrir le repo GitHub</a>
+            <a class="btn btn--ghost" href="../../index.html#projects">Retour aux projets</a>
+          </div>
+        </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Visuel GitHub</h3>
+          <p class="muted">Aperçu du projet depuis GitHub.</p>
+          <figure class="card" style="margin:0; margin-top:10px">
+            <a href="https://github.com/SonFire03/DFIR_Case_Manager" target="_blank" rel="noreferrer">
+              <img src="https://opengraph.githubassets.com/1/SonFire03/DFIR_Case_Manager" alt="DFIR Case Manager — aperçu GitHub" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+            </a>
+            <figcaption class="muted" style="margin-top:8px">Carte GitHub du repository</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="../../js/main.js?v=20260424a"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ADB Manager Pro — Projet | Sofiane Dehimi</title>
+  <meta name="description" content="Étude de cas ADB Manager Pro: tooling desktop Android ops, transferts, health checks, audit trail et workflows." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://sonfire03.github.io/mon-site/projet/adb-manager-pro/" />
+
+  <link rel="stylesheet" href="../../css/main.css?v=20260424a" />
+  <script defer src="../../js/main.js?v=20260424a"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
+      </a>
+
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" href="../../index.html#projects">← Projets</a>
+        <a class="btn" href="../../assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top:28px">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2>ADB Manager Pro</h2>
+          <p class="muted">Outil desktop pour opérations Android locales: administration, diagnostics, transferts et traçabilité.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row between" style="flex-wrap:wrap; gap:12px">
+            <div>
+              <div class="kicker">Android Ops • Desktop Tooling • Automation</div>
+              <div class="h3">Objectif</div>
+              <p class="muted" style="margin-top:8px">
+                Industrialiser les opérations ADB répétitives via une interface desktop claire,
+                avec workflows guidés, contrôles de santé et journal d'actions.
+              </p>
+            </div>
+            <div class="tags" aria-label="Technos" style="align-self:flex-start">
+              <span class="tag">Python</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">ADB</span>
+              <span class="tag">Desktop</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Case study</h3>
+          <div class="casegrid">
+            <article class="caseblock">
+              <h4>Problème</h4>
+              <p>Les opérations ADB manuelles sont rapides à dériver et difficiles à rejouer proprement.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Contraintes</h4>
+              <p>Usage local, lisible pour un profil ops junior, sans dépendance à une infra distante.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Choix techniques</h4>
+              <p>Python + interface desktop pour centraliser commandes, transferts et routines de checks.</p>
+            </article>
+            <article class="caseblock">
+              <h4>Résultat</h4>
+              <p>Workflow Android opérationnel plus fiable, plus traçable et plus rapide à exécuter.</p>
+            </article>
+          </div>
+
+          <div class="grid2">
+            <div>
+              <h3>Fonctionnalités</h3>
+              <ul class="list">
+                <li>Détection appareils connectés et exécution de commandes guidées</li>
+                <li>Transferts de fichiers et opérations récurrentes automatisées</li>
+                <li>Health checks pour validation rapide de l'état du device</li>
+                <li>Journal local pour audit trail des actions opérateur</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Valeur dans le portfolio</h3>
+              <ul class="list">
+                <li>Prouve la capacité à construire du tooling concret orienté exploitation</li>
+                <li>Renforce le socle backend/scripting hors périmètre purement web</li>
+                <li>Complète l'axe cyber défensif sans le concurrencer</li>
+                <li>Démontre une approche orientée fiabilité et répétabilité</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="metricbar" aria-label="Indicateurs projet">
+            <span class="metric">Actions: commande / transfert / diagnostic</span>
+            <span class="metric">Contexte: Android local</span>
+            <span class="metric">Approche: workflow + audit trail</span>
+          </div>
+
+          <div class="proofline">
+            <span class="proofline__k">Preuve</span>
+            <a class="textlink" href="https://github.com/SonFire03/adb_manager" target="_blank" rel="noreferrer">Repo public ADB Manager Pro</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Démarrage rapide</h3>
+          <pre>git clone https://github.com/SonFire03/adb_manager.git
+cd adb_manager
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+python main.py</pre>
+
+          <div class="card__actions" style="margin-top:10px">
+            <a class="btn" href="https://github.com/SonFire03/adb_manager" target="_blank" rel="noreferrer">Ouvrir le repo GitHub</a>
+            <a class="btn btn--ghost" href="../../index.html#projects">Retour aux projets</a>
+          </div>
+        </article>
+
+        <div class="card" data-reveal style="margin-top:14px">
+          <h3>Visuel GitHub</h3>
+          <p class="muted">Aperçu du projet depuis GitHub.</p>
+          <figure class="card" style="margin:0; margin-top:10px">
+            <a href="https://github.com/SonFire03/adb_manager" target="_blank" rel="noreferrer">
+              <img src="https://opengraph.githubassets.com/1/SonFire03/adb_manager" alt="ADB Manager Pro — aperçu GitHub" loading="lazy" decoding="async" style="width:100%; height:auto; border-radius:14px" />
+            </a>
+            <figcaption class="muted" style="margin-top:8px">Carte GitHub du repository</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="../../js/main.js?v=20260424a"></script>
+</body>
+</html>
