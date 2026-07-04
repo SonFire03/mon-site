@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Krawl — Honeypot & Dashboard | Sofiane Dehimi</title>
-  <meta name="description" content="Étude de cas: Krawl (honeypot + dashboard) — collecte, détection (SQLi/XSS/LFI/XXE), tests WSL2 + accès téléphone, export d'IPs." />
+  <meta name="description" content="Étude de cas: Krawl (honeypot + dashboard) — observation d'événements lab, détection de signaux suspects, tests WSL2 et exports d'indicateurs." />
   <meta name="theme-color" content="#0B0F14" />
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
 
@@ -20,7 +20,7 @@
     <div class="wrap topbar__inner">
       <a class="brand" href="../../index.html#projects" aria-label="Retour aux projets">
         <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__text">Sofiane<span class="muted">Control</span></span>
+        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
       </a>
 
       <nav class="nav" aria-label="Navigation">
@@ -47,7 +47,7 @@
       <div class="wrap">
         <div class="section__head" data-reveal>
           <h2>Krawl — Honeypot & Dashboard</h2>
-          <p class="muted">Collecte de requêtes suspectes + détection de vecteurs d’attaque + visualisation (dashboard) + export d’IPs.</p>
+          <p class="muted">Collecte contrôlée d'événements honeypot + visualisation (dashboard) + export d'indicateurs.</p>
         </div>
 
         <article class="card" data-reveal>
@@ -56,8 +56,8 @@
               <div class="kicker">Cybersécurité • Observabilité</div>
               <div class="h3">Objectif</div>
               <p class="muted" style="margin-top:8px">
-                Mettre en place un honeypot simple pour <b>observer</b> les scans/attaques (paths, payloads, user-agents),
-                détecter des patterns (SQLi, XSS, LFI/RFI, traversal, XXE) et obtenir des indicateurs actionnables.
+                Mettre en place un honeypot simple pour <b>observer</b> les scans et requêtes suspectes (paths, user-agents),
+                détecter des patterns de lab et obtenir des indicateurs actionnables pour l'analyse défensive.
               </p>
             </div>
             <div class="tags" aria-label="Technos" style="align-self:flex-start">
@@ -75,8 +75,8 @@
               <h3>Fonctionnalités validées</h3>
               <ul class="list">
                 <li>Dashboard: top IPs, top user-agents, activité récente</li>
-                <li>Capture de credentials sur endpoints “pièges”</li>
-                <li>Classification des attaques: <code>sql_injection</code>, <code>xss_attempt</code>, <code>path_traversal</code>, <code>lfi_rfi</code>, <code>xxe_injection</code></li>
+                <li>Collecte d'événements de type honeypot sur endpoints piégés</li>
+                <li>Classification des signaux: <code>sql_injection</code>, <code>xss_attempt</code>, <code>path_traversal</code>, <code>lfi_rfi</code>, <code>xxe_injection</code></li>
                 <li>Simulation de trafic via <code>curl</code> + script (UA variés, chemins variés)</li>
                 <li>Accès LAN (téléphone) depuis WSL2 via firewall + portproxy</li>
               </ul>
@@ -95,7 +95,7 @@
 
         <div class="card" data-reveal style="margin-top:14px">
           <h3>Captures (dashboard & honeypot)</h3>
-          <p class="muted">Exemples de pages leurres + activité capturée + classification des attaques.</p>
+          <p class="muted">Exemples de pages leurres + activité capturée + classification des signaux observés en lab.</p>
 
           <div class="grid2" style="margin-top:12px">
             <figure class="card" style="margin:0">
@@ -114,14 +114,14 @@
 
             <figure class="card" style="margin:0">
               <a href="../../assets/krawl/credentials-captured.png" target="_blank" rel="noreferrer">
-                <img src="../../assets/krawl/credentials-captured.png" alt="Activité capturée et credentials soumis sur endpoints pièges (ex: wp-login, login)" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
+                <img src="../../assets/krawl/credentials-captured.png" alt="Activité capturée et événements soumis sur endpoints pièges (ex: wp-login, login)" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
               </a>
-              <figcaption class="muted" style="margin-top:8px">Credentials capturés sur endpoints pièges</figcaption>
+              <figcaption class="muted" style="margin-top:8px">Événements capturés sur endpoints pièges</figcaption>
             </figure>
 
             <figure class="card" style="margin:0">
               <a href="../../assets/krawl/attack-analysis.png" target="_blank" rel="noreferrer">
-                <img src="../../assets/krawl/attack-analysis.png" alt="Analyse des attaques: SQLi, path traversal, XSS, LFI/RFI, XXE; user agents curl et zgrab" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
+                <img src="../../assets/krawl/attack-analysis.png" alt="Analyse des signaux: SQLi, path traversal, XSS, LFI/RFI, XXE; user agents curl et zgrab" loading="lazy" style="width:100%; height:auto; border-radius:14px" />
               </a>
               <figcaption class="muted" style="margin-top:8px">Classification & user agents (curl, zgrab)</figcaption>
             </figure>
@@ -131,8 +131,8 @@
         <div class="card" data-reveal style="margin-top:14px">
           <h3>Ce que ça apporte “en réel”</h3>
           <ul class="list">
-            <li>Visibilité sur les scans/attaques (sur un serveur exposé) + timing + volume</li>
-            <li>Indicateurs: IPs, user-agents, vecteurs d’attaque les plus fréquents</li>
+            <li>Visibilité sur les scans et requêtes suspectes (sur un serveur exposé) + timing + volume</li>
+            <li>Indicateurs: IPs, user-agents, chemins attaqués et signaux les plus fréquents</li>
             <li>Base pour automatiser: alerting, blocage (fail2ban/iptables), rate-limit</li>
           </ul>
         </div>

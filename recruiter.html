@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Recruiter View v2 — Sofiane Dehimi</title>
-  <meta name="description" content="Vue recruteur ultra synthétique: positionnement junior IT/cyber/backend, projets clés, preuves vérifiables et contact direct." />
+  <meta name="description" content="Vue recruteur ultra synthétique: positionnement junior IT/SOC/backend Python, projets clés, preuves vérifiables et contact direct." />
   <meta name="theme-color" content="#091018" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -36,13 +36,13 @@
   <main class="wrap" style="padding:22px 18px 50px">
     <section class="card" data-reveal>
       <p class="kicker">Recruiter view v2</p>
-      <h1 class="h1" style="margin-top:10px">Junior IT / Cyber / Backend Python</h1>
-      <p class="muted" style="margin-top:8px; max-width:80ch">Outils SOC/CTI en Python, preuves publiques, approche défensive.</p>
+      <h1 class="h1" style="margin-top:10px">Développeur Python junior orienté SOC, DFIR & automatisation système</h1>
+      <p class="muted" style="margin-top:8px; max-width:80ch">Outils SOC, DFIR et automatisation en Python, preuves publiques, approche défensive et local-first.</p>
 
       <div class="stats" style="margin-top:14px" data-reveal>
         <div class="stat">
           <div class="stat__k">Cible</div>
-          <div class="stat__v">SOC junior / IT ops / backend</div>
+          <div class="stat__v">SOC junior / IT ops / backend Python</div>
         </div>
         <div class="stat">
           <div class="stat__k">Stack</div>
@@ -63,19 +63,19 @@
     </section>
 
     <section class="card" style="margin-top:14px" data-reveal>
-      <div class="row between" style="flex-wrap:wrap">
-        <div>
-          <div class="kicker">Projet Scan</div>
-          <div class="h3">6 projets à vérifier</div>
+        <div class="row between" style="flex-wrap:wrap">
+          <div>
+            <div class="kicker">Projet Scan</div>
+            <div class="h3">Sélection de projets défensifs</div>
+          </div>
+          <a class="btn btn--ghost" href="index.html#projects">Version complète</a>
         </div>
-        <a class="btn btn--ghost" href="index.html#projects">Version complète</a>
-      </div>
 
       <div class="project-scan" style="margin-top:12px">
         <div class="project-scan__row">
           <div>
             <div class="project-scan__name">Mini SOC Dashboard</div>
-            <div class="project-scan__desc">Ingestion logs, détection, alertes, exports</div>
+            <div class="project-scan__desc">Dashboard SOC local: ingestion logs, détection, alertes, rapports HTML</div>
           </div>
           <div class="project-scan__stack">FastAPI / SQLite</div>
           <a class="project-scan__link" href="projet/mini-soc-dashboard/index.html">Case study</a>
@@ -83,8 +83,8 @@
 
         <div class="project-scan__row">
           <div>
-            <div class="project-scan__name">Threat Intel Aggregator</div>
-            <div class="project-scan__desc">Pipeline IOC: import, normalisation, scoring, export</div>
+            <div class="project-scan__name">IOCvault — Threat Intel Aggregator</div>
+            <div class="project-scan__desc">Pipeline IOC local-first: import, normalisation, scoring, export</div>
           </div>
           <div class="project-scan__stack">Python / CTI</div>
           <a class="project-scan__link" href="projet/threat-intel-aggregator/index.html">Case study</a>
@@ -92,8 +92,35 @@
 
         <div class="project-scan__row">
           <div>
+            <div class="project-scan__name">IronAudit</div>
+            <div class="project-scan__desc">Audit Linux en lecture seule: score, findings et remédiation</div>
+          </div>
+          <div class="project-scan__stack">Python / Linux</div>
+          <a class="project-scan__link" href="projet/ironaudit/index.html">Case study</a>
+        </div>
+
+        <div class="project-scan__row">
+          <div>
+            <div class="project-scan__name">DFIR Case Manager</div>
+            <div class="project-scan__desc">Incidents, timeline, IOC, notes et reporting</div>
+          </div>
+          <div class="project-scan__stack">Python / DFIR</div>
+          <a class="project-scan__link" href="projet/dfir-case-manager/index.html">Case study</a>
+        </div>
+
+        <div class="project-scan__row">
+          <div>
+            <div class="project-scan__name">ADB Manager Pro</div>
+            <div class="project-scan__desc">Gestion Android locale, debug et automation</div>
+          </div>
+          <div class="project-scan__stack">Python / ADB</div>
+          <a class="project-scan__link" href="projet/adb-manager-pro/index.html">Case study</a>
+        </div>
+
+        <div class="project-scan__row">
+          <div>
             <div class="project-scan__name">AutoHack</div>
-            <div class="project-scan__desc">Catalogue CLI pour workflows de lab</div>
+            <div class="project-scan__desc">Catalogue CLI pédagogique pour workflows de lab</div>
           </div>
           <div class="project-scan__stack">Python / Rich TUI</div>
           <a class="project-scan__link" href="projet/autohack/index.html">Détails</a>
@@ -101,17 +128,8 @@
 
         <div class="project-scan__row">
           <div>
-            <div class="project-scan__name">Krawl</div>
-            <div class="project-scan__desc">Honeypot + dashboard + rapport PDF</div>
-          </div>
-          <div class="project-scan__stack">Python / WSL2</div>
-          <a class="project-scan__link" href="projet/krawl/index.html">Détails</a>
-        </div>
-
-        <div class="project-scan__row">
-          <div>
             <div class="project-scan__name">Sofiane Cloud</div>
-            <div class="project-scan__desc">Hub média privé + panel ops</div>
+            <div class="project-scan__desc">Cloud privé local-first avec panel ops</div>
           </div>
           <div class="project-scan__stack">Flask / Linux</div>
           <a class="project-scan__link" href="projet/sofianecloud/index.html">Détails</a>
@@ -119,11 +137,11 @@
 
         <div class="project-scan__row">
           <div>
-            <div class="project-scan__name">IronAudit</div>
-            <div class="project-scan__desc">Audit posture Linux avec scoring et remédiation</div>
+            <div class="project-scan__name">Krawl</div>
+            <div class="project-scan__desc">Honeypot lab et observation d'événements exposés</div>
           </div>
-          <div class="project-scan__stack">Python / Linux</div>
-          <a class="project-scan__link" href="projet/ironaudit/index.html">Case study</a>
+          <div class="project-scan__stack">Python / WSL2</div>
+          <a class="project-scan__link" href="projet/krawl/index.html">Détails</a>
         </div>
       </div>
     </section>
@@ -170,7 +188,7 @@
       <div class="h3">Validation rapide</div>
       <ol class="list list--tight">
         <li>Consulter le GitHub principal</li>
-        <li>Ouvrir Mini SOC Dashboard et Threat Intel Aggregator</li>
+        <li>Ouvrir Mini SOC Dashboard et IOCvault — Threat Intel Aggregator</li>
         <li>Vérifier badges Cisco/Credly et PDF</li>
       </ol>
       <div class="card__actions" style="margin-top:12px">
