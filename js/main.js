@@ -34,13 +34,14 @@
     else root.removeAttribute('data-theme');
   }
 
-  const storedTheme = localStorage.getItem(THEME_KEY);
-  if (storedTheme) applyTheme(storedTheme);
+  let storedTheme;
+  try { storedTheme = localStorage.getItem(THEME_KEY); } catch { /* Storage may be disabled. */ }
+  if (storedTheme && !document.body.classList.contains('portfolio')) applyTheme(storedTheme);
 
   function toggleTheme(){
     const isLight = root.getAttribute('data-theme') === 'light';
     const next = isLight ? 'dark' : 'light';
-    localStorage.setItem(THEME_KEY, next);
+    try { localStorage.setItem(THEME_KEY, next); } catch { /* Theme still works without persistence. */ }
     applyTheme(next);
   }
 
@@ -181,6 +182,7 @@
   const formFeedback = document.getElementById('form-feedback');
   if (form && formFeedback) {
     const submitBtn = form.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn?.innerHTML;
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -195,6 +197,7 @@
         const res = await fetch(form.action, {
           method: 'POST',
           body: data,
+          signal: AbortSignal.timeout(15000),
           headers: { Accept: 'application/json' },
         });
 
@@ -212,7 +215,7 @@
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Envoyer';
+          submitBtn.innerHTML = submitLabel;
         }
       }
     });
@@ -227,12 +230,12 @@
     el.className = 'palette';
     el.id = 'cmdPalette';
     el.innerHTML = `
-      <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Navigation rapide">
         <div class="palette__top">
-          <input class="palette__input" id="cmdInput" placeholder="Rechercher une action…" autocomplete="off" />
+          <input class="palette__input" id="cmdInput" aria-label="Rechercher une page" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="cmdList" placeholder="Rechercher une action…" autocomplete="off" />
           <div class="palette__hint">Esc</div>
         </div>
-        <div class="palette__list" id="cmdList"></div>
+        <div class="palette__list" id="cmdList" role="listbox" aria-label="Pages et actions"></div>
       </div>
     `;
 
@@ -276,6 +279,8 @@
 
   function showPalette(){
     const el = ensurePalette();
+    if (el.classList.contains('show')) return;
+    window.__cmdPreviousFocus = document.activeElement;
     el.classList.add('show');
     const input = document.getElementById('cmdInput');
     const list = document.getElementById('cmdList');
@@ -294,6 +299,7 @@
       items.forEach((a, i) => {
         const div = document.createElement('div');
         div.className = 'palette__item';
+        div.id = `cmd-option-${i}`;
         div.setAttribute('role','option');
         div.setAttribute('aria-selected', i === window.__cmdIndex ? 'true' : 'false');
         div.innerHTML = `<div><div class="palette__label"></div><div class="palette__meta"></div></div><div class="palette__meta">↵</div>`;
@@ -302,6 +308,11 @@
         div.addEventListener('click', () => runAction(i));
         list.appendChild(div);
       });
+      if (items.length) input.setAttribute('aria-activedescendant', `cmd-option-${window.__cmdIndex}`);
+      else {
+        input.removeAttribute('aria-activedescendant');
+        list.textContent = 'Aucun résultat.';
+      }
     }
 
     function runAction(idx){
@@ -324,6 +335,7 @@
     }
 
     function onKey(e){
+      if (e.key === 'Tab') { e.preventDefault(); input.focus(); return; }
       if (e.key === 'Escape') { e.preventDefault(); hidePalette(); return; }
       if (e.key === 'ArrowDown') { e.preventDefault(); window.__cmdIndex = Math.min((window.__cmdIndex||0)+1, (window.__cmdFiltered||[]).length-1); render(); return; }
       if (e.key === 'ArrowUp') { e.preventDefault(); window.__cmdIndex = Math.max((window.__cmdIndex||0)-1, 0); render(); return; }
@@ -347,6 +359,7 @@
     if (input) input.value = '';
     if (window.__cmdOnKey) document.removeEventListener('keydown', window.__cmdOnKey);
     window.__cmdOnKey = null;
+    window.__cmdPreviousFocus?.focus();
   }
 
   const openPaletteBtn = document.getElementById('openPalette');
@@ -483,4 +496,23 @@
       if (e.key === 'Enter') checkSecret();
     });
   }
+})();
+
+// Project selection is progressive enhancement: all work stays visible without JS.
+(() => {
+  const filters = document.querySelector('.project-filters');
+  if (!filters) return;
+  const cards = [...document.querySelectorAll('.work-card[data-category]')];
+  filters.hidden = false;
+  filters.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-project-filter]');
+    if (!button) return;
+    filters.querySelectorAll('button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    let count = 0;
+    cards.forEach(card => {
+      card.hidden = button.dataset.projectFilter !== 'all' && card.dataset.category !== button.dataset.projectFilter;
+      if (!card.hidden) count++;
+    });
+    document.getElementById('projectCount').textContent = `${count} projet${count > 1 ? 's' : ''}`;
+  });
 })();

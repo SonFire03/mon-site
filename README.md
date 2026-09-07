@@ -1,66 +1,55 @@
-# Sofiane Dehimi — Portfolio IT / Cyber / Backend
+# Sofiane Dehimi — Portfolio
 
-Portfolio statique GitHub Pages orienté recrutement IT / SOC junior / cybersécurité / backend Python.
+Portfolio personnel Python, Linux et cybersécurité défensive. Site statique en français, publié sur GitHub Pages, sans compilation ni dépendance JavaScript en production.
 
-## Live
+- [Portfolio](https://sonfire03.github.io/mon-site/)
+- [Profil recruteur](https://sonfire03.github.io/mon-site/recruiter.html)
+- [Certifications](https://sonfire03.github.io/mon-site/projet/certif/certifications.html)
 
-- Portfolio: https://sonfire03.github.io/mon-site/
-- Recruiter view (scan rapide): https://sonfire03.github.io/mon-site/recruiter.html
-- Certifications / preuves: https://sonfire03.github.io/mon-site/projet/certif/certifications.html
+## Design et contenu
 
-## Positionnement
+Identité encre et vert lime, typographie éditoriale, monogramme et illustrations CSS. Six projets principaux filtrables, projets de lab, parcours, compétences, badges vérifiables et formulaire de contact. Les visuels SOC/IOC/DFIR/ADB illustrent les workflows ; ils ne représentent pas des mesures réelles. La capture Sofiane Cloud provient du projet.
 
-Profil junior orienté exécution technique:
-- IT operations / support système-réseau
-- Cyber défensive (SOC / Blue Team / CTI)
-- Backend Python (FastAPI, API REST, automatisation)
+Les études de cas et leurs liens sont conservés. Le CV d’une page est reconstitué exclusivement à partir des informations du portfolio ; sa source modifiable est `cv.html`.
 
-## Projets clés
+## Structure
 
-- Mini SOC Dashboard  
-  Ingestion de logs, détection, alertes/incidents, KPI et exports.
-- Threat Intel Aggregator  
-  Pipeline IOC: import, normalisation, scoring, export.
-- AutoHack  
-  Catalogue CLI structuré pour workflows de lab sécurité.
-- Krawl  
-  Honeypot pédagogique + dashboard + documentation PDF.
-- Sofiane Cloud  
-  Hub média privé Flask avec panel ops.
-- IronAudit  
-  Linux security posture auditor avec scoring, findings et guidance de remédiation.
+- `index.html` : accueil et sélection de projets.
+- `recruiter.html` : lecture synthétique pour le recrutement.
+- `cv.html`, `assets/CV_Sofiane_Dehimi.pdf` : source imprimable et CV téléchargeable.
+- `css/main.css` : composants des pages détaillées.
+- `css/redesign.css` : identité partagée, accueil et adaptations mobiles.
+- `js/main.js` : navigation, filtres, contact, certifications et navigation clavier Ctrl/Cmd+K.
+- `projet/` : études de cas, certifications et parcours.
+- `scripts/` : contrôles des liens et tests navigateur.
 
-## Stack
+## Développement local
 
-- Frontend: HTML, CSS, JavaScript (vanilla)
-- Backend (projets): Python, FastAPI, Flask
-- Data: SQLite, JSON, CSV
-- Outils: Git, GitHub, Linux
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1
+```
 
-## Preuves vérifiables
+Ouvrir `http://127.0.0.1:8765/`. Les projets restent visibles sans JavaScript. Le formulaire utilise l’endpoint Formspree existant ; aucune clé n’est stockée dans le dépôt.
 
-- GitHub: https://github.com/SonFire03
-- Badges Cisco/Credly: page certifs du portfolio
-- Certificats TryHackMe (PDF): page certifs du portfolio
+## Vérification
 
-## Structure du repo
+```sh
+python3 scripts/check_site.py
+node --check js/main.js
+```
 
-- `index.html` — page principale
-- `recruiter.html` — version recruteur ultra synthétique
-- `css/main.css` — design system et responsive
-- `js/main.js` — interactions UI
-- `projet/*` — pages de détail projets
-- `projet/certif/certifications.html` — preuves/certifications
-- `assets/` — images, CV, ressources
+Les tests navigateur nécessitent Playwright et Chromium (outils de développement facultatifs) :
 
-## Déploiement GitHub Pages
+```sh
+npm install --no-save --package-lock=false playwright
+npx playwright install chromium
+node scripts/check_browser.cjs
+```
 
-1. `Settings` -> `Pages`
-2. Source: `Deploy from a branch`
-3. Branch: `main`, dossier: `/ (root)`
-4. Attendre 1-2 minutes
+Laisser le serveur local actif. `CHROME_PATH` permet d’utiliser un Chrome installé ; `PLAYWRIGHT_MODULE` permet d’utiliser une installation existante de Playwright. Les tests couvrent quatre largeurs d’écran, les filtres, le menu mobile, les pages secondaires, les certifications, la navigation clavier et le contenu sans JavaScript. Les envois Formspree sont interceptés : aucun message réel n’est envoyé. Les captures sont enregistrées dans `/tmp/portfolio-*.png`.
 
-## Contact
+Pour actualiser le PDF : ouvrir `cv.html`, imprimer au format A4, désactiver les en-têtes/pieds de page et enregistrer vers `assets/CV_Sofiane_Dehimi.pdf`.
 
-- GitHub: https://github.com/SonFire03
-- Formulaire: section contact du portfolio
+## Publication
+
+GitHub Pages publie la branche `main`, à la racine du dépôt. Un push sur `main` déclenche la mise à jour du site. La page 404 utilise le préfixe `/mon-site/` pour fonctionner aussi depuis une URL imbriquée inexistante.

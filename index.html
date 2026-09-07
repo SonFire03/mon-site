@@ -1,30 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Sofiane Dehimi — Portfolio SOC / DFIR / Python</title>
-  <meta name="description" content="Portfolio de Sofiane Dehimi, développeur Python junior orienté SOC, DFIR, Linux et automatisation défensive: projets concrets, preuves vérifiables et contact direct." />
-  <meta name="theme-color" content="#091018" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/sofiane.jpg" />
-
-  <meta property="og:title" content="Sofiane Dehimi — Portfolio SOC / DFIR / Python" />
-  <meta property="og:description" content="Profil junior structuré: projets SOC/DFIR/Python tooling, certifications vérifiables et preuves GitHub." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/sofiane.jpg" />
-  <link rel="canonical" href="https://sonfire03.github.io/mon-site/" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Manrope:wght@400;500;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet" />
-  <link rel="preload" href="css/main.css?v=20260424a" as="style" />
-  <link rel="preconnect" href="https://formspree.io" />
-  <link rel="stylesheet" href="css/main.css?v=20260424a" />
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Sofiane Dehimi — Portfolio SOC / DFIR / Python
+  </title>
+  <meta content="Portfolio de Sofiane Dehimi, développeur Python junior orienté SOC, DFIR, Linux et automatisation défensive: projets concrets, preuves vérifiables et contact direct." name="description"/>
+  <meta content="#101110" name="theme-color"/>
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://sonfire03.github.io/mon-site/assets/sofiane.jpg" rel="apple-touch-icon"/>
+  <meta content="Sofiane Dehimi — Portfolio SOC / DFIR / Python" property="og:title"/>
+  <meta content="Profil junior structuré: projets SOC/DFIR/Python tooling, certifications vérifiables et preuves GitHub." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://sonfire03.github.io/mon-site/assets/sofiane.jpg" property="og:image"/>
+  <link href="https://sonfire03.github.io/mon-site/" rel="canonical"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Manrope:wght@400;500;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+  <link as="style" href="css/main.css?v=20260907" rel="preload"/>
+  <link href="https://formspree.io" rel="preconnect"/>
+  <link href="css/main.css?v=20260907" rel="stylesheet"/>
   <script type="application/ld+json">
-  {
+   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sofiane Dehimi",
@@ -41,660 +39,979 @@
     "sameAs": ["https://github.com/SonFire03"]
   }
   </script>
-  <script defer src="js/main.js?v=20260424a"></script>
-</head>
-<body>
-  <a class="skip" href="#content">Aller au contenu</a>
-
+  <script defer="" src="js/main.js?v=20260907">
+  </script>
+  <link href="css/redesign.css?v=20260907" rel="stylesheet"/>
+ </head>
+ <body class="portfolio">
+  <a class="skip" href="#content">
+   Aller au contenu
+  </a>
   <header class="topbar">
-    <div class="topbar__progress" aria-hidden="true"><div id="scrollProgress"></div></div>
-    <div class="wrap topbar__inner">
-      <a class="brand" href="#top" aria-label="Retour en haut">
-        <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__text">Sofiane<span class="muted">.ops</span></span>
+   <div class="wrap topbar__inner">
+    <a aria-label="Sofiane Dehimi, accueil" class="brand" href="#top">
+     <span class="monogram">
+      sd
+      <span>
+       _
+      </span>
+     </span>
+     <span class="brand-caption">
+      SOFIANE DEHIMI
+      <br/>
+      <small>
+       PYTHON &amp; CYBERSÉCURITÉ
+      </small>
+     </span>
+    </a>
+    <nav aria-label="Navigation principale" class="nav">
+     <button aria-controls="navMenu" aria-expanded="false" class="nav__toggle" id="navToggle">
+      Menu
+      <span aria-hidden="true">
+       ＋
+      </span>
+     </button>
+     <div class="nav__menu" id="navMenu">
+      <a href="#projects">
+       Projets
       </a>
-
-      <nav class="nav" aria-label="Navigation principale">
-        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
-        <div class="nav__menu" id="navMenu">
-          <a href="recruiter.html">Recruiter view</a>
-          <a href="#highlights">Highlights</a>
-          <a href="#about">À propos</a>
-          <a href="#skills">Compétences</a>
-          <a href="#projects">Projets</a>
-          <a href="#certifications">Preuves</a>
-          <a href="#contact">Contact</a>
-
-          <div class="nav__divider" aria-hidden="true"></div>
-          <button class="btn btn--ghost nav__btn" id="themeToggle2" type="button">Thème</button>
-          <a class="btn nav__btn" href="assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
-        </div>
-      </nav>
-
-      <div class="topbar__actions">
-        <button class="btn btn--ghost" id="themeToggle" type="button">Thème</button>
-        <a class="btn" href="assets/CV_Sofiane_Dehimi.pdf" download>CV (PDF)</a>
-        <button class="btn btn--ghost" id="openPalette" type="button" title="Ctrl+K">Ctrl+K</button>
-      </div>
-    </div>
+      <a href="#about">
+       À propos
+      </a>
+      <a href="#skills">
+       Expertises
+      </a>
+      <a href="#certifications">
+       Certifications
+      </a>
+      <a class="nav-contact" href="#contact">
+       Discutons
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </a>
+     </div>
+    </nav>
+   </div>
   </header>
-
   <main id="content">
-    <section class="hero" id="top">
-      <div class="wrap hero__grid">
-        <div class="hero__left">
-          <p class="kicker">Portfolio IT / Cybersécurité défensive / Backend Python</p>
-          <h1 class="h1">Développeur Python junior orienté SOC, DFIR & automatisation système.</h1>
-          <p class="lead">Je construis des outils concrets autour de l'analyse de logs, des tableaux de bord SOC, de l'audit Linux, des IOC et du reporting défensif en local-first.</p>
-
-          <div class="stats" data-reveal>
-            <div class="stat">
-              <div class="stat__k">Positionnement</div>
-              <div class="stat__v">Junior SOC / IT Ops / Backend Python</div>
-            </div>
-            <div class="stat">
-              <div class="stat__k">Stack principal</div>
-              <div class="stat__v">Python • FastAPI • Linux • SOC tooling</div>
-            </div>
-            <div class="stat">
-              <div class="stat__k">Preuves</div>
-              <div class="stat__v">GitHub • Credly • PDF • captures</div>
-            </div>
-          </div>
-
-          <div class="hero__cta">
-            <a class="btn" href="recruiter.html">Recruiter view (10s)</a>
-            <a class="btn btn--ghost" href="#projects">Voir la sélection projets</a>
-            <a class="btn btn--ghost" href="#contact">Me contacter</a>
-          </div>
-
-          <div class="chips" aria-label="Liens principaux">
-            <a class="chip" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">GitHub principal</a>
-            <a class="chip" href="projet/certif/certifications.html">Certifications vérifiables</a>
-            <a class="chip" href="assets/CV_Sofiane_Dehimi.pdf" download>CV PDF</a>
-          </div>
-        </div>
-
-        <div class="hero__right">
-          <article class="card profile" data-reveal>
-            <img src="assets/sofiane.jpg" alt="Photo de Sofiane Dehimi" class="profile__img" loading="lazy" decoding="async" />
-            <div class="profile__meta">
-              <div class="profile__name">Sofiane Dehimi</div>
-              <div class="profile__role muted">Junior SOC / IT Ops / Backend Python</div>
-              <div class="profile__stack">
-                <span class="pill">Python</span>
-                <span class="pill">FastAPI</span>
-                <span class="pill">Linux</span>
-                <span class="pill">Windows</span>
-                <span class="pill">SOC</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card small" data-reveal>
-            <div class="small__title">Disponibilité</div>
-            <ul class="list list--tight">
-              <li>Recherche: poste junior IT / SOC / backend Python sécurité</li>
-              <li>Basé en Île-de-France (mobilité locale)</li>
-              <li>Ouvert aux entretiens techniques</li>
-            </ul>
-          </article>
-        </div>
+   <section class="hero" id="top">
+    <div class="wrap">
+     <div class="hero-eyebrow">
+      <span>
+       <span class="live-dot">
+       </span>
+       À L’ÉCOUTE D’OPPORTUNITÉS JUNIOR
+      </span>
+      <span>
+       ÎLE-DE-FRANCE · FR
+      </span>
+     </div>
+     <div class="intro-grid">
+      <div>
+       <p class="intro-name">
+        Bonjour, moi c’est Sofiane.
+       </p>
+       <h1>
+        Comprendre.
+        <br/>
+        Construire.
+        <br/>
+        <span>
+         Sécuriser.
+        </span>
+       </h1>
+       <p class="hero-description">
+        Développeur Python junior, passionné par les systèmes Linux et la cybersécurité défensive. Je transforme des problèmes techniques en outils concrets.
+       </p>
+       <div class="hero__cta">
+        <a class="btn" href="#projects">
+         Explorer mes projets
+         <span aria-hidden="true">
+          ↗
+         </span>
+        </a>
+        <a class="quiet-link" download="" href="assets/CV_Sofiane_Dehimi.pdf">
+         Télécharger mon CV
+         <span aria-hidden="true">
+          ↓
+         </span>
+        </a>
+       </div>
       </div>
-    </section>
-
-    <section class="section" id="highlights">
-      <div class="wrap">
-        <div class="section__head" data-reveal>
-          <h2>Highlights</h2>
-          <p class="muted">Version lecture rapide.</p>
-        </div>
-
-        <div class="grid3">
-          <article class="card" data-reveal>
-            <h3>Projets hiérarchisés</h3>
-            <p class="muted">Sélection de projets SOC / DFIR / Python tooling, organisée par priorité.</p>
-            <a class="textlink" href="#projects">Voir la sélection projet</a>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Preuves vérifiables</h3>
-            <p class="muted">Badges Cisco/Credly, PDF et GitHub public.</p>
-            <a class="textlink" href="projet/certif/certifications.html">Ouvrir les preuves</a>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Orientation défensive</h3>
-            <p class="muted">SOC/CTI, logs, détection et workflow IOC.</p>
-            <a class="textlink" href="#skills">Voir compétences</a>
-          </article>
-        </div>
-
-          <article class="card" data-reveal style="margin-top:14px">
-          <h3>Scan projet rapide</h3>
-          <p class="muted">Objectif, stack et preuve en un coup d'oeil.</p>
-          <div class="project-scan">
-            <div class="project-scan__row">
-              <div>
-                <div class="project-scan__name">Mini SOC Dashboard</div>
-                <div class="project-scan__desc">Dashboard SOC local: ingestion logs, détection, alertes, rapports HTML</div>
-              </div>
-              <div class="project-scan__stack">FastAPI / Python / SQLite</div>
-              <a class="project-scan__link" href="projet/mini-soc-dashboard/index.html">Case study</a>
-            </div>
-            <div class="project-scan__row">
-              <div>
-                <div class="project-scan__name">IOCvault — Threat Intel Aggregator</div>
-                <div class="project-scan__desc">Pipeline IOC local-first: import, normalisation, scoring, export</div>
-              </div>
-              <div class="project-scan__stack">FastAPI / CTI / API REST</div>
-              <a class="project-scan__link" href="projet/threat-intel-aggregator/index.html">Case study</a>
-            </div>
-            <div class="project-scan__row">
-              <div>
-                <div class="project-scan__name">DFIR Case Manager</div>
-                <div class="project-scan__desc">Gestion d'incidents: timeline, IOC, notes, preuves et reporting</div>
-              </div>
-              <div class="project-scan__stack">Flask / SQLite / DFIR</div>
-              <a class="project-scan__link" href="projet/dfir-case-manager/index.html">Case study</a>
-            </div>
-            <div class="project-scan__row">
-              <div>
-                <div class="project-scan__name">ADB Manager Pro</div>
-                <div class="project-scan__desc">Tooling desktop Android local: commandes, transferts et audit trail</div>
-              </div>
-              <div class="project-scan__stack">Python / Tkinter / ADB</div>
-              <a class="project-scan__link" href="projet/adb-manager-pro/index.html">Case study</a>
-            </div>
-          </div>
-        </article>
+      <div aria-label="De la compréhension des systèmes à leur protection" class="hero-art">
+       <div class="orbit orbit-one">
+       </div>
+       <div class="orbit orbit-two">
+       </div>
+       <div class="orbit orbit-three">
+       </div>
+       <div class="orbit-cross cross-x">
+       </div>
+       <div class="orbit-cross cross-y">
+       </div>
+       <span class="orbit-label label-top">
+        01 — OBSERVER
+       </span>
+       <span class="orbit-label label-bottom">
+        03 — PROTÉGER
+       </span>
+       <span class="orbit-label label-right">
+        02 — CONSTRUIRE
+       </span>
+       <div aria-hidden="true" class="core-mark">
+        s
+        <span>
+         d
+        </span>
+        <i>
+         _
+        </i>
+       </div>
+       <span class="orbit-node node-one">
+       </span>
+       <span class="orbit-node node-two">
+       </span>
+       <div class="art-caption">
+        <span>
+         CODE WITH PURPOSE.
+        </span>
+        <span>
+         PYTHON / LINUX / BLUE TEAM
+        </span>
+       </div>
       </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="wrap">
-        <div class="section__head" data-reveal>
-          <h2>À propos</h2>
-          <p class="muted">Profil, base IT et progression en cybersécurité défensive.</p>
-        </div>
-
-        <div class="grid2">
-          <article class="card" data-reveal>
-            <h3>Positionnement professionnel</h3>
-            <p class="muted">Profil junior IT/cyber avec base systèmes-réseaux et focus backend Python pour des cas d'usage SOC: ingestion, parsing, API et dashboards techniques.</p>
-            <ul class="list">
-              <li>Base: support utilisateur, systèmes Windows/Linux, réseau</li>
-              <li>Focus: automatisation défensive, analyse de logs, traitement IOC</li>
-              <li>Objectif: SOC junior, IT ops ou backend Python orienté sécurité</li>
-            </ul>
-
-            <div class="divider"></div>
-            <h3>Formation</h3>
-            <ul class="list">
-              <li><strong>Bac Pro Systèmes Numériques</strong> — Lycée Jacques Prévert (Combs-la-Ville), 2018-2021, mention Bien</li>
-              <li><strong>BEP Systèmes Numériques (certification intermédiaire du Bac Pro SN)</strong> — 2019</li>
-              <li><strong>Formation continue</strong>: Cisco, TryHackMe, projets GitHub documentés</li>
-            </ul>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Expériences terrain</h3>
-            <p class="muted">Maintenance/support terrain: diagnostic, communication, fiabilité.</p>
-
-            <div class="timeline">
-              <div class="titem">
-                <div class="titem__top">
-                  <div class="titem__title">Conseiller Service Client — Boulanger (Cesson)</div>
-                  <div class="titem__date muted">Août 2023 - Nov. 2024</div>
-                </div>
-                <div class="titem__desc muted">Incidents SAV, suivi client, coordination.</div>
-              </div>
-
-              <div class="titem">
-                <div class="titem__top">
-                  <div class="titem__title">Technicien Maintenance Informatique — Mairie de Dammarie-les-Lys</div>
-                  <div class="titem__date muted">Sept. 2021 - Mars 2023</div>
-                </div>
-                <div class="titem__desc muted">Alternance: support, maintenance, assistance utilisateurs.</div>
-              </div>
-
-              <div class="titem">
-                <div class="titem__top">
-                  <div class="titem__title">Stages IT — Mairie de Dammarie-les-Lys</div>
-                  <div class="titem__date muted">2020 - 2021</div>
-                </div>
-                <div class="titem__desc muted">Stages IT en environnement municipal.</div>
-              </div>
-            </div>
-          </article>
-        </div>
+     </div>
+     <div class="hero-bottom">
+      <span>
+       DU CODE, DES PROJETS, DES PREUVES.
+      </span>
+      <a href="https://github.com/SonFire03" rel="noreferrer" target="_blank">
+       GitHub / SonFire03 ↗
+      </a>
+      <a aria-label="Descendre vers les projets" href="#projects">
+       DÉFILER POUR DÉCOUVRIR ↓
+      </a>
+     </div>
+    </div>
+   </section>
+   <div aria-label="Technologies" class="stack-strip">
+    <div class="wrap">
+     <span>
+      MON TERRAIN DE JEU
+     </span>
+     <b>
+      Python
+     </b>
+     <i>
+      ✳
+     </i>
+     <b>
+      FastAPI
+     </b>
+     <i>
+      ✳
+     </i>
+     <b>
+      Linux
+     </b>
+     <i>
+      ✳
+     </i>
+     <b>
+      Flask
+     </b>
+     <i>
+      ✳
+     </i>
+     <b>
+      Git
+     </b>
+     <i>
+      ✳
+     </i>
+     <b>
+      Blue Team
+     </b>
+    </div>
+   </div>
+   <section class="section selected-work" id="projects">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <p class="eyebrow">
+        01 / PROJETS SÉLECTIONNÉS
+       </p>
+       <h2>
+        Le concret,
+        <br/>
+        avant les mots
+        <span>
+         .
+        </span>
+       </h2>
       </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="wrap">
-        <div class="section__head" data-reveal>
-          <h2>Compétences</h2>
-          <p class="muted">Compétences hiérarchisées selon l'axe backend Python, systèmes Linux et cyber défensive.</p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="card" data-reveal>
-            <h3>Backend & scripting</h3>
-            <ul class="list list--tight">
-              <li>Python, FastAPI, Flask, APIs REST</li>
-              <li>Scripts CLI, automatisation, parsing de logs, normalisation de données</li>
-              <li>JSON / CSV / Markdown exports pour outils techniques</li>
-            </ul>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Systèmes & administration</h3>
-            <ul class="list list--tight">
-              <li>Linux, systemd, logs, services, permissions</li>
-              <li>Shell, UFW, SSH basics et diagnostic opérationnel</li>
-              <li>Dépannage poste, hygiène système et audit local</li>
-            </ul>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Cybersécurité défensive / SOC</h3>
-            <ul class="list list--tight">
-              <li>Analyse de logs, alerting, détection et triage initial</li>
-              <li>IOC, threat intelligence, incident response et DFIR basics</li>
-              <li>Audit local, reporting et observation en environnement de lab</li>
-            </ul>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Qualité & workflow</h3>
-            <ul class="list list--tight">
-              <li>Git, tests, pytest, Ruff, Mypy</li>
-              <li>Documentation, releases et architecture de projet</li>
-              <li>Workflow itératif: MVP, validation, amélioration continue</li>
-            </ul>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Desktop / Android tooling</h3>
-            <ul class="list list--tight">
-              <li>PySide6, ADB, Termux</li>
-              <li>Device management et automatisation locale</li>
-              <li>Interfaces desktop pour tâches système et diagnostic</li>
-            </ul>
-          </article>
-        </div>
+      <p>
+       Des outils développés pour apprendre,
+       <br/>
+       résoudre et comprendre en profondeur.
+       <br/>
+       Le code et les choix techniques sont ouverts.
+      </p>
+     </div>
+     <div class="work-toolbar">
+      <div aria-label="Filtrer les projets" class="project-filters" hidden="">
+       <button aria-pressed="true" data-project-filter="all" type="button">
+        Tous les projets
+        <span>
+         06
+        </span>
+       </button>
+       <button aria-pressed="false" data-project-filter="cyber" type="button">
+        Cybersécurité
+       </button>
+       <button aria-pressed="false" data-project-filter="backend" type="button">
+        Backend
+       </button>
+       <button aria-pressed="false" data-project-filter="tools" type="button">
+        Outillage
+       </button>
       </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="wrap">
-        <div class="section__head" data-reveal>
-          <h2>Projets</h2>
-          <p class="muted">SOC, audit Linux, DFIR, threat intel et tooling backend: une sélection structurée et démontrable.</p>
+      <span id="projectCount" role="status">
+       6 projets
+      </span>
+     </div>
+     <div class="work-grid">
+      <article class="work-card" data-category="cyber">
+       <a aria-label="Découvrir Mini SOC Dashboard" class="work-visual visual-soc" href="projet/mini-soc-dashboard/index.html">
+        <div class="signal-label">
+         <span class="live-dot">
+         </span>
+         PIPELINE DE DÉTECTION
+         <span>
+          LOCAL / SOC
+         </span>
         </div>
-        <p class="projects-intro muted" data-reveal>Ces projets montrent un axe clair: backend Python, systèmes Linux, cybersécurité défensive et automatisation orientée opérations.</p>
-
-        <article class="card project-feature" data-reveal>
-          <div>
-            <p class="kicker">Projet vedette</p>
-            <div class="card__top">
-              <h3>Mini SOC Dashboard</h3>
-              <span class="project-label">SOC / Detection</span>
-            </div>
-            <p class="muted">Dashboard SOC local: ingestion logs, détection, alertes et reporting.</p>
-            <ul class="list list--tight">
-              <li>Ingestion multi-formats (JSON/fichiers/logs web) avec mode live</li>
-              <li>Règles unitaires/corrélées, watchlist IOC et politiques automatiques</li>
-              <li>Rapports HTML, exports CSV, scheduler et suivi d'incidents</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">FastAPI</span>
-              <span class="tag">Python</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">Blue Team</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn" href="projet/mini-soc-dashboard/index.html">Voir détails</a>
-              <a class="btn btn--ghost" href="https://github.com/SonFire03/mini_soc_dashboard.git" target="_blank" rel="noreferrer">Repo GitHub</a>
-            </div>
-          </div>
-          <img class="project__thumb" src="https://github.com/user-attachments/assets/75cedf6c-652c-4f27-93fd-2a4d995c5427" alt="Mini SOC Dashboard — Vue d'ensemble du dashboard SOC" loading="lazy" decoding="async" />
-        </article>
-
-        <div class="projects-subhead" data-reveal>
-          <h3>Projets principaux</h3>
-          <p class="muted">Noyau de preuves backend/sécurité à vérifier en priorité.</p>
+        <div class="signal-graph">
+         <i style="--bar:14%">
+         </i>
+         <i style="--bar:23%">
+         </i>
+         <i style="--bar:18%">
+         </i>
+         <i style="--bar:35%">
+         </i>
+         <i style="--bar:27%">
+         </i>
+         <i style="--bar:44%">
+         </i>
+         <i style="--bar:31%">
+         </i>
+         <i style="--bar:23%">
+         </i>
+         <i style="--bar:49%">
+         </i>
+         <i style="--bar:38%">
+         </i>
+         <i style="--bar:65%">
+         </i>
+         <i style="--bar:43%">
+         </i>
+         <i style="--bar:30%">
+         </i>
+         <i style="--bar:47%">
+         </i>
+         <i style="--bar:80%">
+         </i>
+         <i style="--bar:52%">
+         </i>
+         <i style="--bar:34%">
+         </i>
+         <i style="--bar:60%">
+         </i>
+         <i style="--bar:42%">
+         </i>
+         <i style="--bar:96%">
+         </i>
+         <i style="--bar:64%">
+         </i>
+         <i style="--bar:48%">
+         </i>
+         <i style="--bar:72%">
+         </i>
+         <i style="--bar:50%">
+         </i>
+         <i style="--bar:37%">
+         </i>
+         <i style="--bar:61%">
+         </i>
+         <i style="--bar:43%">
+         </i>
+         <i style="--bar:28%">
+         </i>
+         <i style="--bar:49%">
+         </i>
+         <i style="--bar:33%">
+         </i>
+         <i style="--bar:22%">
+         </i>
+         <i style="--bar:39%">
+         </i>
         </div>
-
-        <div class="projects-grid projects-grid--main">
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>IronAudit</h3>
-              <span class="project-label">Linux Security</span>
-            </div>
-            <p class="muted">Audit Linux en lecture seule: posture, findings structurés, score et remédiation.</p>
-            <ul class="list list--tight">
-              <li>Checks lecture seule: SSH, firewall, services, users/sudo, permissions, updates, auth</li>
-              <li>Exports terminal, JSON, Markdown, HTML, SARIF et dashboard web local</li>
-              <li>Comparaison baseline/current et historique de snapshots</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">Python</span>
-              <span class="tag">Typer</span>
-              <span class="tag">Linux</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/ironaudit/index.html">Détails</a>
-              <a class="btn btn--ghost" href="https://github.com/SonFire03/IronAudit" target="_blank" rel="noreferrer">Repo GitHub</a>
-            </div>
-          </article>
-
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>IOCvault — Threat Intel Aggregator</h3>
-              <span class="project-label">Threat Intel</span>
-            </div>
-            <p class="muted">IOCvault: pipeline local-first pour importer, normaliser, dédupliquer, scorer et exporter des IOC.</p>
-            <ul class="list list--tight">
-              <li>Imports TXT/CSV/JSON + rapport d'exécution par lot</li>
-              <li>Normalisation IP/domaine/URL/hash/CVE avec déduplication</li>
-              <li>API REST, watchlist et interface web de suivi</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">CTI</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/threat-intel-aggregator/index.html">Détails</a>
-              <a class="btn btn--ghost" href="https://github.com/SonFire03/Threat_Intel_Aggregator.git" target="_blank" rel="noreferrer">Repo GitHub</a>
-            </div>
-          </article>
-
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>DFIR Case Manager</h3>
-              <span class="project-label">DFIR / Case Management</span>
-            </div>
-            <p class="muted">Application DFIR pour piloter les incidents: cas, chronologie, IOC, notes et reporting.</p>
-            <ul class="list list--tight">
-              <li>Gestion de cas avec statut, priorité, propriétaire et suivi d'avancement</li>
-              <li>Timeline, IOC, preuves et notes centralisées pour investigation reproductible</li>
-              <li>Exports et reporting exploitables pour handover SOC/DFIR</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">Python</span>
-              <span class="tag">Flask</span>
-              <span class="tag">SQLite</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/dfir-case-manager/index.html">Détails</a>
-              <a class="btn btn--ghost" href="https://github.com/SonFire03/DFIR_Case_Manager.git" target="_blank" rel="noreferrer">Repo GitHub</a>
-            </div>
-          </article>
-
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>ADB Manager Pro</h3>
-              <span class="project-label">Android Ops / Desktop Tooling</span>
-            </div>
-            <p class="muted">Application desktop PySide6 pour la gestion d'appareils Android, fichiers, apps, debug et monitoring.</p>
-            <ul class="list list--tight">
-              <li>Transferts, exécution de commandes et health checks via workflow guidé</li>
-              <li>Journal d'actions et audit trail local pour traçabilité opérationnelle</li>
-              <li>Automatisation de tâches répétitives pour parc Android de lab</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">Python</span>
-              <span class="tag">Tkinter</span>
-              <span class="tag">ADB</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/adb-manager-pro/index.html">Détails</a>
-              <a class="btn btn--ghost" href="https://github.com/SonFire03/adb_manager.git" target="_blank" rel="noreferrer">Repo GitHub</a>
-            </div>
-          </article>
+        <div class="pipeline">
+         <span>
+          01 / INGESTION
+         </span>
+         <b>
+          →
+         </b>
+         <span>
+          02 / DÉTECTION
+         </span>
+         <b>
+          →
+         </b>
+         <span>
+          03 / TRIAGE
+         </span>
         </div>
-
-        <div class="projects-subhead projects-subhead--soft" data-reveal>
-          <h3>Projets complémentaires</h3>
-          <p class="muted">Des briques utiles en appui de l'axe SOC/DFIR/backend, avec une priorité de lecture plus basse.</p>
+       </a>
+       <div class="work-body">
+        <div class="work-meta">
+         <span>
+          01 / Python · FastAPI · SQLite
+         </span>
+         <span>
+          ↗
+         </span>
         </div>
-
-        <div class="projects-complementary">
-          <article class="card project-card project-card--support" data-reveal>
-            <div class="card__top">
-              <h3>AUTOHACK</h3>
-              <span class="project-label">CLI Tooling</span>
-            </div>
-            <p class="muted">Catalogue CLI pédagogique pour organiser, documenter et rejouer des workflows techniques en environnement lab, avec dry-run, historique et structure claire.</p>
-            <ul class="list list--tight">
-              <li>Recherche multi-critères dans un large catalogue de commandes sécurité</li>
-              <li>Dry-run, favoris et historique local pour usage contrôlé</li>
-              <li>Exports Markdown/TXT/JSON/HTML pour partage d'exécution</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">Python</span>
-              <span class="tag">Rich TUI</span>
-              <span class="tag">Automation</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/autohack/index.html">Détails</a>
-              <a class="btn btn--ghost" href="https://github.com/SonFire03/autohack" target="_blank" rel="noreferrer">Repo GitHub</a>
-            </div>
-          </article>
-
-          <article class="card project-card project-card--support" data-reveal>
-            <div class="card__top">
-              <h3>Sofiane Cloud</h3>
-              <span class="project-label">Infrastructure</span>
-            </div>
-            <p class="muted">Cloud personnel local-first avec interface web, gestion de fichiers, galerie, panneau d'administration et supervision système.</p>
-            <ul class="list list--tight">
-              <li>Interface responsive pour galerie et documents</li>
-              <li>Explorateur avec recherche, tri, pagination et ZIP</li>
-              <li>Panel ops pour supervision services et tunnels</li>
-            </ul>
-            <div class="tags" aria-label="Stack">
-              <span class="tag">Flask</span>
-              <span class="tag">Linux</span>
-              <span class="tag">Cloudflare</span>
-            </div>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/sofianecloud/index.html">Détails</a>
-            </div>
-          </article>
+        <h3>
+         <a href="projet/mini-soc-dashboard/index.html">
+          Mini SOC Dashboard
+         </a>
+        </h3>
+        <p class="work-title">
+         Des logs bruts aux alertes exploitables.
+        </p>
+        <p>
+         Ingestion, règles de détection, triage et rapports : un workflow SOC complet, pensé pour fonctionner en local.
+        </p>
+        <a class="textlink" href="projet/mini-soc-dashboard/index.html">
+         Explorer le projet
+         <span aria-hidden="true">
+          ↗
+         </span>
+        </a>
+       </div>
+      </article>
+      <article class="work-card" data-category="cyber">
+       <a aria-label="Découvrir IronAudit" class="work-visual visual-audit" href="projet/ironaudit/index.html">
+        <div class="terminal-head">
+         <span>
+          ● ● ●
+         </span>
+         ironaudit / linux
         </div>
+        <code>
+         <span>
+          $
+         </span>
+         ironaudit scan
+         <br/>
+         <br/>
+         <span>
+          ✓
+         </span>
+         Permissions &amp; services
+         <br/>
+         <span>
+          ✓
+         </span>
+         Configuration SSH
+         <br/>
+         <span>
+          ✓
+         </span>
+         Pare-feu &amp; journalisation
+         <br/>
+         <br/>
+         <span>
+          →
+         </span>
+         Rapport de posture système
+         <span class="cursor">
+          _
+         </span>
+        </code>
+       </a>
+       <div class="work-body">
+        <div class="work-meta">
+         <span>
+          02 / Python · Typer · Linux
+         </span>
+         <span>
+          ↗
+         </span>
+        </div>
+        <h3>
+         <a href="projet/ironaudit/index.html">
+          IronAudit
+         </a>
+        </h3>
+        <p class="work-title">
+         Comprendre et renforcer un système Linux.
+        </p>
+        <p>
+         Audit en lecture seule, score de posture et recommandations de remédiation.
+        </p>
+        <a class="textlink" href="projet/ironaudit/index.html">
+         Explorer le projet
+         <span aria-hidden="true">
+          ↗
+         </span>
+        </a>
+       </div>
+      </article>
+      <article class="work-card" data-category="cyber">
+       <a aria-label="Découvrir IOCvault" class="work-visual visual-ioc" href="projet/threat-intel-aggregator/index.html">
+        <div class="system-graphic">
+         <span class="system-core">
+          IOC
+         </span>
+         <div>
+          <span>
+           IP
+          </span>
+          <span>
+           DOMAIN
+          </span>
+          <span>
+           URL
+          </span>
+          <span>
+           HASH
+          </span>
+         </div>
+        </div>
+       </a>
+       <div class="work-body">
+        <div class="work-meta">
+         <span>
+          03 / Python · FastAPI · CTI
+         </span>
+         <span>
+          ↗
+         </span>
+        </div>
+        <h3>
+         <a href="projet/threat-intel-aggregator/index.html">
+          IOCvault
+         </a>
+        </h3>
+        <p class="work-title">
+         Donner du sens aux indicateurs de menace.
+        </p>
+        <p>
+         Importer, normaliser, dédupliquer et scorer des IOC dans un pipeline local.
+        </p>
+        <a class="textlink" href="projet/threat-intel-aggregator/index.html">
+         Explorer le projet
+         <span aria-hidden="true">
+          ↗
+         </span>
+        </a>
+       </div>
+      </article>
+      <article class="work-card" data-category="cyber">
+       <a aria-label="Découvrir DFIR Case Manager" class="work-visual visual-dfir" href="projet/dfir-case-manager/index.html">
+        <div class="system-graphic">
+         <span class="system-core">
+          DFIR
+         </span>
+         <div>
+          <span>
+           INCIDENT
+          </span>
+          <span>
+           TIMELINE
+          </span>
+          <span>
+           PREUVES
+          </span>
+          <span>
+           RAPPORT
+          </span>
+         </div>
+        </div>
+       </a>
+       <div class="work-body">
+        <div class="work-meta">
+         <span>
+          04 / Python · Flask · SQLite
+         </span>
+         <span>
+          ↗
+         </span>
+        </div>
+        <h3>
+         <a href="projet/dfir-case-manager/index.html">
+          DFIR Case Manager
+         </a>
+        </h3>
+        <p class="work-title">
+         Garder le fil d’une investigation.
+        </p>
+        <p>
+         Cas, chronologie, IOC, preuves et notes réunis pour un reporting structuré.
+        </p>
+        <a class="textlink" href="projet/dfir-case-manager/index.html">
+         Explorer le projet
+         <span aria-hidden="true">
+          ↗
+         </span>
+        </a>
+       </div>
+      </article>
+      <article class="work-card" data-category="tools">
+       <a aria-label="Découvrir ADB Manager Pro" class="work-visual visual-adb" href="projet/adb-manager-pro/index.html">
+        <div class="system-graphic">
+         <span class="system-core">
+          ADB
+         </span>
+         <div>
+          <span>
+           DEVICE
+          </span>
+          <span>
+           FILES
+          </span>
+          <span>
+           DEBUG
+          </span>
+          <span>
+           LOGS
+          </span>
+         </div>
+        </div>
+       </a>
+       <div class="work-body">
+        <div class="work-meta">
+         <span>
+          05 / Python · ADB · Desktop
+         </span>
+         <span>
+          ↗
+         </span>
+        </div>
+        <h3>
+         <a href="projet/adb-manager-pro/index.html">
+          ADB Manager Pro
+         </a>
+        </h3>
+        <p class="work-title">
+         Piloter Android depuis le bureau.
+        </p>
+        <p>
+         Gestion des appareils, transferts, diagnostic et historique des actions.
+        </p>
+        <a class="textlink" href="projet/adb-manager-pro/index.html">
+         Explorer le projet
+         <span aria-hidden="true">
+          ↗
+         </span>
+        </a>
+       </div>
+      </article>
+      <article class="work-card" data-category="backend">
+       <a aria-label="Découvrir Sofiane Cloud" class="work-visual visual-cloud" href="projet/sofianecloud/index.html">
+        <img alt="Capture de l’interface Sofiane Cloud" height="600" loading="lazy" src="projet/sofianecloud/assets/overview.png" width="1000"/>
+       </a>
+       <div class="work-body">
+        <div class="work-meta">
+         <span>
+          06 / Flask · Linux · Cloudflare
+         </span>
+         <span>
+          ↗
+         </span>
+        </div>
+        <h3>
+         <a href="projet/sofianecloud/index.html">
+          Sofiane Cloud
+         </a>
+        </h3>
+        <p class="work-title">
+         Un espace personnel, sous contrôle.
+        </p>
+        <p>
+         Fichiers, galerie et supervision des services dans un cloud privé.
+        </p>
+        <a class="textlink" href="projet/sofianecloud/index.html">
+         Explorer le projet
+         <span aria-hidden="true">
+          ↗
+         </span>
+        </a>
+       </div>
+      </article>
+     </div>
+     <div class="more-projects">
+      <span>
+       ET AUSSI, DANS MON LAB
+      </span>
+      <a href="projet/autohack/index.html">
+       AutoHack ↗
+      </a>
+      <a href="projet/krawl/index.html">
+       Krawl ↗
+      </a>
+      <a href="projet/worldmonitor/index.html">
+       WorldMonitor ↗
+      </a>
+      <a href="https://github.com/SonFire03" rel="noreferrer" target="_blank">
+       Tout le GitHub ↗
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="section about-section" id="about">
+    <div class="wrap about-grid">
+     <div class="portrait-frame">
+      <img alt="Sofiane Dehimi" height="700" loading="lazy" src="assets/sofiane.jpg" width="600"/>
+      <div class="portrait-caption">
+       <strong>
+        Sofiane Dehimi
+       </strong>
+       <span>
+        CURIEUX PAR NATURE. TECHNIQUE PAR PASSION.
+       </span>
       </div>
-    </section>
-
-    <section class="section" id="recent">
-      <div class="wrap">
-        <div class="section__head" data-reveal>
-          <h2>Projets récents / en progression</h2>
-          <p class="muted">Briques plus récentes, à un stade de documentation ou de finition variable.</p>
+     </div>
+     <div>
+      <p class="eyebrow">
+       02 / DERRIÈRE LE TERMINAL
+      </p>
+      <h2>
+       Apprendre en faisant.
+       <br/>
+       Avancer en comprenant
+       <span>
+        .
+       </span>
+      </h2>
+      <p class="about-lead">
+       J’aime comprendre ce qui se passe sous le capot.
+      </p>
+      <p>
+       Mon parcours a commencé par les systèmes numériques, puis le support et la maintenance informatique. Aujourd’hui, je prolonge cette base terrain en développant des outils Python dédiés à la sécurité et aux opérations.
+      </p>
+      <p>
+       Analyser des logs, automatiser une tâche, documenter une investigation : chaque projet est une occasion de relier le code à un besoin réel.
+      </p>
+      <div class="experience">
+       <div>
+        <span>
+         2023 — 2024
+        </span>
+        <div>
+         <h3>
+          Conseiller Service Client
+         </h3>
+         <p>
+          Boulanger · Cesson — SAV, suivi et coordination.
+         </p>
         </div>
-
-        <div class="projects-grid">
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>DFIR Case Manager</h3>
-              <span class="project-label">Récent</span>
-            </div>
-            <p class="muted">Gestion de dossiers d'incident, timeline, IOC et reporting DFIR pédagogique.</p>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/dfir-case-manager/index.html">Détails</a>
-            </div>
-          </article>
-
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>PocketSOC-Termux</h3>
-              <span class="project-label">En progression</span>
-            </div>
-            <p class="muted">Toolkit SOC léger pour Android / Termux: triage local, monitoring, collecte de preuves et reporting en lab.</p>
-            <ul class="list list--tight">
-              <li>Page dédiée à documenter si le projet devient public</li>
-              <li>Orientation défensive, usage local-first uniquement</li>
-            </ul>
-          </article>
-
-          <article class="card project-card" data-reveal>
-            <div class="card__top">
-              <h3>ADB Manager Pro</h3>
-              <span class="project-label">Récent</span>
-            </div>
-            <p class="muted">Application desktop PySide6 pour la gestion d'appareils Android, debug et automatisation.</p>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="projet/adb-manager-pro/index.html">Détails</a>
-            </div>
-          </article>
+       </div>
+       <div>
+        <span>
+         2021 — 2023
+        </span>
+        <div>
+         <h3>
+          Technicien maintenance informatique
+         </h3>
+         <p>
+          Mairie de Dammarie-les-Lys · Alternance.
+         </p>
         </div>
+       </div>
+       <div>
+        <span>
+         2018 — 2021
+        </span>
+        <div>
+         <h3>
+          Bac Pro Systèmes Numériques
+         </h3>
+         <p>
+          Lycée Jacques Prévert · Mention Bien.
+         </p>
+        </div>
+       </div>
       </div>
-    </section>
-
-    <section class="section" id="certifications">
-      <div class="wrap">
-        <div class="section__head" data-reveal>
-          <h2>Preuves vérifiables</h2>
-          <p class="muted">Certifications et preuves publiques, cadrées pour un usage défensif et de lab.</p>
-        </div>
-
-        <div class="grid2 proof-grid">
-          <article class="card" data-reveal>
-            <h3>Badges Cisco / Credly</h3>
-            <p class="muted">Parcours cyber/réseau: JCA, Network Defense, Endpoint Security, Python.</p>
-            <div class="card__actions">
-              <a class="btn" href="projet/certif/certifications.html?filter=cisco">Voir badges Cisco</a>
-              <a class="btn btn--ghost" href="projet/certif/certifications.html">Page complète</a>
-            </div>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>TryHackMe / PDF</h3>
-            <p class="muted">Certificats PDF liés à des exercices de lab.</p>
-            <div class="card__actions">
-              <a class="btn" href="projet/certif/certifications.html?filter=tryhackme">Voir certificats PDF</a>
-              <a class="btn btn--ghost" href="projet/certif/certifications.html">Tout ouvrir</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="card" data-reveal style="margin-top:14px">
-          <div class="row between" style="flex-wrap:wrap">
-            <div>
-              <div class="kicker">Aperçu</div>
-              <div class="h3">Sélection rapide</div>
-            </div>
-            <a class="btn btn--ghost" href="projet/certif/certifications.html">Page complète</a>
-          </div>
-
-          <div class="badgegrid" style="margin-top:14px">
-            <a class="badge" href="https://www.credly.com/badges/bfb7ee47-a3e2-4a1a-ba6f-3a469568c922/public_url" target="_blank" rel="noreferrer">
-              <img src="projet/certif/assets/credly/junior-cybersecurity-analyst-career-path.png" alt="Cisco Credly — Junior Cybersecurity Analyst" loading="lazy" decoding="async" />
-              <div class="badge__t">Junior Cybersecurity Analyst</div>
-              <div class="badge__s muted">Cisco / Credly</div>
-            </a>
-
-            <a class="badge" href="https://www.credly.com/badges/6459609a-0d5a-4b29-8041-7c805ae464f0/public_url" target="_blank" rel="noreferrer">
-              <img src="projet/certif/assets/credly/network-defense.png" alt="Cisco Credly — Network Defense" loading="lazy" decoding="async" />
-              <div class="badge__t">Network Defense</div>
-              <div class="badge__s muted">Cisco / Credly</div>
-            </a>
-
-            <a class="badge" href="https://www.credly.com/badges/0910350a-758c-4c8f-b2e8-d27662451eb5/public_url" target="_blank" rel="noreferrer">
-              <img src="projet/certif/assets/credly/endpoint-security.png" alt="Cisco Credly — Endpoint Security" loading="lazy" decoding="async" />
-              <div class="badge__t">Endpoint Security</div>
-              <div class="badge__s muted">Cisco / Credly</div>
-            </a>
-
-            <a class="badge" href="projet/certif/certifications.html?filter=tryhackme">
-              <img src="projet/certif/assets/3HnCZjv.png" alt="TryHackMe — certificats PDF" loading="lazy" decoding="async" />
-              <div class="badge__t">TryHackMe</div>
-              <div class="badge__s muted">PDF</div>
-            </a>
-          </div>
-        </div>
+      <a class="textlink" href="recruiter.html">
+       Vous recrutez ? Mon profil en un coup d’œil ↗
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="skills">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <p class="eyebrow">
+        03 / COMPÉTENCES EN PRATIQUE
+       </p>
+       <h2>
+        Une base système.
+        <br/>
+        Un réflexe développeur
+        <span>
+         .
+        </span>
+       </h2>
       </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="section__head" data-reveal>
-          <h2>Contact</h2>
-          <p class="muted">Contact direct.</p>
-        </div>
-
-        <div class="grid2">
-          <article class="card" data-reveal>
-            <h3>Coordonnées rapides</h3>
-            <div class="social">
-              <a class="social__link" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">
-                <img src="assets/github.svg" alt="GitHub" loading="lazy" decoding="async" />
-                <span>github.com/SonFire03</span>
-              </a>
-
-              <div class="card__actions" style="margin-top:10px">
-                <a class="btn" href="recruiter.html">Recruiter view</a>
-                <a class="btn btn--ghost" href="projet/certif/certifications.html">Certifications</a>
-              </div>
-
-              <div class="copy-actions" style="margin-top:10px">
-                <button class="btn btn--ghost copy-actions__btn" id="copyGithub" type="button">Copier le lien GitHub</button>
-                <button class="btn btn--ghost copy-actions__btn" id="copyPortfolio" type="button">Copier le lien du portfolio</button>
-                <button class="btn btn--ghost copy-actions__btn" id="copyRecruiter" type="button">Copier le lien recruiter view</button>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-            <h3>Info complémentaire</h3>
-            <ul class="list list--tight">
-              <li>Disponibilité: visio ou présentiel</li>
-              <li>Préférence: poste junior IT/SOC/backend Python</li>
-              <li>Fuseau: Europe/Paris</li>
-            </ul>
-          </article>
-
-          <article class="card" data-reveal>
-            <h3>Envoyer un message</h3>
-            <form id="contact-form" action="https://formspree.io/f/mrbkavoo" method="POST">
-              <label class="label">
-                <span>Nom</span>
-                <input class="input" type="text" name="name" placeholder="Votre nom" required />
-              </label>
-              <label class="label">
-                <span>Email</span>
-                <input class="input" type="email" name="email" placeholder="votre@email.com" required />
-              </label>
-              <label class="label">
-                <span>Message</span>
-                <textarea class="input" name="message" rows="5" placeholder="Contexte, poste visé, disponibilités" required></textarea>
-              </label>
-              <button class="btn" type="submit">Envoyer</button>
-              <p class="muted" id="form-feedback" style="margin-top:10px"></p>
-            </form>
-          </article>
-        </div>
+      <p>
+       Des compétences mises en pratique
+       <br/>
+       dans mes projets et mes expériences.
+      </p>
+     </div>
+     <div class="expertise-grid">
+      <article>
+       <span aria-hidden="true" class="expertise-icon">
+        &lt;/&gt;
+       </span>
+       <h3>
+        Développer &amp; automatiser
+       </h3>
+       <p>
+        Des API aux scripts CLI : structurer les données et simplifier les tâches répétitives.
+       </p>
+       <div class="tags">
+        <span class="tag">
+         Python
+        </span>
+        <span class="tag">
+         FastAPI / Flask
+        </span>
+        <span class="tag">
+         SQLite
+        </span>
+        <span class="tag">
+         API REST
+        </span>
+       </div>
+      </article>
+      <article>
+       <span aria-hidden="true" class="expertise-icon">
+        ⌘
+       </span>
+       <h3>
+        Observer &amp; défendre
+       </h3>
+       <p>
+        Analyser les événements, traiter les IOC et organiser le triage et l’investigation en lab.
+       </p>
+       <div class="tags">
+        <span class="tag">
+         SOC / Blue Team
+        </span>
+        <span class="tag">
+         CTI
+        </span>
+        <span class="tag">
+         DFIR
+        </span>
+        <span class="tag">
+         Logs
+        </span>
+       </div>
+      </article>
+      <article>
+       <span aria-hidden="true" class="expertise-icon">
+        &gt;_
+       </span>
+       <h3>
+        Administrer &amp; fiabiliser
+       </h3>
+       <p>
+        Diagnostiquer un environnement, gérer ses services et documenter des solutions reproductibles.
+       </p>
+       <div class="tags">
+        <span class="tag">
+         Linux / Windows
+        </span>
+        <span class="tag">
+         Shell
+        </span>
+        <span class="tag">
+         Git
+        </span>
+        <span class="tag">
+         Pytest
+        </span>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section certifications-section" id="certifications">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <p class="eyebrow">
+        04 / APPRENTISSAGE CONTINU
+       </p>
+       <h2>
+        La curiosité se cultive
+        <span>
+         .
+        </span>
+       </h2>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="wrap footer__inner">
-        <a class="footer__link" href="projet/timeline/index.html">&copy; 2025 — Sofiane Dehimi</a>
-        <span class="muted">|</span>
-        <a class="footer__link" href="projet/certif/certifications.html">Certifications</a>
-        <span class="muted">|</span>
-        <a class="footer__link" href="https://github.com/SonFire03" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="textlink" href="projet/certif/certifications.html">
+       Toutes les certifications ↗
+      </a>
+     </div>
+     <div class="proof-list">
+      <a class="proof-badge" href="https://www.credly.com/badges/bfb7ee47-a3e2-4a1a-ba6f-3a469568c922/public_url" rel="noreferrer" target="_blank">
+       <img alt="" height="76" loading="lazy" src="projet/certif/assets/credly/junior-cybersecurity-analyst-career-path.png" width="76"/>
+       <div>
+        <span>
+         CISCO / CREDLY
+        </span>
+        <h3>
+         Junior Cybersecurity Analyst
+        </h3>
+        <small>
+         Vérifier le badge ↗
+        </small>
+       </div>
+      </a>
+      <a class="proof-badge" href="https://www.credly.com/badges/6459609a-0d5a-4b29-8041-7c805ae464f0/public_url" rel="noreferrer" target="_blank">
+       <img alt="" height="76" loading="lazy" src="projet/certif/assets/credly/network-defense.png" width="76"/>
+       <div>
+        <span>
+         CISCO / CREDLY
+        </span>
+        <h3>
+         Network Defense
+        </h3>
+        <small>
+         Vérifier le badge ↗
+        </small>
+       </div>
+      </a>
+      <a class="proof-badge" href="https://www.credly.com/badges/550f94fe-0f5d-4b11-a25f-dabd13fb6a4a/public_url" rel="noreferrer" target="_blank">
+       <img alt="" height="76" loading="lazy" src="projet/certif/assets/credly/python-essentials-2.png" width="76"/>
+       <div>
+        <span>
+         CISCO / CREDLY
+        </span>
+        <h3>
+         Python Essentials 2
+        </h3>
+        <small>
+         Vérifier le badge ↗
+        </small>
+       </div>
+      </a>
+     </div>
+     <p class="proof-note">
+      Également : parcours et exercices pratiques TryHackMe.
+      <a href="projet/certif/certifications.html?filter=tryhackme">
+       Consulter les certificats ↗
+      </a>
+     </p>
+    </div>
+   </section>
+   <section class="section contact-section" id="contact">
+    <div class="wrap contact-grid">
+     <div>
+      <p class="eyebrow">
+       05 / LA SUITE, ENSEMBLE ?
+      </p>
+      <h2>
+       Parlons de votre
+       <br/>
+       prochain
+       <span>
+        projet.
+       </span>
+      </h2>
+      <p>
+       Une opportunité junior en Python, IT ou SOC ?
+       <br/>
+       Un projet technique à partager ? Je serai ravi d’en discuter.
+      </p>
+      <div class="contact-detail">
+       <span class="live-dot">
+       </span>
+       Île-de-France · Visio ou présentiel
       </div>
-    </footer>
+      <a class="textlink" href="https://github.com/SonFire03" rel="noreferrer" target="_blank">
+       Retrouvez-moi sur GitHub ↗
+      </a>
+     </div>
+     <form action="https://formspree.io/f/mrbkavoo" id="contact-form" method="POST">
+      <div class="form-row">
+       <label class="label">
+        <span>
+         Votre nom
+        </span>
+        <input autocomplete="name" class="input" maxlength="120" name="name" placeholder="Alex Martin" required="" type="text"/>
+       </label>
+       <label class="label">
+        <span>
+         Votre email
+        </span>
+        <input autocomplete="email" class="input" maxlength="254" name="email" placeholder="alex@entreprise.fr" required="" type="email"/>
+       </label>
+      </div>
+      <label class="label">
+       <span>
+        Votre message
+       </span>
+       <textarea class="input" maxlength="10000" name="message" placeholder="Une idée, une opportunité, un bonjour…" required="" rows="4"></textarea>
+      </label>
+      <button class="btn" type="submit">
+       Envoyer le message
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </button>
+      <p aria-live="polite" id="form-feedback" role="status">
+      </p>
+      <small class="form-note">
+       Vos coordonnées servent uniquement à vous répondre. Envoi via Formspree.
+      </small>
+     </form>
+    </div>
+   </section>
   </main>
-
-  <button class="totop" id="backToTop" type="button" aria-label="Revenir en haut">↑</button>
-
-  <div class="toast" id="toast" role="status" aria-live="polite">
-    <div class="toast__t" id="toastTitle"></div>
-    <div class="toast__s" id="toastSub"></div>
-  </div>
-</body>
+  <footer class="footer">
+   <div class="wrap footer__inner">
+    <a aria-label="Retour en haut" class="monogram" href="#top">
+     sd
+     <span>
+      _
+     </span>
+    </a>
+    <span>
+     ©
+     <span id="yearNow">
+      2026
+     </span>
+     Sofiane Dehimi
+    </span>
+    <span>
+     Conçu avec soin. Construit avec curiosité.
+    </span>
+    <a href="#top">
+     Retour en haut ↑
+    </a>
+   </div>
+  </footer>
+ </body>
 </html>
